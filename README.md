@@ -52,7 +52,7 @@ In the config file please setup the following variables:
 - ['endpoints'](https://github.com/DivanteLtd/vue-storefront-integration-boilerplate/blob/ed646dce9be22207e3cc08a05c8913e7673f4aeb/2.%20Use%20node-app%20to%20import%20the%20data/node-app/config.example.json#L134) should match the public URLs of Your API corresponding methos (for auth, products, categories, taxrule and attributes)
 - `elasticsearch.indexName` - should be set to Your ElasticSearch index which then will be connected to the Vue Storefront. It can be fresh / non-existient index as well (will be created then). For example You may have: `vue_storefront_mangento1`
 
-# Available commands
+### Available commands
 The bridge works on temporary, versioned ES indexes. You decide when the index should be published (when all data objects are properly set).
 
 Create new version of index (for example: vue_storefront_mangento1_1): 
