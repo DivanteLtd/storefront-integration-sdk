@@ -80,3 +80,10 @@ Congratulations! After this step You should have got the ES index synchronized w
 All You need to do is to set the proper API endpoints in the `config/local.json`. [Here You have the details](https://github.com/DivanteLtd/vue-storefront-integration-boilerplate/blob/master/3.%20Configure%20vue-storefront/How%20to%20configure%20Vue%20Storefront.md).
 
 Please note that You still need to use the `vue-storefront-api` for accessing the ElasticSearch / do the server side tax callculation etc.
+
+
+# Support
+
+This is MIT project so it's ... just AS IS :) However, if You're planing to add the new platform to the Vue Storefront ecosystem and publish it freely as an open source - we'll do our best to support You! 
+
+Please feel free to contact the core team on [Slack channel](http://slack.vuestorefront.io) or via contributors@vuestorefront.io
