@@ -17,9 +17,9 @@ However, `vue-storefront-api` was initially meant to support all kind of request
 
 That means that creating the Vue Storefront integration basically is divided into 3 main steps:
 
-1. [You exposes the API around Your platform]() of choice regarding our spec. In fact it's a `vue-storefront-api` enpodints specification. Having such an API - Vue Storefront will be able to speak directly with Your platform as a backend **Layer B**.
+1. [You exposes the API around Your platform](https://github.com/DivanteLtd/vue-storefront-integration-boilerplate/tree/master/1.%20Expose%20the%20API%20endpoints%20required%20by%20VS) of choice regarding our spec. In fact it's a `vue-storefront-api` enpodints specification. Having such an API - Vue Storefront will be able to speak directly with Your platform as a backend **Layer B**.
 
-2. [You need to use `node-app` application]() to import the data from the freshly created API endpoints to the Elastic Search **Layer A**.
+2. [You need to use `node-app` application](https://github.com/DivanteLtd/vue-storefront-integration-boilerplate/tree/master/2.%20Use%20node-app%20to%20import%20the%20data/node-app) to import the data from the freshly created API endpoints to the Elastic Search **Layer A**.
 
 
 3. [Then You just need to point `vue-storefront`]() application to newly created endpoints.
@@ -48,9 +48,31 @@ nano config.json
 ```
 
 In the config file please setup the following variables:
-- `auth` section to setup user login and password - these values will be used to generate the JWT token used to authorize the requests against Your API - 
-- ['endpoint'](https://github.com/DivanteLtd/magento1-vsbridge/blob/5d4b9285c2dd2a20900e6075f50ebc2d7802499e/node-app/config.example.json#L14) should match your Magento 1.9 URL,
-- [`elasticsearch.indexName`](https://github.com/DivanteLtd/magento1-vsbridge/blob/5d4b9285c2dd2a20900e6075f50ebc2d7802499e/node-app/config.example.json#L4) should be set to Your ElasticSearch index which then will be connected to the Vue Storefront. It can be fresh / non-existient index as well (will be created then). For example You may have: `vue_storefront_mangento1`
+- `auth` section to setup user login and password - these values will be used to generate the JWT token used to [authorize the requests against Your API](https://github.com/DivanteLtd/vue-storefront-integration-boilerplate/blob/master/1.%20Expose%20the%20API%20endpoints%20required%20by%20VS/Required%20API%20specification.md#post-vsbridgeauthadmin)
+- ['endpoints'](https://github.com/DivanteLtd/vue-storefront-integration-boilerplate/blob/ed646dce9be22207e3cc08a05c8913e7673f4aeb/2.%20Use%20node-app%20to%20import%20the%20data/node-app/config.example.json#L134) should match the public URLs of Your API corresponding methos (for auth, products, categories, taxrule and attributes)
+- `elasticsearch.indexName` - should be set to Your ElasticSearch index which then will be connected to the Vue Storefront. It can be fresh / non-existient index as well (will be created then). For example You may have: `vue_storefront_mangento1`
 
+# Available commands
+The bridge works on temporary, versioned ES indexes. You decide when the index should be published (when all data objects are properly set).
+
+Create new version of index (for example: vue_storefront_mangento1_1): 
+```
+node index.js new
+```
+
+Index data:
+```
+node index.js attributes
+node index.js taxrules
+node index.js categories
+node index.js products
+```
+
+Publish new version of index (creates an alias with prod. name of the index: vue_storefront_magento1_1 -> vue_storefront_magento1): 
+```
+node index.js publish
+```
+
+Congratulations! After this step You should have got the ES index synchronized with Your custom platform!
 
 ## Step 3: How to configure vue-storefront
