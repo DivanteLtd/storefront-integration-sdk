@@ -2,9 +2,11 @@
 
 To integrate the [vue-storefront](github.com/DivanteLtd/vue-storefront) with third party platform You should start with building the API around the platform. It should be compatible with the following specification to let Vue Storefront app seamlesly use it and process the data.
 
+The example implementation references/links are provided for the Magento1 module.
+
 **This is general purpose API** for 3rd party platform integration with Vue Storefront.
 
-Some endpoints (`attributes`, `categories`, `products`, `taxrules`) returns data that can be directly stored to ElasticSearch by [node-app](https://github.com/DivanteLtd/magento1-vsbridge/tree/master/node-app) and used for catalog rendering, while others are used by [vue-storefront-api](https://github.com/DivanteLtd/vue-storefront-api) to proxy the dynamic requests (orders, cart, user account sync).
+Some endpoints (`attributes`, `categories`, `products`, `taxrules`) returns data that can be directly stored to ElasticSearch by [node-app](https://github.com/DivanteLtd/vue-storefront-integration-boilerplate/tree/master/2.%20Use%20node-app%20to%20import%20the%20data/node-app) and used for catalog rendering, while others are used by [vue-storefront](https://github.com/DivanteLtd/vue-storefront] to proxy the dynamic requests (orders, cart, user account sync).
 
 ## Static endpoints for product catalog indexation by [node-app](https://github.com/DivanteLtd/magento1-vsbridge/tree/master/node-app)
 

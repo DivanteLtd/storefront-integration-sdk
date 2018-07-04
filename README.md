@@ -76,3 +76,7 @@ node index.js publish
 Congratulations! After this step You should have got the ES index synchronized with Your custom platform!
 
 ## Step 3: How to configure vue-storefront
+
+All You need to do is to set the proper API endpoints in the `config/local.json`. [Here You have the details](https://github.com/DivanteLtd/vue-storefront-integration-boilerplate/blob/master/3.%20Configure%20vue-storefront/How%20to%20configure%20Vue%20Storefront.md).
+
+Please note that You still need to use the `vue-storefront-api` for accessing the ElasticSearch / do the server side tax callculation etc.
