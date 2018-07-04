@@ -22,7 +22,7 @@ That means that creating the Vue Storefront integration basically is divided int
 2. [You need to use `node-app` application](https://github.com/DivanteLtd/vue-storefront-integration-boilerplate/tree/master/2.%20Use%20node-app%20to%20import%20the%20data/node-app) to import the data from the freshly created API endpoints to the Elastic Search **Layer A**.
 
 
-3. [Then You just need to point `vue-storefront`]() application to newly created endpoints.
+3. [Then You just need to point `vue-storefront`](https://github.com/DivanteLtd/vue-storefront-integration-boilerplate/blob/master/3.%20Configure%20vue-storefront/How%20to%20configure%20Vue%20Storefront.md) application to newly created endpoints.
 
 
 
