@@ -2428,7 +2428,7 @@ The `result` is a cart-id that should be used for all subsequent cart related op
 Method used to fetch the current server side shopping cart content, used mostly for synchronization purposes when `config.cart.synchronize=true`
 
 #### WHEN:
-This method is called just after any Vue Storefrotn cart modification to check if the server or client shopping cart items need to be updated. It get's the current list of the shopping cart items. The synchronization algoritm in Vue Storefront determines if server or client items need to be updated and executes `api/cart/update` or `api/cart/delete` accordngly.
+This method is called just after any Vue Storefront cart modification to check if the server or client shopping cart items need to be updated. It gets the current list of the shopping cart items. The synchronization algorithm in VueStorefront determines if server or client items need to be updated and executes `api/cart/update` or `api/cart/delete` accordngly.
 
 #### GET PARAMS:
 `token` - null OR user token obtained from [`/vsbridge/user/login`](https://github.com/DivanteLtd/vue-storefront-api/blob/7d98771994b1009ad17d69c458f9e93686cfb145/src/vsbridge/user.js#L48)
@@ -2470,7 +2470,7 @@ This method is called just after any Vue Storefrotn cart modification to check i
 
 ### POST [/vsbridge/cart/update](https://github.com/DivanteLtd/vue-storefront-api/blob/7d98771994b1009ad17d69c458f9e93686cfb145/src/vsbridge/cart.js#L43)
 
-Method used to add or update shopping cart item server side. As a request body there should be JSON given representing the cart item. `sku` and `qty` are the two required options. If you like to update/edit server cart item You need to pass `item_id` identifier as well (can be optainted from `api/cart/pull`)
+Method used to add or update shopping cart item's server side. As a request body there should be JSON given representing the cart item. `sku` and `qty` are the two required options. If you like to update/edit server cart item You need to pass `item_id` identifier as well (can be optainted from `api/cart/pull`)
 
 #### WHEN:
 This method is called just after `api/cart/pull` as a consequence of the synchronization process
@@ -2537,7 +2537,7 @@ curl 'https://your-domain.example.com/vsbridge/cart/update?token=xu8h02nd66yq0ga
 
 ### POST [/vsbridge/cart/delete](https://github.com/DivanteLtd/vue-storefront-api/blob/7d98771994b1009ad17d69c458f9e93686cfb145/src/vsbridge/cart.js#L113)
 
-This method is used to remove the shopping cart item server side.
+This method is used to remove the shopping cart item on server side.
 
 #### WHEN: 
 This method is called just after `api/cart/pull` as a consequence of the synchronization process
