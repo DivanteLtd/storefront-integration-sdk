@@ -413,7 +413,9 @@ curl -X GET \
 ```
 
 ### GET [/vsbridge/categories/index](https://github.com/DivanteLtd/magento1-vsbridge/blob/154a51248bb1acbfffa0c270dae45a7e87cc6492/magento1-module/app/code/local/Divante/VueStorefrontBridge/controllers/CategoriesController.php#L30)
-This method is used to get all the cateogries from Magento
+This method is used to get all the categories from Magento
+
+:exclamation: Note: while this method should return the full category tree, it won't work out out of the box with vue-storefront [SidebarMenu.js](https://github.com/DivanteLtd/vue-storefront/blob/master/core/components/blocks/SidebarMenu/SidebarMenu.js). It requires you the first node to have level of `2` contrary to level `0` in example below.
 
 #### GET PARAMS
 `apiKey` - authorization key provided by `/vsbridge/auth/admin` endpoint
