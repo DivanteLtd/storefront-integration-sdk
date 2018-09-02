@@ -1,7 +1,7 @@
 # Vue Storefront integration easy as 1-2-3
 
 Vue Storefront is platform agnostic which means it can be connected to virtually any CMS. Currently we do officially support:
-- [Magento2]() via `mage2vuestorefront` + `vue-storefront-api` data bridge,
+- [Magento2](https://github.com/DivanteLtd/mage2vuestorefront) via `mage2vuestorefront` + `vue-storefront-api` data bridge,
 - [Magento1](https://github.com/DivanteLtd/magento1-vsbridge) via `magento1-vsbrdige` data bridge.
 - Limited: [Pimcore](https://github.com/DivanteLtd/pimcore2vuestorefront) via `pimcore2vuestorefront` data bridge,
 
