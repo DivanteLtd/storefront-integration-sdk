@@ -49,7 +49,7 @@ curl -X POST \
 This method is used to get all the attributes from Magento
 
 #### GET PARAMS
-`apiKey` - authorization key provided by `/vsbridge/auth/admin` endpoint
+`apikey` - authorization key provided by `/vsbridge/auth/admin` endpoint
 
 #### EXAMPLE CALL:
 
@@ -418,7 +418,7 @@ This method is used to get all the categories from Magento
 :exclamation: Note: while this method should return the full category tree, it won't work out out of the box with vue-storefront [SidebarMenu.js](https://github.com/DivanteLtd/vue-storefront/blob/master/core/components/blocks/SidebarMenu/SidebarMenu.js). It requires you the first node to have level of `2` contrary to level `0` in example below.
 
 #### GET PARAMS
-`apiKey` - authorization key provided by `/vsbridge/auth/admin` endpoint
+`apikey` - authorization key provided by `/vsbridge/auth/admin` endpoint
 `pageSize` - number of records to be returned
 `page` - number of current page
 
@@ -942,7 +942,7 @@ curl -X GET \
 This method is used to get all the tax rules from the backend
 
 #### GET PARAMS
-`apiKey` - authorization key provided by `/vsbridge/auth/admin` endpoint
+`apikey` - authorization key provided by `/vsbridge/auth/admin` endpoint
 `pageSize` - number of records to be returned
 `page` - number of current page
 
@@ -1331,7 +1331,7 @@ curl -X GET \
 This method is used to get all the products from the backend
 
 #### GET PARAMS
-`apiKey` - authorization key provided by `/vsbridge/auth/admin` endpoint
+`apikey` - authorization key provided by `/vsbridge/auth/admin` endpoint
 `pageSize` - number of records to be returned
 `page` - number of current page
 
@@ -1420,7 +1420,10 @@ curl -X GET \
                     "category_id": 21,
                     "name": "Bags & Luggage"
                 }
-            ]
+            ],
+            "stock":{
+                "is_in_stock": true
+            }
         },
         {
             "entity_type_id": 4,
@@ -1493,7 +1496,10 @@ curl -X GET \
                     "category_id": 21,
                     "name": "Bags & Luggage"
                 }
-            ]
+            ],
+            "stock":{    
+                "is_in_stock": true
+            }
         },
         {
             "entity_type_id": 4,
@@ -2350,7 +2356,10 @@ curl -X GET \
                     "category_id": 17,
                     "name": "Pants & Denim"
                 }
-            ]
+            ],
+            "stock":{    
+                "is_in_stock": true
+            }
         }
     ]
 }
