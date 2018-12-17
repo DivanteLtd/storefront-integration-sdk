@@ -2448,32 +2448,56 @@ This method is called just after any Vue Storefront cart modification to check i
 
 #### RESPONSE BODY:
 ```json
-{  
-   "cartItem":{  
-      "sku":"WS12-XS-Orange",
-      "qty":1,
-      "product_option":{  
-         "extension_attributes":{  
-            "custom_options":[  
-
-            ],
-            "configurable_item_options":[  
-               {  
-                  "option_id":"93",
-                  "option_value":"56"
-               },
-               {  
-                  "option_id":"142",
-                  "option_value":"167"
-               }
-            ],
-            "bundle_options":[  
-
-            ]
-         }
-      },
-      "quoteId":"0a8109552020cc80c99c54ad13ef5d5a"
-   }
+{
+  "code": 200,
+  "result": [
+    {
+      "item_id": 66257,
+      "sku": "WS08-M-Black",
+      "qty": 1,
+      "name": "Minerva LumaTech&trade; V-Tee",
+      "price": 32,
+      "product_type": "configurable",
+      "quote_id": "dceac8e2172a1ff0cfba24d757653257",
+      "product_option": {
+        "extension_attributes": {
+          "configurable_item_options": [
+            {
+              "option_id": "93",
+              "option_value": 49
+            },
+            {
+              "option_id": "142",
+              "option_value": 169
+            }
+          ]
+        }
+      }
+    },
+    {
+      "item_id": 66266,
+      "sku": "WS08-XS-Red",
+      "qty": 1,
+      "name": "Minerva LumaTech&trade; V-Tee",
+      "price": 32,
+      "product_type": "configurable",
+      "quote_id": "dceac8e2172a1ff0cfba24d757653257",
+      "product_option": {
+        "extension_attributes": {
+          "configurable_item_options": [
+            {
+              "option_id": "93",
+              "option_value": 58
+            },
+            {
+              "option_id": "142",
+              "option_value": 167
+            }
+          ]
+        }
+      }
+    }
+  ]
 }
 
 ```
