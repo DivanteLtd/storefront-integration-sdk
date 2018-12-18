@@ -17,7 +17,7 @@ However, `vue-storefront-api` was initially meant to support all kind of request
 
 That means that creating the Vue Storefront integration basically is divided into 3 main steps:
 
-1. [You exposes the API around Your platform](https://github.com/DivanteLtd/vue-storefront-integration-boilerplate/tree/master/1.%20Expose%20the%20API%20endpoints%20required%20by%20VS) of choice regarding our spec. In fact it's a `vue-storefront-api` enpodints specification. Having such an API - Vue Storefront will be able to speak directly with Your platform as a backend **Layer B**.
+1. [You exposes the API around Your platform](https://github.com/DivanteLtd/vue-storefront-integration-boilerplate/tree/master/1.%20Expose%20the%20API%20endpoints%20required%20by%20VS) of choice regarding our spec. In fact it's a `vue-storefront-api` endpoints specification. Having such an API - Vue Storefront will be able to speak directly with Your platform as a backend **Layer B**.
 
 2. [You need to use `node-app` application](https://github.com/DivanteLtd/vue-storefront-integration-boilerplate/tree/master/2.%20Use%20node-app%20to%20import%20the%20data/node-app) to import the data from the freshly created API endpoints to the Elastic Search **Layer A**.
 
