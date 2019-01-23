@@ -32,7 +32,7 @@ You may take a look [how we did it for the Magento1](https://github.com/DivanteL
 
 ## Step 2: How to use node-app
 
-Then, having the API in place You're to fo the **Layer A** integration. Which means - to fill the ElasticSearch with products, categories, attributes and taxrules data.
+Then, having the API in place You're to do the **Layer A** integration. Which means - to fill the ElasticSearch with products, categories, attributes and taxrules data.
 
 You can use our [boilerplate node-app](https://github.com/DivanteLtd/vue-storefront-integration-boilerplate/tree/master/2.%20Use%20node-app%20to%20import%20the%20data/node-app) which is compilant with the data formats specified above.
 This is a consumer application that's responsible for synchronizing the Magento1 data with the ElasticSearch instance.
