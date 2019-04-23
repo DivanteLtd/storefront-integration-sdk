@@ -67,7 +67,6 @@ curl -X GET \
     "result": [
         {
             "attribute_code": "accessories_size",
-            "backend_type": "int",
             "backend_table": null,
             "frontend_model": null,
             "frontend_input": "select",
@@ -122,7 +121,6 @@ curl -X GET \
    
         {
             "attribute_code": "apparel_type",
-            "backend_type": "int",
             "backend_table": null,
             "frontend_model": null,
             "frontend_input": "select",
@@ -208,7 +206,6 @@ curl -X GET \
         },
         {
             "attribute_code": "author_artist",
-            "backend_type": "text",
             "backend_table": null,
             "frontend_model": null,
             "frontend_input": "textarea",
@@ -245,7 +242,6 @@ curl -X GET \
         },
         {
             "attribute_code": "bed_bath_type",
-            "backend_type": "int",
             "backend_table": null,
             "frontend_model": null,
             "frontend_input": "select",
@@ -291,7 +287,6 @@ curl -X GET \
         },
         {
             "attribute_code": "books_music_type",
-            "backend_type": "int",
             "backend_table": null,
             "frontend_model": null,
             "frontend_input": "select",
@@ -338,7 +333,6 @@ curl -X GET \
        
         {
             "attribute_code": "camera_type",
-            "backend_type": "int",
             "backend_table": null,
             "frontend_model": null,
             "frontend_input": "select",
@@ -4032,7 +4026,6 @@ Elastic Search data format. Please read more on [data formats used in Vue Storef
           "is_user_defined": true,
           "default_frontend_label": "Size",
           "frontend_labels": null,
-          "backend_type": "int",
           "source_model": "Magento\\Eav\\Model\\Entity\\Attribute\\Source\\Table",
           "default_value": "91",
           "is_unique": "0",
@@ -4159,7 +4152,6 @@ Elastic Search data format. Please read more on [data formats used in Vue Storef
           "is_user_defined": true,
           "default_frontend_label": "Size",
           "frontend_labels": null,
-          "backend_type": "int",
           "is_unique": "0",
           "validation_rules": [],
           "id": 142,
@@ -4258,7 +4250,6 @@ Elastic Search data format. Please read more on [data formats used in Vue Storef
           "is_user_defined": true,
           "default_frontend_label": "Color",
           "frontend_labels": null,
-          "backend_type": "int",
           "source_model": "Magento\\Eav\\Model\\Entity\\Attribute\\Source\\Table",
           "default_value": "49",
           "is_unique": "0",
@@ -4306,7 +4297,6 @@ Elastic Search data format. Please read more on [data formats used in Vue Storef
           "is_user_defined": false,
           "default_frontend_label": "Price",
           "frontend_labels": null,
-          "backend_type": "decimal",
           "is_unique": "0",
           "validation_rules": [],
           "id": 77,
