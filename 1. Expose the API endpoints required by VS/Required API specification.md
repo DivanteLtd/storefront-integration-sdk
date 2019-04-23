@@ -69,7 +69,6 @@ curl -X GET \
             "attribute_code": "accessories_size",
             "frontend_input": "select",
             "frontend_label": "Accessories Size",
-            "is_required": false,
             "is_user_defined": true,
             "default_value": "",
             "is_unique": false,
@@ -119,7 +118,6 @@ curl -X GET \
             "attribute_code": "apparel_type",
             "frontend_input": "select",
             "frontend_label": "Type",
-            "is_required": true,
             "is_user_defined": true,
             "default_value": "",
             "is_unique": false,
@@ -200,7 +198,6 @@ curl -X GET \
             "attribute_code": "author_artist",
             "frontend_input": "textarea",
             "frontend_label": "Author/Artist",
-            "is_required": false,
             "is_user_defined": true,
             "default_value": null,
             "is_unique": false,
@@ -232,7 +229,6 @@ curl -X GET \
             "attribute_code": "bed_bath_type",
             "frontend_input": "select",
             "frontend_label": "Bed & Bath Type",
-            "is_required": false,
             "is_user_defined": true,
             "default_value": "",
             "is_unique": false,
@@ -273,7 +269,6 @@ curl -X GET \
             "attribute_code": "books_music_type",
             "frontend_input": "select",
             "frontend_label": "Books & Music Type",
-            "is_required": false,
             "is_user_defined": true,
             "default_value": "",
             "is_unique": false,
@@ -315,7 +310,6 @@ curl -X GET \
             "attribute_code": "camera_type",
             "frontend_input": "select",
             "frontend_label": "Camera Type",
-            "is_required": false,
             "is_user_defined": true,
             "default_value": "",
             "is_unique": false,
@@ -3912,7 +3906,6 @@ Elastic Search data format. Please read more on [data formats used in Vue Storef
           "attribute_id": 157,
           "attribute_code": "size",
           "frontend_input": "select",
-          "is_required": false,
           "options": [
             {
               "label": " ",
@@ -4037,7 +4030,6 @@ Elastic Search data format. Please read more on [data formats used in Vue Storef
           "attribute_id": 142,
           "attribute_code": "size",
           "frontend_input": "select",
-          "is_required": false,
           "options": [
             {
               "label": " ",
@@ -4166,7 +4158,6 @@ Elastic Search data format. Please read more on [data formats used in Vue Storef
           "attribute_id": 93,
           "attribute_code": "color",
           "frontend_input": "select",
-          "is_required": false,
           "options": [
             {
               "label": " ",
@@ -4265,7 +4256,6 @@ Elastic Search data format. Please read more on [data formats used in Vue Storef
           "attribute_id": 77,
           "attribute_code": "price",
           "frontend_input": "price",
-          "is_required": true,
           "options": [],
           "is_user_defined": false,
           "default_frontend_label": "Price",
