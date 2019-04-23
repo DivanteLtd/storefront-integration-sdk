@@ -67,7 +67,6 @@ curl -X GET \
     "result": [
         {
             "attribute_code": "accessories_size",
-            "attribute_model": null,
             "backend_model": null,
             "backend_type": "int",
             "backend_table": null,
@@ -124,7 +123,6 @@ curl -X GET \
    
         {
             "attribute_code": "apparel_type",
-            "attribute_model": null,
             "backend_model": null,
             "backend_type": "int",
             "backend_table": null,
@@ -212,7 +210,6 @@ curl -X GET \
         },
         {
             "attribute_code": "author_artist",
-            "attribute_model": null,
             "backend_model": null,
             "backend_type": "text",
             "backend_table": null,
@@ -251,7 +248,6 @@ curl -X GET \
         },
         {
             "attribute_code": "bed_bath_type",
-            "attribute_model": null,
             "backend_model": null,
             "backend_type": "int",
             "backend_table": null,
@@ -299,7 +295,6 @@ curl -X GET \
         },
         {
             "attribute_code": "books_music_type",
-            "attribute_model": null,
             "backend_model": null,
             "backend_type": "int",
             "backend_table": null,
@@ -348,7 +343,6 @@ curl -X GET \
        
         {
             "attribute_code": "camera_type",
-            "attribute_model": null,
             "backend_model": null,
             "backend_type": "int",
             "backend_table": null,
