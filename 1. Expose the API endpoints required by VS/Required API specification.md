@@ -67,7 +67,6 @@ curl -X GET \
     "result": [
         {
             "attribute_code": "accessories_size",
-            "frontend_model": null,
             "frontend_input": "select",
             "frontend_label": "Accessories Size",
             "frontend_class": null,
@@ -120,7 +119,6 @@ curl -X GET \
    
         {
             "attribute_code": "apparel_type",
-            "frontend_model": null,
             "frontend_input": "select",
             "frontend_label": "Type",
             "frontend_class": null,
@@ -204,7 +202,6 @@ curl -X GET \
         },
         {
             "attribute_code": "author_artist",
-            "frontend_model": null,
             "frontend_input": "textarea",
             "frontend_label": "Author/Artist",
             "frontend_class": null,
@@ -239,7 +236,6 @@ curl -X GET \
         },
         {
             "attribute_code": "bed_bath_type",
-            "frontend_model": null,
             "frontend_input": "select",
             "frontend_label": "Bed & Bath Type",
             "frontend_class": null,
@@ -283,7 +279,6 @@ curl -X GET \
         },
         {
             "attribute_code": "books_music_type",
-            "frontend_model": null,
             "frontend_input": "select",
             "frontend_label": "Books & Music Type",
             "frontend_class": null,
@@ -328,7 +323,6 @@ curl -X GET \
        
         {
             "attribute_code": "camera_type",
-            "frontend_model": null,
             "frontend_input": "select",
             "frontend_label": "Camera Type",
             "frontend_class": null,
