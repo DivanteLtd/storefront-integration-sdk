@@ -76,7 +76,6 @@ curl -X GET \
             "is_comparable": false,
             "is_visible_on_front": false,
             "position": 0,
-            "search_weight": 1,
             "id": 194,
             "options": [
                 {
@@ -109,7 +108,6 @@ curl -X GET \
             "is_comparable": false,
             "is_visible_on_front": true,
             "position": 0,
-            "search_weight": 1,
             "id": 176,
             "options": [
                 {
@@ -173,7 +171,6 @@ curl -X GET \
             "is_comparable": false,
             "is_visible_on_front": true,
             "position": 0,
-            "search_weight": 1,
             "id": 202,
             "options": []
         },
@@ -188,7 +185,6 @@ curl -X GET \
             "is_comparable": false,
             "is_visible_on_front": true,
             "position": 0,
-            "search_weight": 1,
             "id": 198,
             "options": [
                 {
@@ -212,7 +208,6 @@ curl -X GET \
             "is_comparable": false,
             "is_visible_on_front": true,
             "position": 0,
-            "search_weight": 1,
             "id": 208,
             "options": [
                 {
@@ -237,7 +232,6 @@ curl -X GET \
             "is_comparable": false,
             "is_visible_on_front": false,
             "position": 0,
-            "search_weight": 1,
             "id": 195,
             "options": [
                 {
