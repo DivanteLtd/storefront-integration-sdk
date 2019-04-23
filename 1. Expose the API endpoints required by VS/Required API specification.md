@@ -77,7 +77,6 @@ curl -X GET \
             "is_visible_on_front": false,
             "is_visible_in_advanced_search": false,
             "position": 0,
-            "is_used_for_promo_rules": false,
             "search_weight": 1,
             "id": 194,
             "options": [
@@ -112,7 +111,6 @@ curl -X GET \
             "is_visible_on_front": true,
             "is_visible_in_advanced_search": false,
             "position": 0,
-            "is_used_for_promo_rules": true,
             "search_weight": 1,
             "id": 176,
             "options": [
@@ -178,7 +176,6 @@ curl -X GET \
             "is_visible_on_front": true,
             "is_visible_in_advanced_search": false,
             "position": 0,
-            "is_used_for_promo_rules": false,
             "search_weight": 1,
             "id": 202,
             "options": []
@@ -195,7 +192,6 @@ curl -X GET \
             "is_visible_on_front": true,
             "is_visible_in_advanced_search": false,
             "position": 0,
-            "is_used_for_promo_rules": false,
             "search_weight": 1,
             "id": 198,
             "options": [
@@ -221,7 +217,6 @@ curl -X GET \
             "is_visible_on_front": true,
             "is_visible_in_advanced_search": false,
             "position": 0,
-            "is_used_for_promo_rules": false,
             "search_weight": 1,
             "id": 208,
             "options": [
@@ -248,7 +243,6 @@ curl -X GET \
             "is_visible_on_front": false,
             "is_visible_in_advanced_search": false,
             "position": 0,
-            "is_used_for_promo_rules": false,
             "search_weight": 1,
             "id": 195,
             "options": [
@@ -3807,7 +3801,6 @@ Elastic Search data format. Please read more on [data formats used in Vue Storef
           "position": 0,
           "is_visible_in_advanced_search": "0",
           "is_comparable": "0",
-          "is_used_for_promo_rules": "1",
           "is_visible_on_front": "0",
           "is_visible": true,
           "scope": "global",
@@ -3923,7 +3916,6 @@ Elastic Search data format. Please read more on [data formats used in Vue Storef
           "position": 0,
           "is_visible_in_advanced_search": "0",
           "is_comparable": "0",
-          "is_used_for_promo_rules": "1",
           "is_visible_on_front": "0",
           "is_visible": true,
           "scope": "global",
@@ -4039,7 +4031,6 @@ Elastic Search data format. Please read more on [data formats used in Vue Storef
           "position": 0,
           "is_visible_in_advanced_search": "0",
           "is_comparable": "0",
-          "is_used_for_promo_rules": "1",
           "is_visible_on_front": "0",
           "is_visible": true,
           "scope": "global",
@@ -4123,7 +4114,6 @@ Elastic Search data format. Please read more on [data formats used in Vue Storef
           "position": 0,
           "is_visible_in_advanced_search": "1",
           "is_comparable": "0",
-          "is_used_for_promo_rules": "0",
           "is_visible_on_front": "0",
           "is_visible": true,
           "scope": "global",
