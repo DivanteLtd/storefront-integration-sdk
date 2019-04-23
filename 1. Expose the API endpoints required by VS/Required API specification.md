@@ -66,7 +66,6 @@ curl -X GET \
     "code": 200,
     "result": [
         {
-            "entity_type_id": 4,
             "attribute_code": "accessories_size",
             "attribute_model": null,
             "backend_model": null,
@@ -124,7 +123,6 @@ curl -X GET \
         },
    
         {
-            "entity_type_id": 4,
             "attribute_code": "apparel_type",
             "attribute_model": null,
             "backend_model": null,
@@ -213,7 +211,6 @@ curl -X GET \
             ]
         },
         {
-            "entity_type_id": 4,
             "attribute_code": "author_artist",
             "attribute_model": null,
             "backend_model": null,
@@ -253,7 +250,6 @@ curl -X GET \
             "options": []
         },
         {
-            "entity_type_id": 4,
             "attribute_code": "bed_bath_type",
             "attribute_model": null,
             "backend_model": null,
@@ -302,7 +298,6 @@ curl -X GET \
             ]
         },
         {
-            "entity_type_id": 4,
             "attribute_code": "books_music_type",
             "attribute_model": null,
             "backend_model": null,
@@ -352,7 +347,6 @@ curl -X GET \
         },
        
         {
-            "entity_type_id": 4,
             "attribute_code": "camera_type",
             "attribute_model": null,
             "backend_model": null,
@@ -437,7 +431,6 @@ curl -X GET \
     "code": 200,
     "result": [
         {
-            "entity_type_id": 3,
             "attribute_set_id": 0,
             "parent_id": 0,
             "created_at": "2013-01-14 10:12:53",
@@ -451,7 +444,6 @@ curl -X GET \
             "id": 1,
             "children_data": [
                 {
-                    "entity_type_id": 3,
                     "attribute_set_id": 3,
                     "parent_id": 1,
                     "created_at": "2013-01-14 10:12:53",
@@ -466,7 +458,6 @@ curl -X GET \
                     "id": 2,
                     "children_data": [
                         {
-                            "entity_type_id": 3,
                             "attribute_set_id": 3,
                             "parent_id": 2,
                             "created_at": "2013-01-25 10:43:31",
@@ -482,7 +473,6 @@ curl -X GET \
                             "id": 4,
                             "children_data": [
                                 {
-                                    "entity_type_id": 3,
                                     "attribute_set_id": 3,
                                     "parent_id": 4,
                                     "created_at": "2013-01-25 10:56:08",
@@ -499,7 +489,6 @@ curl -X GET \
                                     "children_data": []
                                 },
                                 {
-                                    "entity_type_id": 3,
                                     "attribute_set_id": 3,
                                     "parent_id": 4,
                                     "created_at": "2013-01-25 10:57:32",
@@ -516,7 +505,6 @@ curl -X GET \
                                     "children_data": []
                                 },
                                 {
-                                    "entity_type_id": 3,
                                     "attribute_set_id": 3,
                                     "parent_id": 4,
                                     "created_at": "2013-01-25 10:58:32",
@@ -533,7 +521,6 @@ curl -X GET \
                                     "children_data": []
                                 },
                                 {
-                                    "entity_type_id": 3,
                                     "attribute_set_id": 3,
                                     "parent_id": 4,
                                     "created_at": "2013-01-25 10:59:21",
@@ -552,7 +539,6 @@ curl -X GET \
                             ]
                         },
                         {
-                            "entity_type_id": 3,
                             "attribute_set_id": 3,
                             "parent_id": 2,
                             "created_at": "2013-01-25 10:44:47",
@@ -568,7 +554,6 @@ curl -X GET \
                             "id": 5,
                             "children_data": [
                                 {
-                                    "entity_type_id": 3,
                                     "attribute_set_id": 3,
                                     "parent_id": 5,
                                     "created_at": "2013-01-25 11:01:03",
@@ -585,7 +570,6 @@ curl -X GET \
                                     "children_data": []
                                 },
                                 {
-                                    "entity_type_id": 3,
                                     "attribute_set_id": 3,
                                     "parent_id": 5,
                                     "created_at": "2013-01-25 11:01:28",
@@ -602,7 +586,6 @@ curl -X GET \
                                     "children_data": []
                                 },
                                 {
-                                    "entity_type_id": 3,
                                     "attribute_set_id": 3,
                                     "parent_id": 5,
                                     "created_at": "2013-01-25 11:03:19",
@@ -619,7 +602,6 @@ curl -X GET \
                                     "children_data": []
                                 },
                                 {
-                                    "entity_type_id": 3,
                                     "attribute_set_id": 3,
                                     "parent_id": 5,
                                     "created_at": "2013-01-25 11:03:48",
@@ -636,7 +618,6 @@ curl -X GET \
                                     "children_data": []
                                 },
                                 {
-                                    "entity_type_id": 3,
                                     "attribute_set_id": 3,
                                     "parent_id": 5,
                                     "created_at": "2013-11-04 03:18:58",
@@ -655,7 +636,6 @@ curl -X GET \
                             ]
                         },
                         {
-                            "entity_type_id": 3,
                             "attribute_set_id": 3,
                             "parent_id": 2,
                             "created_at": "2013-01-25 10:47:41",
@@ -671,7 +651,6 @@ curl -X GET \
                             "id": 6,
                             "children_data": [
                                 {
-                                    "entity_type_id": 3,
                                     "attribute_set_id": 3,
                                     "parent_id": 6,
                                     "created_at": "2013-01-25 11:04:27",
@@ -688,7 +667,6 @@ curl -X GET \
                                     "children_data": []
                                 },
                                 {
-                                    "entity_type_id": 3,
                                     "attribute_set_id": 3,
                                     "parent_id": 6,
                                     "created_at": "2013-01-25 11:05:03",
@@ -705,7 +683,6 @@ curl -X GET \
                                     "children_data": []
                                 },
                                 {
-                                    "entity_type_id": 3,
                                     "attribute_set_id": 3,
                                     "parent_id": 6,
                                     "created_at": "2013-01-25 11:06:05",
@@ -722,7 +699,6 @@ curl -X GET \
                                     "children_data": []
                                 },
                                 {
-                                    "entity_type_id": 3,
                                     "attribute_set_id": 3,
                                     "parent_id": 6,
                                     "created_at": "2013-01-25 11:07:12",
@@ -741,7 +717,6 @@ curl -X GET \
                             ]
                         },
                         {
-                            "entity_type_id": 3,
                             "attribute_set_id": 3,
                             "parent_id": 2,
                             "created_at": "2013-01-25 10:49:05",
@@ -757,7 +732,6 @@ curl -X GET \
                             "id": 7,
                             "children_data": [
                                 {
-                                    "entity_type_id": 3,
                                     "attribute_set_id": 3,
                                     "parent_id": 7,
                                     "created_at": "2013-01-25 11:07:52",
@@ -774,7 +748,6 @@ curl -X GET \
                                     "children_data": []
                                 },
                                 {
-                                    "entity_type_id": 3,
                                     "attribute_set_id": 3,
                                     "parent_id": 7,
                                     "created_at": "2013-01-25 11:08:31",
@@ -791,7 +764,6 @@ curl -X GET \
                                     "children_data": []
                                 },
                                 {
-                                    "entity_type_id": 3,
                                     "attribute_set_id": 3,
                                     "parent_id": 7,
                                     "created_at": "2013-01-25 11:08:54",
@@ -808,7 +780,6 @@ curl -X GET \
                                     "children_data": []
                                 },
                                 {
-                                    "entity_type_id": 3,
                                     "attribute_set_id": 3,
                                     "parent_id": 7,
                                     "created_at": "2013-01-25 11:10:06",
@@ -827,7 +798,6 @@ curl -X GET \
                             ]
                         },
                         {
-                            "entity_type_id": 3,
                             "attribute_set_id": 3,
                             "parent_id": 2,
                             "created_at": "2013-01-25 10:49:50",
@@ -843,7 +813,6 @@ curl -X GET \
                             "id": 8,
                             "children_data": [
                                 {
-                                    "entity_type_id": 3,
                                     "attribute_set_id": 3,
                                     "parent_id": 8,
                                     "created_at": "2013-01-25 11:10:39",
@@ -860,7 +829,6 @@ curl -X GET \
                                     "children_data": []
                                 },
                                 {
-                                    "entity_type_id": 3,
                                     "attribute_set_id": 3,
                                     "parent_id": 8,
                                     "created_at": "2013-01-25 11:11:07",
@@ -877,7 +845,6 @@ curl -X GET \
                                     "children_data": []
                                 },
                                 {
-                                    "entity_type_id": 3,
                                     "attribute_set_id": 3,
                                     "parent_id": 8,
                                     "created_at": "2013-01-25 11:11:31",
@@ -894,7 +861,6 @@ curl -X GET \
                                     "children_data": []
                                 },
                                 {
-                                    "entity_type_id": 3,
                                     "attribute_set_id": 3,
                                     "parent_id": 8,
                                     "created_at": "2013-01-25 11:12:07",
@@ -913,7 +879,6 @@ curl -X GET \
                             ]
                         },
                         {
-                            "entity_type_id": 3,
                             "attribute_set_id": 3,
                             "parent_id": 2,
                             "created_at": "2013-01-25 10:50:47",
@@ -1350,7 +1315,6 @@ curl -X GET \
     "code": 200,
     "result": [
         {
-            "entity_type_id": 4,
             "attribute_set_id": 11,
             "type_id": "simple",
             "sku": "abl004",
@@ -1426,7 +1390,6 @@ curl -X GET \
             }
         },
         {
-            "entity_type_id": 4,
             "attribute_set_id": 11,
             "type_id": "simple",
             "sku": "abl003",
@@ -1502,7 +1465,6 @@ curl -X GET \
             }
         },
         {
-            "entity_type_id": 4,
             "attribute_set_id": 13,
             "type_id": "configurable",
             "sku": "mpd000c",
@@ -3992,7 +3954,6 @@ Elastic Search data format. Please read more on [data formats used in Vue Storef
           "attribute_id": 157,
           "attribute_code": "size",
           "frontend_input": "select",
-          "entity_type_id": "4",
           "is_required": false,
           "options": [
             {
@@ -4120,7 +4081,6 @@ Elastic Search data format. Please read more on [data formats used in Vue Storef
           "attribute_id": 142,
           "attribute_code": "size",
           "frontend_input": "select",
-          "entity_type_id": "4",
           "is_required": false,
           "options": [
             {
@@ -4252,7 +4212,6 @@ Elastic Search data format. Please read more on [data formats used in Vue Storef
           "attribute_id": 93,
           "attribute_code": "color",
           "frontend_input": "select",
-          "entity_type_id": "4",
           "is_required": false,
           "options": [
             {
@@ -4354,7 +4313,6 @@ Elastic Search data format. Please read more on [data formats used in Vue Storef
           "attribute_id": 77,
           "attribute_code": "price",
           "frontend_input": "price",
-          "entity_type_id": "4",
           "is_required": true,
           "options": [],
           "is_user_defined": false,
