@@ -67,7 +67,6 @@ curl -X GET \
     "result": [
         {
             "attribute_code": "accessories_size",
-            "backend_model": null,
             "backend_type": "int",
             "backend_table": null,
             "frontend_model": null,
@@ -123,7 +122,6 @@ curl -X GET \
    
         {
             "attribute_code": "apparel_type",
-            "backend_model": null,
             "backend_type": "int",
             "backend_table": null,
             "frontend_model": null,
@@ -210,7 +208,6 @@ curl -X GET \
         },
         {
             "attribute_code": "author_artist",
-            "backend_model": null,
             "backend_type": "text",
             "backend_table": null,
             "frontend_model": null,
@@ -248,7 +245,6 @@ curl -X GET \
         },
         {
             "attribute_code": "bed_bath_type",
-            "backend_model": null,
             "backend_type": "int",
             "backend_table": null,
             "frontend_model": null,
@@ -295,7 +291,6 @@ curl -X GET \
         },
         {
             "attribute_code": "books_music_type",
-            "backend_model": null,
             "backend_type": "int",
             "backend_table": null,
             "frontend_model": null,
@@ -343,7 +338,6 @@ curl -X GET \
        
         {
             "attribute_code": "camera_type",
-            "backend_model": null,
             "backend_type": "int",
             "backend_table": null,
             "frontend_model": null,
@@ -4313,7 +4307,6 @@ Elastic Search data format. Please read more on [data formats used in Vue Storef
           "default_frontend_label": "Price",
           "frontend_labels": null,
           "backend_type": "decimal",
-          "backend_model": "Magento\\Catalog\\Model\\Product\\Attribute\\Backend\\Price",
           "is_unique": "0",
           "validation_rules": [],
           "id": 77,
