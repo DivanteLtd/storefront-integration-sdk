@@ -281,7 +281,6 @@ curl -X GET \
     "code": 200,
     "result": [
         {
-            "attribute_set_id": 0,
             "parent_id": 0,
             "created_at": "2013-01-14 10:12:53",
             "updated_at": "2013-01-14 10:12:53",
@@ -294,7 +293,6 @@ curl -X GET \
             "id": 1,
             "children_data": [
                 {
-                    "attribute_set_id": 3,
                     "parent_id": 1,
                     "created_at": "2013-01-14 10:12:53",
                     "updated_at": "2013-05-15 22:43:57",
@@ -308,7 +306,6 @@ curl -X GET \
                     "id": 2,
                     "children_data": [
                         {
-                            "attribute_set_id": 3,
                             "parent_id": 2,
                             "created_at": "2013-01-25 10:43:31",
                             "updated_at": "2013-05-15 22:50:23",
@@ -323,7 +320,6 @@ curl -X GET \
                             "id": 4,
                             "children_data": [
                                 {
-                                    "attribute_set_id": 3,
                                     "parent_id": 4,
                                     "created_at": "2013-01-25 10:56:08",
                                     "updated_at": "2014-03-07 15:01:55",
@@ -339,7 +335,6 @@ curl -X GET \
                                     "children_data": []
                                 },
                                 {
-                                    "attribute_set_id": 3,
                                     "parent_id": 4,
                                     "created_at": "2013-01-25 10:57:32",
                                     "updated_at": "2014-11-22 23:50:26",
@@ -355,7 +350,6 @@ curl -X GET \
                                     "children_data": []
                                 },
                                 {
-                                    "attribute_set_id": 3,
                                     "parent_id": 4,
                                     "created_at": "2013-01-25 10:58:32",
                                     "updated_at": "2013-05-06 04:11:20",
@@ -371,7 +365,6 @@ curl -X GET \
                                     "children_data": []
                                 },
                                 {
-                                    "attribute_set_id": 3,
                                     "parent_id": 4,
                                     "created_at": "2013-01-25 10:59:21",
                                     "updated_at": "2013-03-05 04:45:24",
@@ -389,7 +382,6 @@ curl -X GET \
                             ]
                         },
                         {
-                            "attribute_set_id": 3,
                             "parent_id": 2,
                             "created_at": "2013-01-25 10:44:47",
                             "updated_at": "2013-05-08 05:20:07",
@@ -404,7 +396,6 @@ curl -X GET \
                             "id": 5,
                             "children_data": [
                                 {
-                                    "attribute_set_id": 3,
                                     "parent_id": 5,
                                     "created_at": "2013-01-25 11:01:03",
                                     "updated_at": "2013-05-06 04:12:42",
@@ -420,7 +411,6 @@ curl -X GET \
                                     "children_data": []
                                 },
                                 {
-                                    "attribute_set_id": 3,
                                     "parent_id": 5,
                                     "created_at": "2013-01-25 11:01:28",
                                     "updated_at": "2014-11-23 00:08:20",
@@ -436,7 +426,6 @@ curl -X GET \
                                     "children_data": []
                                 },
                                 {
-                                    "attribute_set_id": 3,
                                     "parent_id": 5,
                                     "created_at": "2013-01-25 11:03:19",
                                     "updated_at": "2013-04-16 08:52:47",
@@ -452,7 +441,6 @@ curl -X GET \
                                     "children_data": []
                                 },
                                 {
-                                    "attribute_set_id": 3,
                                     "parent_id": 5,
                                     "created_at": "2013-01-25 11:03:48",
                                     "updated_at": "2013-03-05 07:15:31",
@@ -468,7 +456,6 @@ curl -X GET \
                                     "children_data": []
                                 },
                                 {
-                                    "attribute_set_id": 3,
                                     "parent_id": 5,
                                     "created_at": "2013-11-04 03:18:58",
                                     "updated_at": "2014-11-21 02:27:50",
@@ -486,7 +473,6 @@ curl -X GET \
                             ]
                         },
                         {
-                            "attribute_set_id": 3,
                             "parent_id": 2,
                             "created_at": "2013-01-25 10:47:41",
                             "updated_at": "2013-12-25 12:28:34",
@@ -501,7 +487,6 @@ curl -X GET \
                             "id": 6,
                             "children_data": [
                                 {
-                                    "attribute_set_id": 3,
                                     "parent_id": 6,
                                     "created_at": "2013-01-25 11:04:27",
                                     "updated_at": "2013-03-05 07:16:27",
@@ -517,7 +502,6 @@ curl -X GET \
                                     "children_data": []
                                 },
                                 {
-                                    "attribute_set_id": 3,
                                     "parent_id": 6,
                                     "created_at": "2013-01-25 11:05:03",
                                     "updated_at": "2013-03-05 07:16:42",
@@ -533,7 +517,6 @@ curl -X GET \
                                     "children_data": []
                                 },
                                 {
-                                    "attribute_set_id": 3,
                                     "parent_id": 6,
                                     "created_at": "2013-01-25 11:06:05",
                                     "updated_at": "2013-05-08 05:21:45",
@@ -549,7 +532,6 @@ curl -X GET \
                                     "children_data": []
                                 },
                                 {
-                                    "attribute_set_id": 3,
                                     "parent_id": 6,
                                     "created_at": "2013-01-25 11:07:12",
                                     "updated_at": "2013-03-05 07:17:10",
@@ -567,7 +549,6 @@ curl -X GET \
                             ]
                         },
                         {
-                            "attribute_set_id": 3,
                             "parent_id": 2,
                             "created_at": "2013-01-25 10:49:05",
                             "updated_at": "2013-05-08 05:26:34",
@@ -582,7 +563,6 @@ curl -X GET \
                             "id": 7,
                             "children_data": [
                                 {
-                                    "attribute_set_id": 3,
                                     "parent_id": 7,
                                     "created_at": "2013-01-25 11:07:52",
                                     "updated_at": "2013-05-16 20:06:14",
@@ -598,7 +578,6 @@ curl -X GET \
                                     "children_data": []
                                 },
                                 {
-                                    "attribute_set_id": 3,
                                     "parent_id": 7,
                                     "created_at": "2013-01-25 11:08:31",
                                     "updated_at": "2013-03-05 07:17:38",
@@ -614,7 +593,6 @@ curl -X GET \
                                     "children_data": []
                                 },
                                 {
-                                    "attribute_set_id": 3,
                                     "parent_id": 7,
                                     "created_at": "2013-01-25 11:08:54",
                                     "updated_at": "2013-03-08 19:27:16",
@@ -630,7 +608,6 @@ curl -X GET \
                                     "children_data": []
                                 },
                                 {
-                                    "attribute_set_id": 3,
                                     "parent_id": 7,
                                     "created_at": "2013-01-25 11:10:06",
                                     "updated_at": "2013-03-29 22:54:12",
@@ -648,7 +625,6 @@ curl -X GET \
                             ]
                         },
                         {
-                            "attribute_set_id": 3,
                             "parent_id": 2,
                             "created_at": "2013-01-25 10:49:50",
                             "updated_at": "2013-05-15 22:49:33",
@@ -663,7 +639,6 @@ curl -X GET \
                             "id": 8,
                             "children_data": [
                                 {
-                                    "attribute_set_id": 3,
                                     "parent_id": 8,
                                     "created_at": "2013-01-25 11:10:39",
                                     "updated_at": "2013-05-06 04:17:00",
@@ -679,7 +654,6 @@ curl -X GET \
                                     "children_data": []
                                 },
                                 {
-                                    "attribute_set_id": 3,
                                     "parent_id": 8,
                                     "created_at": "2013-01-25 11:11:07",
                                     "updated_at": "2013-05-06 04:17:12",
@@ -695,7 +669,6 @@ curl -X GET \
                                     "children_data": []
                                 },
                                 {
-                                    "attribute_set_id": 3,
                                     "parent_id": 8,
                                     "created_at": "2013-01-25 11:11:31",
                                     "updated_at": "2013-05-06 04:17:24",
@@ -711,7 +684,6 @@ curl -X GET \
                                     "children_data": []
                                 },
                                 {
-                                    "attribute_set_id": 3,
                                     "parent_id": 8,
                                     "created_at": "2013-01-25 11:12:07",
                                     "updated_at": "2013-05-06 04:17:34",
@@ -729,7 +701,6 @@ curl -X GET \
                             ]
                         },
                         {
-                            "attribute_set_id": 3,
                             "parent_id": 2,
                             "created_at": "2013-01-25 10:50:47",
                             "updated_at": "2013-05-10 17:17:59",
@@ -1165,7 +1136,6 @@ curl -X GET \
     "code": 200,
     "result": [
         {
-            "attribute_set_id": 11,
             "type_id": "simple",
             "sku": "abl004",
             "has_options": false,
@@ -1240,7 +1210,6 @@ curl -X GET \
             }
         },
         {
-            "attribute_set_id": 11,
             "type_id": "simple",
             "sku": "abl003",
             "has_options": false,
@@ -1315,7 +1284,6 @@ curl -X GET \
             }
         },
         {
-            "attribute_set_id": 13,
             "type_id": "configurable",
             "sku": "mpd000c",
             "has_options": true,
@@ -4148,7 +4116,6 @@ For list:
         "id": 1866,
         "sku": "WP07",
         "name": "Aeon Capri",
-        "attribute_set_id": 10,
         "price": 0,
         "status": 1,
         "visibility": 4,
