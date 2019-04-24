@@ -1143,7 +1143,6 @@ curl -X GET \
             "created_at": "2013-04-04 05:48:18",
             "updated_at": "2014-11-24 10:29:12",
             "color": null,
-            "material": 138,
             "jewelry_type": null,
             "status": 1,
             "accessories_size": null,
@@ -1210,7 +1209,6 @@ curl -X GET \
             "created_at": "2013-04-04 05:48:18",
             "updated_at": "2014-11-24 10:28:33",
             "color": 20,
-            "material": 138,
             "jewelry_type": null,
             "status": 1,
             "accessories_size": null,
@@ -4136,10 +4134,6 @@ For list:
           {
             "attribute_code": "tax_class_id",
             "value": "2"
-          },
-          {
-            "attribute_code": "material",
-            "value": "156,150,154"
           },
           {
             "attribute_code": "eco_collection",
