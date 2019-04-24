@@ -1136,7 +1136,6 @@ curl -X GET \
         {
             "type_id": "simple",
             "sku": "abl004",
-            "required_options": 0,
             "created_at": "2013-04-04 05:48:18",
             "updated_at": "2014-11-24 10:29:12",
             "color": null,
@@ -1209,7 +1208,6 @@ curl -X GET \
         {
             "type_id": "simple",
             "sku": "abl003",
-            "required_options": 0,
             "created_at": "2013-04-04 05:48:18",
             "updated_at": "2014-11-24 10:28:33",
             "color": 20,
@@ -1282,7 +1280,6 @@ curl -X GET \
         {
             "type_id": "configurable",
             "sku": "mpd000c",
-            "required_options": 1,
             "created_at": "2013-05-03 20:06:20",
             "updated_at": "2014-11-23 00:12:49",
             "status": 1,
@@ -4148,10 +4145,6 @@ For list:
           {
             "attribute_code": "options_container",
             "value": "container2"
-          },
-          {
-            "attribute_code": "required_options",
-            "value": "0"
           },
           {
             "attribute_code": "url_key",
