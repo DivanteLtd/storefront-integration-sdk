@@ -96,7 +96,6 @@ curl -X GET \
                 }
             ]
         },
-   
         {
             "attribute_code": "apparel_type",
             "frontend_input": "select",
@@ -220,7 +219,6 @@ curl -X GET \
                 }
             ]
         },
-       
         {
             "attribute_code": "camera_type",
             "frontend_input": "select",
@@ -1138,7 +1136,6 @@ curl -X GET \
         {
             "type_id": "simple",
             "sku": "abl004",
-            "has_options": false,
             "required_options": 0,
             "created_at": "2013-04-04 05:48:18",
             "updated_at": "2014-11-24 10:29:12",
@@ -1212,7 +1209,6 @@ curl -X GET \
         {
             "type_id": "simple",
             "sku": "abl003",
-            "has_options": false,
             "required_options": 0,
             "created_at": "2013-04-04 05:48:18",
             "updated_at": "2014-11-24 10:28:33",
@@ -1286,7 +1282,6 @@ curl -X GET \
         {
             "type_id": "configurable",
             "sku": "mpd000c",
-            "has_options": true,
             "required_options": 1,
             "created_at": "2013-05-03 20:06:20",
             "updated_at": "2014-11-23 00:12:49",
@@ -4157,10 +4152,6 @@ For list:
           {
             "attribute_code": "required_options",
             "value": "0"
-          },
-          {
-            "attribute_code": "has_options",
-            "value": "1"
           },
           {
             "attribute_code": "url_key",
