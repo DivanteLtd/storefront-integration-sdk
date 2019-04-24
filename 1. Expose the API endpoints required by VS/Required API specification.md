@@ -1168,7 +1168,6 @@ curl -X GET \
                     "image": "https://via.placeholder.com/1024x1024.png"
                 }
             ],
-            "options_container": "container1",
             "url_key": "rolls-travel-wallet",
             "url_path": "rolls-travel-wallet.html",
             "image_label": null,
@@ -1233,7 +1232,6 @@ curl -X GET \
                     "image": "https://via.placeholder.com/1024x1024.png"
                 }
             ],
-            "options_container": "container1",
             "url_key": "flapover-briefcase",
             "url_path": "flapover-briefcase.html",
             "image_label": null,
@@ -1291,7 +1289,6 @@ curl -X GET \
             "image": "/m/p/mpd000t.jpg",
             "small_image": "/m/p/mpd000t.jpg",
             "thumbnail": "/m/p/mpd000t.jpg",
-            "options_container": "container1",
             "gift_message_available": null,
             "gift_wrapping_available": 0,
             "image_label": null,
@@ -1324,7 +1321,6 @@ curl -X GET \
                     "length": null,
                     "recurring_profile": null,
                     "name": "Khaki Bowery Chino Pants",
-                    "options_container": "container2",
                     "gift_message_available": null,
                     "gift_wrapping_available": null,
                     "url_key": "khaki-bowery-chino-pants",
@@ -1359,7 +1355,6 @@ curl -X GET \
                     "length": null,
                     "recurring_profile": null,
                     "name": "Khaki Bowery Chino Pants",
-                    "options_container": "container2",
                     "gift_message_available": null,
                     "gift_wrapping_available": null,
                     "url_key": "khaki-bowery-chino-pants",
@@ -1394,7 +1389,6 @@ curl -X GET \
                     "length": null,
                     "recurring_profile": null,
                     "name": "Khaki Bowery Chino Pants",
-                    "options_container": "container2",
                     "gift_message_available": null,
                     "gift_wrapping_available": null,
                     "url_key": "khaki-bowery-chino-pants",
@@ -1443,7 +1437,6 @@ curl -X GET \
                             "image": "https://via.placeholder.com/1024x1024.png"
                         }
                     ],
-                    "options_container": "container1",
                     "url_key": "bowery-chino-pants",
                     "url_path": "bowery-chino-pants.html",
                     "image_label": null,
@@ -1487,7 +1480,6 @@ curl -X GET \
                             "image": "https://via.placeholder.com/1024x1024.png"
                         }
                     ],
-                    "options_container": "container1",
                     "url_key": "bowery-chino-pants",
                     "url_path": "bowery-chino-pants-549.html",
                     "image_label": null,
@@ -1531,7 +1523,6 @@ curl -X GET \
                             "image": "https://via.placeholder.com/1024x1024.png"
                         }
                     ],
-                    "options_container": "container1",
                     "url_key": "bowery-chino-pants",
                     "url_path": "bowery-chino-pants-550.html",
                     "image_label": null,
@@ -1561,7 +1552,6 @@ curl -X GET \
                     "length": null,
                     "recurring_profile": null,
                     "name": "Bowery Chino Pants",
-                    "options_container": "container1",
                     "gift_message_available": null,
                     "gift_wrapping_available": null,
                     "url_key": "bowery-chino-pants-charcoal-38",
@@ -1596,7 +1586,6 @@ curl -X GET \
                     "length": null,
                     "recurring_profile": null,
                     "name": "Bowery Chino Pants",
-                    "options_container": "container1",
                     "gift_message_available": null,
                     "gift_wrapping_available": null,
                     "url_key": "bowery-chino-pants-charcoal-31",
@@ -1631,7 +1620,6 @@ curl -X GET \
                     "length": null,
                     "recurring_profile": null,
                     "name": "Bowery Chino Pants",
-                    "options_container": "container1",
                     "gift_message_available": null,
                     "gift_wrapping_available": null,
                     "url_key": "bowery-chino-pants",
@@ -1666,7 +1654,6 @@ curl -X GET \
                     "length": null,
                     "recurring_profile": null,
                     "name": "Bowery Chino Pants",
-                    "options_container": "container1",
                     "gift_message_available": null,
                     "gift_wrapping_available": null,
                     "url_key": "bowery-chino-pants",
@@ -1701,7 +1688,6 @@ curl -X GET \
                     "length": null,
                     "recurring_profile": null,
                     "name": "Khaki Bowery Chino Pants",
-                    "options_container": "container1",
                     "gift_message_available": null,
                     "gift_wrapping_available": null,
                     "url_key": "khaki-bowery-chino-pants-khaki-28",
@@ -1736,7 +1722,6 @@ curl -X GET \
                     "length": null,
                     "recurring_profile": null,
                     "name": "Khaki Bowery Chino Pants",
-                    "options_container": "container1",
                     "gift_message_available": null,
                     "gift_wrapping_available": null,
                     "url_key": "khaki-bowery-chino-pants",
@@ -1771,7 +1756,6 @@ curl -X GET \
                     "length": null,
                     "recurring_profile": null,
                     "name": "Khaki Bowery Chino Pants",
-                    "options_container": "container1",
                     "gift_message_available": null,
                     "gift_wrapping_available": null,
                     "url_key": "khaki-bowery-chino-pants",
@@ -1806,7 +1790,6 @@ curl -X GET \
                     "length": null,
                     "recurring_profile": null,
                     "name": "Khaki Bowery Chino Pants",
-                    "options_container": "container1",
                     "gift_message_available": null,
                     "gift_wrapping_available": null,
                     "url_key": "khaki-bowery-chino-pants",
@@ -3995,10 +3978,6 @@ For list:
               "35",
               "2"
             ]
-          },
-          {
-            "attribute_code": "options_container",
-            "value": "container2"
           },
           {
             "attribute_code": "url_key",
