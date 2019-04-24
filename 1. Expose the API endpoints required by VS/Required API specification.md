@@ -1173,7 +1173,6 @@ curl -X GET \
             "news_to_date": null,
             "special_from_date": null,
             "special_to_date": null,
-            "is_salable": true,
             "stock_item": {},
             "id": 374,
             "category": [
@@ -1226,7 +1225,6 @@ curl -X GET \
             "news_to_date": null,
             "special_from_date": null,
             "special_to_date": null,
-            "is_salable": true,
             "stock_item": {},
             "id": 373,
             "category": [
@@ -1280,7 +1278,6 @@ curl -X GET \
             "news_to_date": null,
             "special_from_date": null,
             "special_to_date": null,
-            "is_salable": true,
             "stock_item": {},
             "id": 456,
             "configurable_children": [
@@ -1317,7 +1314,6 @@ curl -X GET \
                     "special_from_date": null,
                     "special_to_date": null,
                     "is_in_stock": true,
-                    "is_salable": true
                 },
                 {
                     "sku": "mpd001",
@@ -1352,7 +1348,6 @@ curl -X GET \
                     "special_from_date": null,
                     "special_to_date": null,
                     "is_in_stock": true,
-                    "is_salable": true
                 },
                 {
                     "sku": "mpd002",
@@ -1387,7 +1382,6 @@ curl -X GET \
                     "special_from_date": null,
                     "special_to_date": null,
                     "is_in_stock": true,
-                    "is_salable": true
                 },
                 {
                     "sku": "mpd003",
@@ -1423,7 +1417,6 @@ curl -X GET \
                     "special_from_date": null,
                     "special_to_date": null,
                     "is_in_stock": true,
-                    "is_salable": true
                 },
                 {
                     "sku": "mpd004",
@@ -1459,7 +1452,6 @@ curl -X GET \
                     "special_from_date": null,
                     "special_to_date": null,
                     "is_in_stock": true,
-                    "is_salable": true
                 },
                 {
                     "sku": "mpd005",
@@ -1495,7 +1487,6 @@ curl -X GET \
                     "special_from_date": null,
                     "special_to_date": null,
                     "is_in_stock": true,
-                    "is_salable": true
                 },
                 {
                     "sku": "mpd00338",
@@ -1530,7 +1521,6 @@ curl -X GET \
                     "special_from_date": null,
                     "special_to_date": null,
                     "is_in_stock": true,
-                    "is_salable": true
                 },
                 {
                     "sku": "mpd00331",
@@ -1565,7 +1555,6 @@ curl -X GET \
                     "special_from_date": null,
                     "special_to_date": null,
                     "is_in_stock": false,
-                    "is_salable": false
                 },
                 {
                     "sku": "mpd00328",
@@ -1600,7 +1589,6 @@ curl -X GET \
                     "special_from_date": null,
                     "special_to_date": null,
                     "is_in_stock": true,
-                    "is_salable": true
                 },
                 {
                     "sku": "mpd00336",
@@ -1635,7 +1623,6 @@ curl -X GET \
                     "special_from_date": null,
                     "special_to_date": null,
                     "is_in_stock": true,
-                    "is_salable": true
                 },
                 {
                     "sku": "mpd00028",
@@ -1670,7 +1657,6 @@ curl -X GET \
                     "special_from_date": null,
                     "special_to_date": null,
                     "is_in_stock": true,
-                    "is_salable": true
                 },
                 {
                     "sku": "mpd00031",
@@ -1705,7 +1691,6 @@ curl -X GET \
                     "special_from_date": null,
                     "special_to_date": null,
                     "is_in_stock": true,
-                    "is_salable": true
                 },
                 {
                     "sku": "mpd00036",
@@ -1740,7 +1725,6 @@ curl -X GET \
                     "special_from_date": null,
                     "special_to_date": null,
                     "is_in_stock": true,
-                    "is_salable": true
                 },
                 {
                     "sku": "mpd00038",
@@ -1775,7 +1759,6 @@ curl -X GET \
                     "special_from_date": null,
                     "special_to_date": null,
                     "is_in_stock": true,
-                    "is_salable": true
                 }
             ],
             "configurable_options": [
@@ -4126,7 +4109,6 @@ For render-list:
         "id": 1866,
         "name": "Aeon Capri",
         "type": "configurable",
-        "is_salable": "1",
         "store_id": 1,
         "currency_code": "USD",
         "extension_attributes": {
