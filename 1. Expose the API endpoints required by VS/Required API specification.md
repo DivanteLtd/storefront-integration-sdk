@@ -1114,6 +1114,10 @@ curl -X GET \
 ### GET [/vsbridge/products/index](https://github.com/DivanteLtd/magento1-vsbridge/blob/154a51248bb1acbfffa0c270dae45a7e87cc6492/magento1-module/app/code/local/Divante/VueStorefrontBridge/controllers/ProductsController.php#L6)
 This method is used to get all the products from the backend
 
+**Note**: The response below contains only attributes required for vue-storefront to work.
+If you need to define more attributes, check out: 
+[Product Attributes](https%3A%2F%2Fgithub.com%2FDivanteLtd%2Fvue-storefront-integration-boilerplate%2Fblob%2Fmaster%2F1.%20Expose%20the%20API%20endpoints%20required%20by%20VS%2FProduct%20Attributes.md)
+
 #### GET PARAMS
 `apikey` - authorization key provided by `/vsbridge/auth/admin` endpoint
 `pageSize` - number of records to be returned
