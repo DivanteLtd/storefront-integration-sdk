@@ -1186,6 +1186,10 @@ curl -X GET \
                     "name": "Bags & Luggage"
                 }
             ],
+            "category_ids": [
+                9,
+                21
+            ],
             "stock":{
                 "is_in_stock": true
             }
@@ -1238,6 +1242,10 @@ curl -X GET \
                     "category_id": 21,
                     "name": "Bags & Luggage"
                 }
+            ],
+            "category_ids": [
+                9,
+                21 
             ],
             "stock":{    
                 "is_in_stock": true
@@ -1929,6 +1937,11 @@ curl -X GET \
                     "category_id": 17,
                     "name": "Pants & Denim"
                 }
+            ],
+            "category_ids": [
+                5,
+                14,
+                17
             ],
             "stock":{    
                 "is_in_stock": true
