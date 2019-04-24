@@ -1158,7 +1158,16 @@ curl -X GET \
             "gift_wrapping_available": 0,
             "meta_description": null,
             "thumbnail": "/a/b/abl004a_1.jpg",
-            "media_gallery": null,
+            "media_gallery" : [
+                {
+                    "id": 2406,
+                    "image": "https://via.placeholder.com/1024x1024.png"
+                },
+                {
+                    "id": 2405,
+                    "image": "https://via.placeholder.com/1024x1024.png"
+                }
+            ],
             "gallery": null,
             "options_container": "container1",
             "url_key": "rolls-travel-wallet",
@@ -1215,7 +1224,16 @@ curl -X GET \
             "gift_wrapping_available": 0,
             "meta_description": null,
             "thumbnail": "/a/b/abl003b_1.jpg",
-            "media_gallery": null,
+            "media_gallery" : [
+                {
+                    "id": 2406,
+                    "image": "https://via.placeholder.com/1024x1024.png"
+                },
+                {
+                    "id": 2405,
+                    "image": "https://via.placeholder.com/1024x1024.png"
+                }
+            ],
             "gallery": null,
             "options_container": "container1",
             "url_key": "flapover-briefcase",
@@ -1417,7 +1435,16 @@ curl -X GET \
                     "small_image": "/m/p/mpd003t_2.jpg",
                     "gift_wrapping_available": null,
                     "thumbnail": "/m/p/mpd003t_2.jpg",
-                    "media_gallery": null,
+                    "media_gallery" : [
+                        {
+                            "id": 2406,
+                            "image": "https://via.placeholder.com/1024x1024.png"
+                        },
+                        {
+                            "id": 2405,
+                            "image": "https://via.placeholder.com/1024x1024.png"
+                        }
+                    ],
                     "gallery": null,
                     "options_container": "container1",
                     "url_key": "bowery-chino-pants",
@@ -1453,7 +1480,16 @@ curl -X GET \
                     "small_image": "/m/p/mpd003t_3.jpg",
                     "gift_wrapping_available": null,
                     "thumbnail": "/m/p/mpd003t_3.jpg",
-                    "media_gallery": null,
+                    "media_gallery" : [
+                        {
+                            "id": 2406,
+                            "image": "https://via.placeholder.com/1024x1024.png"
+                        },
+                        {
+                            "id": 2405,
+                            "image": "https://via.placeholder.com/1024x1024.png"
+                        }
+                    ],
                     "gallery": null,
                     "options_container": "container1",
                     "url_key": "bowery-chino-pants",
@@ -1489,7 +1525,16 @@ curl -X GET \
                     "small_image": "/m/p/mpd003t_4.jpg",
                     "gift_wrapping_available": null,
                     "thumbnail": "/m/p/mpd003t_4.jpg",
-                    "media_gallery": null,
+                    "media_gallery" : [
+                        {
+                            "id": 2406,
+                            "image": "https://via.placeholder.com/1024x1024.png"
+                        },
+                        {
+                            "id": 2405,
+                            "image": "https://via.placeholder.com/1024x1024.png"
+                        }
+                    ],
                     "gallery": null,
                     "options_container": "container1",
                     "url_key": "bowery-chino-pants",
