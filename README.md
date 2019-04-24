@@ -86,4 +86,4 @@ Please note that You still need to use the `vue-storefront-api` for accessing th
 
 This is MIT project so it's ... just AS IS :) However, if You're planing to add the new platform to the Vue Storefront ecosystem and publish it freely as an open source - we'll do our best to support You! 
 
-Please feel free to contact the core team on [Slack channel](http://slack.vuestorefront.io) or via contributors@vuestorefront.io
+Please feel free to contact the core team at [Vue Storefront Forum](https://forum.vuestorefront.io/c/development/integrations), on [Slack channel](http://slack.vuestorefront.io) or via contributors@vuestorefront.io
