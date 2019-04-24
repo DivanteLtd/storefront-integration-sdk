@@ -1156,7 +1156,6 @@ curl -X GET \
             "gift_message_available": null,
             "gift_wrapping_available": 0,
             "meta_description": null,
-            "thumbnail": "/a/b/abl004a_1.jpg",
             "media_gallery" : [
                 {
                     "id": 2406,
@@ -1215,7 +1214,6 @@ curl -X GET \
             "gift_message_available": null,
             "gift_wrapping_available": 0,
             "meta_description": null,
-            "thumbnail": "/a/b/abl003b_1.jpg",
             "media_gallery" : [
                 {
                     "id": 2406,
@@ -1274,7 +1272,6 @@ curl -X GET \
             "meta_title": null,
             "meta_description": null,
             "image": "/m/p/mpd000t.jpg",
-            "thumbnail": "/m/p/mpd000t.jpg",
             "gift_message_available": null,
             "gift_wrapping_available": 0,
             "url_path": "khaki-bowery-chino-pants.html",
@@ -1305,7 +1302,6 @@ curl -X GET \
                     "url_key": "khaki-bowery-chino-pants",
                     "url_path": "khaki-bowery-chino-pants-567.html",
                     "image": "/m/p/mpd000t_2.jpg",
-                    "thumbnail": "/m/p/mpd000t_2.jpg",
                     "price": 140,
                     "final_price": 140,
                     "special_price": null,
@@ -1330,7 +1326,6 @@ curl -X GET \
                     "url_key": "khaki-bowery-chino-pants",
                     "url_path": "khaki-bowery-chino-pants-568.html",
                     "image": "/m/p/mpd000t_3.jpg",
-                    "thumbnail": "/m/p/mpd000t_3.jpg",
                     "price": 140,
                     "final_price": 140,
                     "special_price": null,
@@ -1355,7 +1350,6 @@ curl -X GET \
                     "url_key": "khaki-bowery-chino-pants",
                     "url_path": "khaki-bowery-chino-pants-569.html",
                     "image": "/m/p/mpd000t_1.jpg",
-                    "thumbnail": "/m/p/mpd000t_1.jpg",
                     "price": 140,
                     "final_price": 140,
                     "special_price": null,
@@ -1378,7 +1372,6 @@ curl -X GET \
                     "image": "/m/p/mpd003t_2.jpg",
                     "gift_message_available": null,
                     "gift_wrapping_available": null,
-                    "thumbnail": "/m/p/mpd003t_2.jpg",
                     "media_gallery" : [
                         {
                             "id": 2406,
@@ -1413,7 +1406,6 @@ curl -X GET \
                     "image": "/m/p/mpd003t_3.jpg",
                     "gift_message_available": null,
                     "gift_wrapping_available": null,
-                    "thumbnail": "/m/p/mpd003t_3.jpg",
                     "media_gallery" : [
                         {
                             "id": 2406,
@@ -1448,7 +1440,6 @@ curl -X GET \
                     "image": "/m/p/mpd003t_4.jpg",
                     "gift_message_available": null,
                     "gift_wrapping_available": null,
-                    "thumbnail": "/m/p/mpd003t_4.jpg",
                     "media_gallery" : [
                         {
                             "id": 2406,
@@ -1485,7 +1476,6 @@ curl -X GET \
                     "url_key": "bowery-chino-pants-charcoal-38",
                     "url_path": "bowery-chino-pants-charcoal-38.html",
                     "image": "/m/p/mpd003t_6.jpg",
-                    "thumbnail": "/m/p/mpd003t_6.jpg",
                     "price": 140,
                     "final_price": 140,
                     "special_price": null,
@@ -1510,7 +1500,6 @@ curl -X GET \
                     "url_key": "bowery-chino-pants-charcoal-31",
                     "url_path": "bowery-chino-pants-charcoal-31.html",
                     "image": "/m/p/mpd003t_7.jpg",
-                    "thumbnail": "/m/p/mpd003t_7.jpg",
                     "price": 140,
                     "final_price": 140,
                     "special_price": null,
@@ -1535,7 +1524,6 @@ curl -X GET \
                     "url_key": "bowery-chino-pants",
                     "url_path": "bowery-chino-pants-553.html",
                     "image": "/m/p/mpd003t_8.jpg",
-                    "thumbnail": "/m/p/mpd003t_8.jpg",
                     "price": 140,
                     "final_price": 140,
                     "special_price": null,
@@ -1560,7 +1548,6 @@ curl -X GET \
                     "url_key": "bowery-chino-pants",
                     "url_path": "bowery-chino-pants-552.html",
                     "image": "/m/p/mpd003t_5.jpg",
-                    "thumbnail": "/m/p/mpd003t_5.jpg",
                     "price": 140,
                     "final_price": 140,
                     "special_price": null,
@@ -1585,7 +1572,6 @@ curl -X GET \
                     "url_key": "khaki-bowery-chino-pants-khaki-28",
                     "url_path": "khaki-bowery-chino-pants-khaki-28.html",
                     "image": "/m/p/mpd000t_4.jpg",
-                    "thumbnail": "/m/p/mpd000t_4.jpg",
                     "price": 140,
                     "final_price": 140,
                     "special_price": null,
@@ -1610,7 +1596,6 @@ curl -X GET \
                     "url_key": "khaki-bowery-chino-pants",
                     "url_path": "khaki-bowery-chino-pants-570.html",
                     "image": "/m/p/mpd000t_5.jpg",
-                    "thumbnail": "/m/p/mpd000t_5.jpg",
                     "price": 140,
                     "final_price": 140,
                     "special_price": null,
@@ -1635,7 +1620,6 @@ curl -X GET \
                     "url_key": "khaki-bowery-chino-pants",
                     "url_path": "khaki-bowery-chino-pants-571.html",
                     "image": "/m/p/mpd000t_6.jpg",
-                    "thumbnail": "/m/p/mpd000t_6.jpg",
                     "price": 140,
                     "final_price": 140,
                     "special_price": null,
@@ -1660,7 +1644,6 @@ curl -X GET \
                     "url_key": "khaki-bowery-chino-pants",
                     "url_path": "khaki-bowery-chino-pants-572.html",
                     "image": "/m/p/mpd000t_7.jpg",
-                    "thumbnail": "/m/p/mpd000t_7.jpg",
                     "price": 140,
                     "final_price": 140,
                     "special_price": null,
@@ -3819,10 +3802,6 @@ For list:
           },
           {
             "attribute_code": "image",
-            "value": "/w/p/wp07-black_main.jpg"
-          },
-          {
-            "attribute_code": "thumbnail",
             "value": "/w/p/wp07-black_main.jpg"
           },
           {
