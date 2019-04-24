@@ -1168,7 +1168,6 @@ curl -X GET \
                     "image": "https://via.placeholder.com/1024x1024.png"
                 }
             ],
-            "gallery": null,
             "options_container": "container1",
             "url_key": "rolls-travel-wallet",
             "url_path": "rolls-travel-wallet.html",
@@ -1234,7 +1233,6 @@ curl -X GET \
                     "image": "https://via.placeholder.com/1024x1024.png"
                 }
             ],
-            "gallery": null,
             "options_container": "container1",
             "url_key": "flapover-briefcase",
             "url_path": "flapover-briefcase.html",
@@ -1445,7 +1443,6 @@ curl -X GET \
                             "image": "https://via.placeholder.com/1024x1024.png"
                         }
                     ],
-                    "gallery": null,
                     "options_container": "container1",
                     "url_key": "bowery-chino-pants",
                     "url_path": "bowery-chino-pants.html",
@@ -1490,7 +1487,6 @@ curl -X GET \
                             "image": "https://via.placeholder.com/1024x1024.png"
                         }
                     ],
-                    "gallery": null,
                     "options_container": "container1",
                     "url_key": "bowery-chino-pants",
                     "url_path": "bowery-chino-pants-549.html",
@@ -1535,7 +1531,6 @@ curl -X GET \
                             "image": "https://via.placeholder.com/1024x1024.png"
                         }
                     ],
-                    "gallery": null,
                     "options_container": "container1",
                     "url_key": "bowery-chino-pants",
                     "url_path": "bowery-chino-pants-550.html",
