@@ -1306,7 +1306,10 @@ curl -X GET \
                     "special_price": null,
                     "special_from_date": null,
                     "special_to_date": null,
-                    "is_in_stock": true
+                    "is_in_stock": true,
+                    "stock":{
+                        "is_in_stock": true
+                    }
                 },
                 {
                     "sku": "mpd001",
@@ -1329,7 +1332,10 @@ curl -X GET \
                     "special_price": null,
                     "special_from_date": null,
                     "special_to_date": null,
-                    "is_in_stock": true
+                    "is_in_stock": true,
+                    "stock":{
+                        "is_in_stock": true
+                    }
                 },
                 {
                     "sku": "mpd002",
@@ -1352,7 +1358,10 @@ curl -X GET \
                     "special_price": null,
                     "special_from_date": null,
                     "special_to_date": null,
-                    "is_in_stock": true
+                    "is_in_stock": true,
+                    "stock":{
+                        "is_in_stock": true
+                    }
                 },
                 {
                     "sku": "mpd003",
@@ -1385,7 +1394,10 @@ curl -X GET \
                     "special_price": null,
                     "special_from_date": null,
                     "special_to_date": null,
-                    "is_in_stock": true
+                    "is_in_stock": true,
+                    "stock":{
+                        "is_in_stock": true
+                    }
                 },
                 {
                     "sku": "mpd004",
@@ -1418,7 +1430,10 @@ curl -X GET \
                     "special_price": null,
                     "special_from_date": null,
                     "special_to_date": null,
-                    "is_in_stock": true
+                    "is_in_stock": true,
+                    "stock":{
+                        "is_in_stock": true
+                    }
                 },
                 {
                     "sku": "mpd005",
@@ -1451,7 +1466,10 @@ curl -X GET \
                     "special_price": null,
                     "special_from_date": null,
                     "special_to_date": null,
-                    "is_in_stock": true
+                    "is_in_stock": true,
+                    "stock":{
+                        "is_in_stock": true
+                    }
                 },
                 {
                     "sku": "mpd00338",
@@ -1474,7 +1492,10 @@ curl -X GET \
                     "special_price": null,
                     "special_from_date": null,
                     "special_to_date": null,
-                    "is_in_stock": true
+                    "is_in_stock": true,
+                    "stock":{
+                        "is_in_stock": true
+                    }
                 },
                 {
                     "sku": "mpd00331",
@@ -1497,7 +1518,10 @@ curl -X GET \
                     "special_price": null,
                     "special_from_date": null,
                     "special_to_date": null,
-                    "is_in_stock": false
+                    "is_in_stock": false,
+                    "stock":{
+                        "is_in_stock": true
+                    }
                 },
                 {
                     "sku": "mpd00328",
@@ -1520,7 +1544,10 @@ curl -X GET \
                     "special_price": null,
                     "special_from_date": null,
                     "special_to_date": null,
-                    "is_in_stock": true
+                    "is_in_stock": true,
+                    "stock":{
+                        "is_in_stock": true
+                    }
                 },
                 {
                     "sku": "mpd00336",
@@ -1543,7 +1570,10 @@ curl -X GET \
                     "special_price": null,
                     "special_from_date": null,
                     "special_to_date": null,
-                    "is_in_stock": true
+                    "is_in_stock": true,
+                    "stock":{
+                        "is_in_stock": true
+                    }
                 },
                 {
                     "sku": "mpd00028",
@@ -1566,7 +1596,10 @@ curl -X GET \
                     "special_price": null,
                     "special_from_date": null,
                     "special_to_date": null,
-                    "is_in_stock": true
+                    "is_in_stock": true,
+                    "stock":{
+                        "is_in_stock": true
+                    }
                 },
                 {
                     "sku": "mpd00031",
@@ -1589,7 +1622,10 @@ curl -X GET \
                     "special_price": null,
                     "special_from_date": null,
                     "special_to_date": null,
-                    "is_in_stock": true
+                    "is_in_stock": true,
+                    "stock":{
+                        "is_in_stock": true
+                    }
                 },
                 {
                     "sku": "mpd00036",
@@ -1612,7 +1648,10 @@ curl -X GET \
                     "special_price": null,
                     "special_from_date": null,
                     "special_to_date": null,
-                    "is_in_stock": true
+                    "is_in_stock": true,
+                    "stock":{
+                        "is_in_stock": true
+                    }
                 },
                 {
                     "sku": "mpd00038",
@@ -1635,7 +1674,10 @@ curl -X GET \
                     "special_price": null,
                     "special_from_date": null,
                     "special_to_date": null,
-                    "is_in_stock": true
+                    "is_in_stock": true,
+                    "stock":{
+                        "is_in_stock": true
+                    }
                 }
             ],
             "configurable_options": [
