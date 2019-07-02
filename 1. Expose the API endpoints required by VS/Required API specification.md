@@ -2251,7 +2251,7 @@ You have totals data for the current, synchronized quote returned:
 
 ### GET [/vsbridge/cart/payment-methods](https://github.com/DivanteLtd/vue-storefront-api/blob/7d98771994b1009ad17d69c458f9e93686cfb145/src/vsbridge/cart.js#L178)
 
-This method is used as a step in the cart synchronization process to get all the payment methods with actuall costs as available inside the backend CMS
+This method is used as a step in the cart synchronization process to get all the payment methods with actual costs as available inside the backend CMS
 
 #### EXAMPLE CALL:
 
@@ -2289,7 +2289,7 @@ curl 'https://your-domain.example.com/vsbridge/cart/payment-methods?token=xu8h02
 
 ### POST [/vsbridge/cart/shipping-methods](https://github.com/DivanteLtd/vue-storefront-api/blob/7d98771994b1009ad17d69c458f9e93686cfb145/src/vsbridge/cart.js#L160)
 
-This method is used as a step in the cart synchronization process to get all the shipping methods with actuall costs as available inside the backend CMS
+This method is used as a step in the cart synchronization process to get all the shipping methods with actual costs as available inside the backend CMS
 
 #### EXAMPLE CALL:
 
