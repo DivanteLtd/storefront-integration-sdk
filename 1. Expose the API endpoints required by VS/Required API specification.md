@@ -3296,7 +3296,7 @@ This method is used to check the stock item for specified product sku
 
 ### POST ['/vsbridge/order/create`](https://github.com/DivanteLtd/vue-storefront-api/blob/7d98771994b1009ad17d69c458f9e93686cfb145/src/vsbridge/order.js#L17)
 
-Queue the order into the order queue which will be asynchronously submited to the eCommerce backend.
+Queue the order into the order queue which will be asynchronously submitted to the eCommerce backend.
 
 #### REQUEST BODY:
 
