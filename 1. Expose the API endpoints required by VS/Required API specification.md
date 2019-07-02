@@ -3086,7 +3086,7 @@ Get the user order history from server side
 
 ### GET [/vsbridge/user/me](https://github.com/DivanteLtd/vue-storefront-api/blob/7d98771994b1009ad17d69c458f9e93686cfb145/src/vsbridge/user.js#L78)
 
-Gets the User profile for currently authorized user. It's called after `POST /vsbridge/user/login` successfull call.
+Gets the User profile for currently authorized user. It's called after `POST /vsbridge/user/login` successful call.
 
 #### GET PARAMS:
 
