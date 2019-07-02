@@ -1985,7 +1985,7 @@ This method is called just after any Vue Storefront cart modification to check i
 
 ### POST [/vsbridge/cart/update](https://github.com/DivanteLtd/vue-storefront-api/blob/7d98771994b1009ad17d69c458f9e93686cfb145/src/vsbridge/cart.js#L43)
 
-Method used to add or update shopping cart item's server side. As a request body there should be JSON given representing the cart item. `sku` and `qty` are the two required options. If you like to update/edit server cart item You need to pass `item_id` identifier as well (can be optainted from `api/cart/pull`)
+Method used to add or update shopping cart item's server side. As a request body there should be JSON given representing the cart item. `sku` and `qty` are the two required options. If you like to update/edit server cart item You need to pass `item_id` identifier as well (can be obtainted from `api/cart/pull`)
 
 #### WHEN:
 This method is called just after `api/cart/pull` as a consequence of the synchronization process
