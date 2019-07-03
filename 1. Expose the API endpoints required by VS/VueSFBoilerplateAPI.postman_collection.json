@@ -1,0 +1,1267 @@
+{
+	"info": {
+		"_postman_id": "f86d0c75-5550-4e38-a39e-5054c9d79af7",
+		"name": "VueSFBoilerplateAPI",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "/auth/admin",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "3847b261-9789-4e93-9bc7-d4307d0eec8d",
+						"exec": [
+							"var jsonData = JSON.parse(responseBody);",
+							"postman.setEnvironmentVariable(\"apiKey\", jsonData.result);"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "{{apiUrl}}/vsbridge/auth/admin?username={{apiUser}}&password={{apiUserPassword}}",
+					"host": [
+						"{{apiUrl}}"
+					],
+					"path": [
+						"vsbridge",
+						"auth",
+						"admin"
+					],
+					"query": [
+						{
+							"key": "username",
+							"value": "{{apiUser}}"
+						},
+						{
+							"key": "password",
+							"value": "{{apiUserPassword}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/attributes/index",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{apiUrl}}/vsbridge/attributes/index?apikey={{apiKey}}&pageSize=500",
+					"host": [
+						"{{apiUrl}}"
+					],
+					"path": [
+						"vsbridge",
+						"attributes",
+						"index"
+					],
+					"query": [
+						{
+							"key": "apikey",
+							"value": "{{apiKey}}"
+						},
+						{
+							"key": "pageSize",
+							"value": "500"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/categories/index",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{apiUrl}}/vsbridge/categories/index?apikey={{apiKey}}",
+					"host": [
+						"{{apiUrl}}"
+					],
+					"path": [
+						"vsbridge",
+						"categories",
+						"index"
+					],
+					"query": [
+						{
+							"key": "apikey",
+							"value": "{{apiKey}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/products/index",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{apiUrl}}/vsbridge/products/index?apikey={{apiKey}}&pageSize=25&page=10",
+					"host": [
+						"{{apiUrl}}"
+					],
+					"path": [
+						"vsbridge",
+						"products",
+						"index"
+					],
+					"query": [
+						{
+							"key": "apikey",
+							"value": "{{apiKey}}"
+						},
+						{
+							"key": "pageSize",
+							"value": "25"
+						},
+						{
+							"key": "page",
+							"value": "10"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/taxrules/index",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{apiUrl}}/vsbridge/taxrules/index?apikey={{apiKey}}",
+					"host": [
+						"{{apiUrl}}"
+					],
+					"path": [
+						"vsbridge",
+						"taxrules",
+						"index"
+					],
+					"query": [
+						{
+							"key": "apikey",
+							"value": "{{apiKey}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/cart/create",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "86d540da-82f0-44c6-86e1-437b539eccba",
+						"exec": [
+							"var jsonData = JSON.parse(responseBody);",
+							"postman.setEnvironmentVariable(\"cartId\", jsonData.cartId);"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "{{apiUrl}}/vsbridge/cart/create?apiKey={{apiKey}}",
+					"host": [
+						"{{apiUrl}}"
+					],
+					"path": [
+						"vsbridge",
+						"cart",
+						"create"
+					],
+					"query": [
+						{
+							"key": "apiKey",
+							"value": "{{apiKey}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/cart/update",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://www.en.suite.local/vsbridge/cart/update?apiKey={{apiKey}}",
+					"protocol": "http",
+					"host": [
+						"www",
+						"en",
+						"suite",
+						"local"
+					],
+					"path": [
+						"vsbridge",
+						"cart",
+						"update"
+					],
+					"query": [
+						{
+							"key": "apiKey",
+							"value": "{{apiKey}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/cart/delete",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "{{apiUrl}}/vsbridge/cart/delete?apiKey={{apiKey}}",
+					"host": [
+						"{{apiUrl}}"
+					],
+					"path": [
+						"vsbridge",
+						"cart",
+						"delete"
+					],
+					"query": [
+						{
+							"key": "apiKey",
+							"value": "{{apiKey}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/cart/apply-coupon",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "{{apiUrl}}/vsbridge/cart/apply-coupon?apiKey={{apiKey}}",
+					"host": [
+						"{{apiUrl}}"
+					],
+					"path": [
+						"vsbridge",
+						"cart",
+						"apply-coupon"
+					],
+					"query": [
+						{
+							"key": "apiKey",
+							"value": "{{apiKey}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/cart/pull",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{apiUrl}}/vsbridge/cart/pull?apiKey={{apiKey}}&cartId={{cartId}}",
+					"host": [
+						"{{apiUrl}}"
+					],
+					"path": [
+						"vsbridge",
+						"cart",
+						"pull"
+					],
+					"query": [
+						{
+							"key": "apiKey",
+							"value": "{{apiKey}}"
+						},
+						{
+							"key": "cartId",
+							"value": "{{cartId}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/cart/delete-coupon",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "{{apiUrl}}/vsbridge/cart/delete-coupon?apiKey={{apiKey}}",
+					"host": [
+						"{{apiUrl}}"
+					],
+					"path": [
+						"vsbridge",
+						"cart",
+						"delete-coupon"
+					],
+					"query": [
+						{
+							"key": "apiKey",
+							"value": "{{apiKey}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/cart/coupon",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{apiUrl}}/vsbridge/cart/coupon?apiKey={{apiKey}}",
+					"host": [
+						"{{apiUrl}}"
+					],
+					"path": [
+						"vsbridge",
+						"cart",
+						"coupon"
+					],
+					"query": [
+						{
+							"key": "apiKey",
+							"value": "{{apiKey}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/cart/totals",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{apiUrl}}/vsbridge/cart/totals?apiKey={{apiKey}}",
+					"host": [
+						"{{apiUrl}}"
+					],
+					"path": [
+						"vsbridge",
+						"cart",
+						"totals"
+					],
+					"query": [
+						{
+							"key": "apiKey",
+							"value": "{{apiKey}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/cart/payment-methods",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{apiUrl}}/vsbridge/cart/payment-methods?apiKey={{apiKey}}",
+					"host": [
+						"{{apiUrl}}"
+					],
+					"path": [
+						"vsbridge",
+						"cart",
+						"payment-methods"
+					],
+					"query": [
+						{
+							"key": "apiKey",
+							"value": "{{apiKey}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/cart/shipping-methods",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "{{apiUrl}}/vsbridge/cart/shipping-methods?apiKey={{apiKey}}",
+					"host": [
+						"{{apiUrl}}"
+					],
+					"path": [
+						"vsbridge",
+						"cart",
+						"shipping-methods"
+					],
+					"query": [
+						{
+							"key": "apiKey",
+							"value": "{{apiKey}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/cart/shipping-information",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "{{apiUrl}}/vsbridge/cart/shipping-information?apiKey={{apiKey}}",
+					"host": [
+						"{{apiUrl}}"
+					],
+					"path": [
+						"vsbridge",
+						"cart",
+						"shipping-information"
+					],
+					"query": [
+						{
+							"key": "apiKey",
+							"value": "{{apiKey}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/cart/collect-totals",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "{{apiUrl}}/vsbridge/cart/collect-totals?apiKey={{apiKey}}",
+					"host": [
+						"{{apiUrl}}"
+					],
+					"path": [
+						"vsbridge",
+						"cart",
+						"collect-totals"
+					],
+					"query": [
+						{
+							"key": "apiKey",
+							"value": "{{apiKey}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/user/create",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "{{apiUrl}}/vsbridge/user/create?apiKey={{apiKey}}",
+					"host": [
+						"{{apiUrl}}"
+					],
+					"path": [
+						"vsbridge",
+						"user",
+						"create"
+					],
+					"query": [
+						{
+							"key": "apiKey",
+							"value": "{{apiKey}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/user/login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "{{apiUrl}}/vsbridge/user/login?apiKey={{apiKey}}",
+					"host": [
+						"{{apiUrl}}"
+					],
+					"path": [
+						"vsbridge",
+						"user",
+						"login"
+					],
+					"query": [
+						{
+							"key": "apiKey",
+							"value": "{{apiKey}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/user/refresh",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "{{apiUrl}}/vsbridge/user/refresh?apiKey={{apiKey}}",
+					"host": [
+						"{{apiUrl}}"
+					],
+					"path": [
+						"vsbridge",
+						"user",
+						"refresh"
+					],
+					"query": [
+						{
+							"key": "apiKey",
+							"value": "{{apiKey}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/user/resetPassword",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "{{apiUrl}}/vsbridge/user/resetPassword?apiKey={{apiKey}}",
+					"host": [
+						"{{apiUrl}}"
+					],
+					"path": [
+						"vsbridge",
+						"user",
+						"resetPassword"
+					],
+					"query": [
+						{
+							"key": "apiKey",
+							"value": "{{apiKey}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/user/changePassword",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "{{apiUrl}}/vsbridge/user/changePassword?apiKey={{apiKey}}",
+					"host": [
+						"{{apiUrl}}"
+					],
+					"path": [
+						"vsbridge",
+						"user",
+						"changePassword"
+					],
+					"query": [
+						{
+							"key": "apiKey",
+							"value": "{{apiKey}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/user/order-history",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{apiUrl}}/vsbridge/user/order-history?apiKey={{apiKey}}",
+					"host": [
+						"{{apiUrl}}"
+					],
+					"path": [
+						"vsbridge",
+						"user",
+						"order-history"
+					],
+					"query": [
+						{
+							"key": "apiKey",
+							"value": "{{apiKey}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/user/me",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{apiUrl}}/vsbridge/user/me?apiKey={{apiKey}}",
+					"host": [
+						"{{apiUrl}}"
+					],
+					"path": [
+						"vsbridge",
+						"user",
+						"me"
+					],
+					"query": [
+						{
+							"key": "apiKey",
+							"value": "{{apiKey}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/user/me",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "{{apiUrl}}/vsbridge/user/me?apiKey={{apiKey}}",
+					"host": [
+						"{{apiUrl}}"
+					],
+					"path": [
+						"vsbridge",
+						"user",
+						"me"
+					],
+					"query": [
+						{
+							"key": "apiKey",
+							"value": "{{apiKey}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/stock/check/sku",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{apiUrl}}/vsbridge/stock/check?apiKey={{apiKey}}&sku={{productSku}}",
+					"host": [
+						"{{apiUrl}}"
+					],
+					"path": [
+						"vsbridge",
+						"stock",
+						"check"
+					],
+					"query": [
+						{
+							"key": "apiKey",
+							"value": "{{apiKey}}"
+						},
+						{
+							"key": "sku",
+							"value": "{{productSku}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/stock/list",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{apiUrl}}/vsbridge/stock/list?apiKey={{apiKey}}&skus={{productSkus}}",
+					"host": [
+						"{{apiUrl}}"
+					],
+					"path": [
+						"vsbridge",
+						"stock",
+						"list"
+					],
+					"query": [
+						{
+							"key": "apiKey",
+							"value": "{{apiKey}}"
+						},
+						{
+							"key": "skus",
+							"value": "{{productSkus}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/order/create",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "{{apiUrl}}/vsbridge/order/create?apiKey={{apiKey}}",
+					"host": [
+						"{{apiUrl}}"
+					],
+					"path": [
+						"vsbridge",
+						"order",
+						"create"
+					],
+					"query": [
+						{
+							"key": "apiKey",
+							"value": "{{apiKey}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/product/list",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{apiUrl}}/vsbridge/product/list?skus={{productSkus}}",
+					"host": [
+						"{{apiUrl}}"
+					],
+					"path": [
+						"vsbridge",
+						"product",
+						"list"
+					],
+					"query": [
+						{
+							"key": "skus",
+							"value": "{{productSkus}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/product/render-list",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{apiUrl}}/vsbridge/product/render-list?skus={{productSkus}}",
+					"host": [
+						"{{apiUrl}}"
+					],
+					"path": [
+						"vsbridge",
+						"product",
+						"render-list"
+					],
+					"query": [
+						{
+							"key": "skus",
+							"value": "{{productSkus}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/catalog",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{apiUrl}}/vsbridge/catalog/vue_storefront_catalog/attribute/_search?size=50&from=0&sort=",
+					"host": [
+						"{{apiUrl}}"
+					],
+					"path": [
+						"vsbridge",
+						"catalog",
+						"vue_storefront_catalog",
+						"attribute",
+						"_search"
+					],
+					"query": [
+						{
+							"key": "size",
+							"value": "50"
+						},
+						{
+							"key": "from",
+							"value": "0"
+						},
+						{
+							"key": "sort",
+							"value": ""
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/catalog search attributes",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"query\": {\n    \"bool\": {\n      \"filter\": {\n        \"bool\": {\n          \"should\": [\n            {\n              \"term\": {\n                \"attribute_code\": \"color\"\n              }\n            },\n            {\n              \"term\": {\n                \"attribute_code\": \"size\"\n              }\n            },\n            {\n              \"term\": {\n                \"attribute_code\": \"price\"\n              }\n            }\n          ]\n        }\n      }\n    }\n  }\n}"
+				},
+				"url": {
+					"raw": "{{apiUrl}}/vsbridge/catalog/vue_storefront_catalog/attribute/_search",
+					"host": [
+						"{{apiUrl}}"
+					],
+					"path": [
+						"vsbridge",
+						"catalog",
+						"vue_storefront_catalog",
+						"attribute",
+						"_search"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/catalog search category",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"query\": {\n    \"bool\": {\n      \"filter\": {\n        \"bool\": {\n          \"should\": [\n            {\n              \"term\": {\n                \"attribute_code\": \"color\"\n              }\n            },\n            {\n              \"term\": {\n                \"attribute_code\": \"size\"\n              }\n            },\n            {\n              \"term\": {\n                \"attribute_code\": \"price\"\n              }\n            }\n          ]\n        }\n      }\n    }\n  }\n}"
+				},
+				"url": {
+					"raw": "{{apiUrl}}/vsbridge/catalog/vue_storefront_catalog/category/_search",
+					"host": [
+						"{{apiUrl}}"
+					],
+					"path": [
+						"vsbridge",
+						"catalog",
+						"vue_storefront_catalog",
+						"category",
+						"_search"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/catalog search product",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"query\":{\"bool\":{\"filter\":{\"bool\":{\"must\":[{\"terms\":{\"visibility\":[2,3,4]}},{\"terms\":{\"status\":[0,1]}},{\"terms\":{\"stock.is_in_stock\":[true]}},{\"terms\":{\"category_ids\":[13,14,15,16,17,18,19,20,21,22,23]}}]}}}},\"aggs\":{\"agg_terms_color\":{\"terms\":{\"field\":\"color\",\"size\":10}},\"agg_terms_color_options\":{\"terms\":{\"field\":\"color_options\",\"size\":10}},\"agg_terms_size\":{\"terms\":{\"field\":\"size\",\"size\":10}},\"agg_terms_size_options\":{\"terms\":{\"field\":\"size_options\",\"size\":10}},\"agg_terms_assortment\":{\"terms\":{\"field\":\"assortment\",\"size\":10}},\"agg_terms_assortment_options\":{\"terms\":{\"field\":\"assortment_options\",\"size\":10}}}}"
+				},
+				"url": {
+					"raw": "{{apiUrl}}/vsbridge/catalog/vue_storefront_catalog/product/_search?_source_exclude=description,configurable_options,sgn,*.sgn,msrp_display_actual_price_type,*.msrp_display_actual_price_type,required_options&_source_include=*&from=0&size=50&sort=updated_at:desc",
+					"host": [
+						"{{apiUrl}}"
+					],
+					"path": [
+						"vsbridge",
+						"catalog",
+						"vue_storefront_catalog",
+						"product",
+						"_search"
+					],
+					"query": [
+						{
+							"key": "_source_exclude",
+							"value": "description,configurable_options,sgn,*.sgn,msrp_display_actual_price_type,*.msrp_display_actual_price_type,required_options"
+						},
+						{
+							"key": "_source_include",
+							"value": "*"
+						},
+						{
+							"key": "from",
+							"value": "0"
+						},
+						{
+							"key": "size",
+							"value": "50"
+						},
+						{
+							"key": "sort",
+							"value": "updated_at:desc"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/catalog search product by SKU",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"query\":{\"match\":{\"sku\":\"SAMPLE-SKU\"}}}"
+				},
+				"url": {
+					"raw": "{{apiUrl}}/vsbridge/catalog/vue_storefront_catalog/product/_search?_source_exclude=description,configurable_options,sgn,*.sgn,msrp_display_actual_price_type,*.msrp_display_actual_price_type,required_options&_source_include=*&from=0&size=50&sort=updated_at:desc",
+					"host": [
+						"{{apiUrl}}"
+					],
+					"path": [
+						"vsbridge",
+						"catalog",
+						"vue_storefront_catalog",
+						"product",
+						"_search"
+					],
+					"query": [
+						{
+							"key": "_source_exclude",
+							"value": "description,configurable_options,sgn,*.sgn,msrp_display_actual_price_type,*.msrp_display_actual_price_type,required_options"
+						},
+						{
+							"key": "_source_include",
+							"value": "*"
+						},
+						{
+							"key": "from",
+							"value": "0"
+						},
+						{
+							"key": "size",
+							"value": "50"
+						},
+						{
+							"key": "sort",
+							"value": "updated_at:desc"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/catalog search product by path searchadapter",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"query\":{\n\t\t\"bool\":{\n\t\t\t\"filter\":{\n\t\t\t\t\"terms\":{\n\t\t\t\t\t\"url_path\":[\"men/tees/sample-sku.html\"]\n\t\t\t\t}\n\t\t\t}\n\t\t}\n\t}\n}"
+				},
+				"url": {
+					"raw": "{{apiUrl}}/vsbridge/catalog/vue_storefront_catalog/product/_search?_source_exclude=*.msrp_display_actual_price_type,required_options,updated_at,created_at,attribute_set_id,options_container,msrp_display_actual_price_type,has_options,stock.manage_stock,stock.use_config_min_qty,stock.use_config_notify_stock_qty,stock.stock_id,stock.use_config_backorders,stock.use_config_enable_qty_inc,stock.enable_qty_increments,stock.use_config_manage_stock,stock.use_config_min_sale_qty,stock.notify_stock_qty,stock.use_config_max_sale_qty,stock.use_config_max_sale_qty,stock.qty_increments,small_image,sgn,*.sgn&from=0&size=50&sort=",
+					"host": [
+						"{{apiUrl}}"
+					],
+					"path": [
+						"vsbridge",
+						"catalog",
+						"vue_storefront_catalog",
+						"product",
+						"_search"
+					],
+					"query": [
+						{
+							"key": "_source_exclude",
+							"value": "*.msrp_display_actual_price_type,required_options,updated_at,created_at,attribute_set_id,options_container,msrp_display_actual_price_type,has_options,stock.manage_stock,stock.use_config_min_qty,stock.use_config_notify_stock_qty,stock.stock_id,stock.use_config_backorders,stock.use_config_enable_qty_inc,stock.enable_qty_increments,stock.use_config_manage_stock,stock.use_config_min_sale_qty,stock.notify_stock_qty,stock.use_config_max_sale_qty,stock.use_config_max_sale_qty,stock.qty_increments,small_image,sgn,*.sgn"
+						},
+						{
+							"key": "from",
+							"value": "0"
+						},
+						{
+							"key": "size",
+							"value": "50"
+						},
+						{
+							"key": "sort",
+							"value": ""
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/img",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{apiUrl}}/img/200/200/resize/some/folder/file.jpg",
+					"host": [
+						"{{apiUrl}}"
+					],
+					"path": [
+						"img",
+						"200",
+						"200",
+						"resize",
+						"some",
+						"folder",
+						"file.jpg"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/ext/cms-data/cmsPage/1",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{apiUrl}}/vsbridge/ext/cms-data/cmsPage/1",
+					"host": [
+						"{{apiUrl}}"
+					],
+					"path": [
+						"vsbridge",
+						"ext",
+						"cms-data",
+						"cmsPage",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/ext/cms-data/cmsBlock/1",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{apiUrl}}/vsbridge/ext/cms-data/cmsBlock/1",
+					"host": [
+						"{{apiUrl}}"
+					],
+					"path": [
+						"vsbridge",
+						"ext",
+						"cms-data",
+						"cmsBlock",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/ext/cms-data/cmsPageIdentifier/cms-page-1/storeId/1",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{apiUrl}}/vsbridge/ext/cms-data/cmsPageIdentifier/cms-page-1/storeId/1",
+					"host": [
+						"{{apiUrl}}"
+					],
+					"path": [
+						"vsbridge",
+						"ext",
+						"cms-data",
+						"cmsPageIdentifier",
+						"cms-page-1",
+						"storeId",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/ext/cms-data/cmsBlockIdentifier/cms-identifier/storeId/1",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{apiUrl}}/vsbridge/ext/cms-data/cmsBlockIdentifier/cms-identifier/storeId/1",
+					"host": [
+						"{{apiUrl}}"
+					],
+					"path": [
+						"vsbridge",
+						"ext",
+						"cms-data",
+						"cmsBlockIdentifier",
+						"cms-identifier",
+						"storeId",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
