@@ -8,6 +8,8 @@ The example implementation references/links are provided for the Magento1 module
 
 Some endpoints (`attributes`, `categories`, `products`, `taxrules`) returns data that can be directly stored to ElasticSearch by [node-app](https://github.com/DivanteLtd/vue-storefront-integration-boilerplate/tree/master/2.%20Use%20node-app%20to%20import%20the%20data/node-app) and used for catalog rendering, while others are used by [vue-storefront](https://github.com/DivanteLtd/vue-storefront] to proxy the dynamic requests (orders, cart, user account sync).
 
+Feel free to use prepared [Integration Boilerplate Postman Collection](https%3A%2F%2Fgithub.com%2FDivanteLtd%2Fvue-storefront-integration-boilerplate%2Fblob%2Fmaster%2F1.%20Expose%20the%20API%20endpoints%20required%20by%20VS%2FVueSFBoilerplateAPI.postman_collection.json) and test it against your integration
+
 ## Static endpoints for product catalog indexation by [node-app](https://github.com/DivanteLtd/magento1-vsbridge/tree/master/node-app)
 
 ### POST [/vsbridge/auth/admin](https://github.com/DivanteLtd/magento1-vsbridge/blob/154a51248bb1acbfffa0c270dae45a7e87cc6492/magento1-module/app/code/local/Divante/VueStorefrontBridge/controllers/AuthController.php#L6)
