@@ -100,6 +100,9 @@ function putMappings(db, indexName, next) {
         type: "product",
         body: {
             properties: {
+                slug: {type: "keyword"},
+                url_key: {type: "keyword"},
+                url_path: {type: "keyword"},
                 sku: { type: "keyword" },
                 size: { type: "integer" },
                 size_options: { type: "integer" },
@@ -133,13 +136,19 @@ function putMappings(db, indexName, next) {
                     type: "date",           
                     format: "yyyy-MM-dd HH:mm:ss||yyyy-MM-dd||epoch_millis"
                 },
+                news_to_date: {
+                    type: "date",
+                    format: "yyyy-MM-dd HH:mm:ss||yyyy-MM-dd||epoch_millis"
+                },
                 description: { type: "text" },
                 name: { type: "text" },
                 configurable_children: {
                     properties: {
-                        has_options: { type: "boolean" },
-                        price: { type: "float" },
-                        sku: { type: "keyword" }
+                        url_key: { type: "keyword"},
+                        has_options: { type: "boolean"},
+                        price: { type: "float"},
+                        sku: { type: "keyword"},
+                        special_price: { type: "float"}
                     }
                 },
                 configurable_options: {
