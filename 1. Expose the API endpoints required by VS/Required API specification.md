@@ -3951,16 +3951,6 @@ For render-list:
   "result": {
     "items": [
       {
-        "add_to_cart_button": {
-          "post_data": "{\"action\":\"http:\\/\\/demo-magento2.vuestorefront.io\\/checkout\\/cart\\/add\\/uenc\\/%25uenc%25\\/product\\/1866\\/\",\"data\":{\"product\":\"1866\",\"uenc\":\"%uenc%\"}}",
-          "url": "http://demo-magento2.vuestorefront.io/checkout/cart/add/uenc/%25uenc%25/product/1866/",
-          "required_options": true
-        },
-        "add_to_compare_button": {
-          "post_data": null,
-          "url": "{\"action\":\"http:\\/\\/demo-magento2.vuestorefront.io\\/catalog\\/product_compare\\/add\\/\",\"data\":{\"product\":\"1866\",\"uenc\":\"aHR0cDovL2RlbW8tbWFnZW50bzIudnVlc3RvcmVmcm9udC5pby9yZXN0L1YxL3Byb2R1Y3RzLXJlbmRlci1pbmZvP3NlYXJjaENyaXRlcmlhPSZzZWFyY2hDcml0ZXJpYVtmaWx0ZXJfZ3JvdXBzXVswXVtmaWx0ZXJzXVswXVtmaWVsZF09c2t1JnNlYXJjaENyaXRlcmlhW2ZpbHRlcl9ncm91cHNdWzBdW2ZpbHRlcnNdWzBdW3ZhbHVlXT1XUDA3JnNlYXJjaENyaXRlcmlhW2ZpbHRlcl9ncm91cHNdWzBdW2ZpbHRlcnNdWzBdW2NvbmRpdGlvbl90eXBlXT1pbiZzdG9yZUlkPTEmY3VycmVuY3lDb2RlPVVTRA,,\"}}",
-          "required_options": null
-        },
         "price_info": {
           "final_price": 59.04,
           "max_price": 59.04,
@@ -4001,76 +3991,12 @@ For render-list:
             "weee_adjustment": "<span class=\"price\">$59.04</span>"
           }
         },
-        "images": [
-          {
-            "url": "http://demo-magento2.vuestorefront.io/media/catalog/product/cache/f073062f50e48eb0f0998593e568d857/w/p/wp07-black_main.jpg",
-            "code": "recently_viewed_products_grid_content_widget",
-            "height": 300,
-            "width": 240,
-            "label": "Aeon Capri",
-            "resized_width": 240,
-            "resized_height": 300
-          },
-          {
-            "url": "http://demo-magento2.vuestorefront.io/media/catalog/product/cache/900f44f0120b35eff596cbeba48e1c0a/w/p/wp07-black_main.jpg",
-            "code": "recently_viewed_products_list_content_widget",
-            "height": 340,
-            "width": 270,
-            "label": "Aeon Capri",
-            "resized_width": 270,
-            "resized_height": 340
-          },
-          {
-            "url": "http://demo-magento2.vuestorefront.io/media/catalog/product/cache/15dc7e9ba1a6bafcd505d927c7fcfa03/w/p/wp07-black_main.jpg",
-            "code": "recently_viewed_products_images_names_widget",
-            "height": 90,
-            "width": 75,
-            "label": "Aeon Capri",
-            "resized_width": 75,
-            "resized_height": 90
-          },
-          {
-            "url": "http://demo-magento2.vuestorefront.io/media/catalog/product/cache/f073062f50e48eb0f0998593e568d857/w/p/wp07-black_main.jpg",
-            "code": "recently_compared_products_grid_content_widget",
-            "height": 300,
-            "width": 240,
-            "label": "Aeon Capri",
-            "resized_width": 240,
-            "resized_height": 300
-          },
-          {
-            "url": "http://demo-magento2.vuestorefront.io/media/catalog/product/cache/900f44f0120b35eff596cbeba48e1c0a/w/p/wp07-black_main.jpg",
-            "code": "recently_compared_products_list_content_widget",
-            "height": 340,
-            "width": 270,
-            "label": "Aeon Capri",
-            "resized_width": 270,
-            "resized_height": 340
-          },
-          {
-            "url": "http://demo-magento2.vuestorefront.io/media/catalog/product/cache/2b4546e5ba001f3aea4287545d649df0/w/p/wp07-black_main.jpg",
-            "code": "recently_compared_products_images_names_widget",
-            "height": 90,
-            "width": 75,
-            "label": "Aeon Capri",
-            "resized_width": 75,
-            "resized_height": 90
-          }
-        ],
         "url": "http://demo-magento2.vuestorefront.io/aeon-capri.html",
         "id": 1866,
         "name": "Aeon Capri",
         "type": "configurable",
         "store_id": 1,
         "currency_code": "USD",
-        "extension_attributes": {
-          "review_html": "<div class=\"product-reviews-summary short empty\">\n    <div class=\"reviews-actions\">\n        <a class=\"action add\" href=\"http://demo-magento2.vuestorefront.io/aeon-capri.html#review-form\">\n            Be the first to review this product        </a>\n    </div>\n</div>\n",
-          "wishlist_button": {
-            "post_data": null,
-            "url": "{\"action\":\"http:\\/\\/demo-magento2.vuestorefront.io\\/wishlist\\/index\\/add\\/\",\"data\":{\"product\":\"1866\",\"uenc\":\"aHR0cDovL2RlbW8tbWFnZW50bzIudnVlc3RvcmVmcm9udC5pby9yZXN0L1YxL3Byb2R1Y3RzLXJlbmRlci1pbmZvP3NlYXJjaENyaXRlcmlhPSZzZWFyY2hDcml0ZXJpYVtmaWx0ZXJfZ3JvdXBzXVswXVtmaWx0ZXJzXVswXVtmaWVsZF09c2t1JnNlYXJjaENyaXRlcmlhW2ZpbHRlcl9ncm91cHNdWzBdW2ZpbHRlcnNdWzBdW3ZhbHVlXT1XUDA3JnNlYXJjaENyaXRlcmlhW2ZpbHRlcl9ncm91cHNdWzBdW2ZpbHRlcnNdWzBdW2NvbmRpdGlvbl90eXBlXT1pbiZzdG9yZUlkPTEmY3VycmVuY3lDb2RlPVVTRA,,\"}}",
-            "required_options": null
-          }
-        },
         "sgn": "bCt7e44sl1iZV8hzYGioKvSq0EdsAcF21FhpTG5t8l8"
       }
     ]
