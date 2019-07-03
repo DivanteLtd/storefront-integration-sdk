@@ -1985,7 +1985,7 @@ This method is called just after any Vue Storefront cart modification to check i
 
 ### POST [/vsbridge/cart/update](https://github.com/DivanteLtd/vue-storefront-api/blob/7d98771994b1009ad17d69c458f9e93686cfb145/src/vsbridge/cart.js#L43)
 
-Method used to add or update shopping cart item's server side. As a request body there should be JSON given representing the cart item. `sku` and `qty` are the two required options. If you like to update/edit server cart item You need to pass `item_id` identifier as well (can be optainted from `api/cart/pull`)
+Method used to add or update shopping cart item's server side. As a request body there should be JSON given representing the cart item. `sku` and `qty` are the two required options. If you like to update/edit server cart item You need to pass `item_id` identifier as well (can be obtainted from `api/cart/pull`)
 
 #### WHEN:
 This method is called just after `api/cart/pull` as a consequence of the synchronization process
@@ -2251,7 +2251,7 @@ You have totals data for the current, synchronized quote returned:
 
 ### GET [/vsbridge/cart/payment-methods](https://github.com/DivanteLtd/vue-storefront-api/blob/7d98771994b1009ad17d69c458f9e93686cfb145/src/vsbridge/cart.js#L178)
 
-This method is used as a step in the cart synchronization process to get all the payment methods with actuall costs as available inside the backend CMS
+This method is used as a step in the cart synchronization process to get all the payment methods with actual costs as available inside the backend CMS
 
 #### EXAMPLE CALL:
 
@@ -2289,7 +2289,7 @@ curl 'https://your-domain.example.com/vsbridge/cart/payment-methods?token=xu8h02
 
 ### POST [/vsbridge/cart/shipping-methods](https://github.com/DivanteLtd/vue-storefront-api/blob/7d98771994b1009ad17d69c458f9e93686cfb145/src/vsbridge/cart.js#L160)
 
-This method is used as a step in the cart synchronization process to get all the shipping methods with actuall costs as available inside the backend CMS
+This method is used as a step in the cart synchronization process to get all the shipping methods with actual costs as available inside the backend CMS
 
 #### EXAMPLE CALL:
 
@@ -3086,7 +3086,7 @@ Get the user order history from server side
 
 ### GET [/vsbridge/user/me](https://github.com/DivanteLtd/vue-storefront-api/blob/7d98771994b1009ad17d69c458f9e93686cfb145/src/vsbridge/user.js#L78)
 
-Gets the User profile for currently authorized user. It's called after `POST /vsbridge/user/login` successfull call.
+Gets the User profile for currently authorized user. It's called after `POST /vsbridge/user/login` successful call.
 
 #### GET PARAMS:
 
@@ -3296,7 +3296,7 @@ This method is used to check the stock item for specified product sku
 
 ### POST ['/vsbridge/order/create`](https://github.com/DivanteLtd/vue-storefront-api/blob/7d98771994b1009ad17d69c458f9e93686cfb145/src/vsbridge/order.js#L17)
 
-Queue the order into the order queue which will be asynchronously submited to the eCommerce backend.
+Queue the order into the order queue which will be asynchronously submitted to the eCommerce backend.
 
 #### REQUEST BODY:
 
