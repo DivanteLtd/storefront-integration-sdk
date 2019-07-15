@@ -42,7 +42,7 @@ This tool requires an ElasticSearch instance up and running. The simplest way to
 Then you need to modify the configs:
 
 ```
-cd node-app/src
+cd node-app
 cp config.example.json config.json
 nano config.json
 ```
