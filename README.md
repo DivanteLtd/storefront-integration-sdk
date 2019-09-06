@@ -138,10 +138,6 @@ After data has been imported you can check if it works just opening `http://loca
 
 <img src="screens/screen_0_products.png" width="300" />
 
-     elasticdump `--input=${cmd.inputFile}`,
-      `--output=${output}`
-
-
 **Congratulations!** Now it's a good moment to take deep breath and study the data formats we'd just imported in order to create your own mapper from the custom platform of your choice to Vue Storefront format.
 
 ### Product entity
