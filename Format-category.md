@@ -1,4 +1,4 @@
-## Product entity
+## Category entity
 
 Please check the [sample-data/categories.json](sample-data/categories.json) to make sure which fields are trully crucial for Vue Storefront to work.
 
