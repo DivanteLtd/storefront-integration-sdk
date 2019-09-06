@@ -1,0 +1,854 @@
+[
+  {
+    "id": 14,
+    "parent_id": 12,
+    "name": "Jackets",
+    "url_key": "jackets-14",
+    "path": "1/2/11/12/14",
+    "url_path": "men/tops-men/jackets-men/jackets-14",
+    "is_active": true,
+    "position": 1,
+    "level": 4,
+    "product_count": 176,
+    "children_data": []
+  },
+  {
+    "id": 19,
+    "parent_id": 13,
+    "name": "Shorts",
+    "url_key": "shorts-19",
+    "path": "1/2/11/13/19",
+    "url_path": "men/bottoms-men/shorts-men/shorts-19",
+    "is_active": true,
+    "position": 2,
+    "level": 4,
+    "product_count": 148,
+    "children_data": []
+  },
+  {
+    "id": 26,
+    "parent_id": 21,
+    "name": "Bras & Tanks",
+    "url_key": "bras-and-tanks-26",
+    "path": "1/2/20/21/26",
+    "url_path": "women/tops-women/tanks-women/bras-and-tanks-26",
+    "is_active": true,
+    "position": 4,
+    "level": 4,
+    "product_count": 224,
+    "children_data": []
+  },
+  {
+    "id": 25,
+    "parent_id": 21,
+    "name": "Tees",
+    "url_key": "tees-25",
+    "path": "1/2/20/21/25",
+    "url_path": "women/tops-women/tees-women/tees-25",
+    "is_active": true,
+    "position": 3,
+    "level": 4,
+    "product_count": 192,
+    "children_data": []
+  },
+  {
+    "id": 24,
+    "parent_id": 21,
+    "name": "Hoodies & Sweatshirts",
+    "url_key": "hoodies-and-sweatshirts-24",
+    "path": "1/2/20/21/24",
+    "url_path": "women/tops-women/hoodies-and-sweatshirts-women/hoodies-and-sweatshirts-24",
+    "is_active": true,
+    "position": 2,
+    "level": 4,
+    "product_count": 182,
+    "children_data": []
+  },
+  {
+    "id": 22,
+    "parent_id": 20,
+    "name": "Bottoms",
+    "url_key": "bottoms-22",
+    "path": "1/2/20/22",
+    "url_path": "women/bottoms-women/bottoms-22",
+    "is_active": true,
+    "position": 2,
+    "level": 3,
+    "product_count": 0,
+    "children_data": [
+      {
+        "id": 27,
+        "children_data": []
+      },
+      {
+        "id": 28,
+        "children_data": []
+      }
+    ]
+  },
+  {
+    "id": 40,
+    "parent_id": 7,
+    "name": "Eco Collection New",
+    "url_key": "eco-collection-new-40",
+    "path": "1/2/7/40",
+    "url_path": "collections/eco-new/eco-collection-new-40",
+    "is_active": true,
+    "position": 6,
+    "level": 3,
+    "product_count": 0,
+    "children_data": []
+  },
+  {
+    "id": 29,
+    "parent_id": 2,
+    "name": "Promotions",
+    "url_key": "promotions-29",
+    "path": "1/2/29",
+    "url_path": "promotions/promotions-29",
+    "is_active": false,
+    "position": 6,
+    "level": 2,
+    "product_count": 0,
+    "children_data": [
+      {
+        "id": 30,
+        "children_data": []
+      },
+      {
+        "id": 31,
+        "children_data": []
+      },
+      {
+        "id": 32,
+        "children_data": []
+      },
+      {
+        "id": 33,
+        "children_data": []
+      }
+    ]
+  },
+  {
+    "id": 12,
+    "parent_id": 11,
+    "name": "Tops",
+    "url_key": "tops-12",
+    "path": "1/2/11/12",
+    "url_path": "men/tops-men/tops-12",
+    "is_active": true,
+    "position": 1,
+    "level": 3,
+    "product_count": 0,
+    "children_data": [
+      {
+        "id": 14,
+        "children_data": []
+      },
+      {
+        "id": 15,
+        "children_data": []
+      },
+      {
+        "id": 16,
+        "children_data": []
+      },
+      {
+        "id": 17,
+        "children_data": []
+      }
+    ]
+  },
+  {
+    "id": 21,
+    "parent_id": 20,
+    "name": "Tops",
+    "url_key": "tops-21",
+    "path": "1/2/20/21",
+    "url_path": "women/tops-women/tops-21",
+    "is_active": true,
+    "position": 1,
+    "level": 3,
+    "product_count": 0,
+    "children_data": [
+      {
+        "id": 23,
+        "children_data": []
+      },
+      {
+        "id": 24,
+        "children_data": []
+      },
+      {
+        "id": 25,
+        "children_data": []
+      },
+      {
+        "id": 26,
+        "children_data": []
+      }
+    ]
+  },
+  {
+    "id": 8,
+    "parent_id": 7,
+    "name": "New Luma Yoga Collection",
+    "url_key": "new-luma-yoga-collection-8",
+    "path": "1/2/7/8",
+    "url_path": "collections/yoga-new/new-luma-yoga-collection-8",
+    "is_active": true,
+    "position": 1,
+    "level": 3,
+    "product_count": 347,
+    "children_data": []
+  },
+  {
+    "id": 34,
+    "parent_id": 7,
+    "name": "Erin Recommends",
+    "url_key": "erin-recommends-34",
+    "path": "1/2/7/34",
+    "url_path": "collections/erin-recommends/erin-recommends-34",
+    "is_active": true,
+    "position": 2,
+    "level": 3,
+    "product_count": 279,
+    "children_data": []
+  },
+  {
+    "id": 32,
+    "parent_id": 29,
+    "name": "Pants",
+    "url_key": "pants-32",
+    "path": "1/2/29/32",
+    "url_path": "promotions/pants-all/pants-32",
+    "is_active": true,
+    "position": 3,
+    "level": 3,
+    "product_count": 247,
+    "children_data": []
+  },
+  {
+    "id": 30,
+    "parent_id": 29,
+    "name": "Women Sale",
+    "url_key": "women-sale-30",
+    "path": "1/2/29/30",
+    "url_path": "promotions/women-sale/women-sale-30",
+    "is_active": true,
+    "position": 1,
+    "level": 3,
+    "product_count": 224,
+    "children_data": []
+  },
+  {
+    "id": 5,
+    "parent_id": 3,
+    "name": "Fitness Equipment",
+    "url_key": "fitness-equipment-5",
+    "path": "1/2/3/5",
+    "url_path": "gear/fitness-equipment/fitness-equipment-5",
+    "is_active": true,
+    "position": 2,
+    "level": 3,
+    "product_count": 23,
+    "children_data": []
+  },
+  {
+    "id": 33,
+    "parent_id": 29,
+    "name": "Tees",
+    "url_key": "tees-33",
+    "path": "1/2/29/33",
+    "url_path": "promotions/tees-all/tees-33",
+    "is_active": true,
+    "position": 4,
+    "level": 3,
+    "product_count": 192,
+    "children_data": []
+  },
+  {
+    "id": 10,
+    "parent_id": 9,
+    "name": "Video Download",
+    "url_key": "video-download-10",
+    "path": "1/2/9/10",
+    "url_path": "training/training-video/video-download-10",
+    "is_active": true,
+    "position": 1,
+    "level": 3,
+    "product_count": 6,
+    "children_data": []
+  },
+  {
+    "id": 9,
+    "parent_id": 2,
+    "name": "Training",
+    "url_key": "training-9",
+    "path": "1/2/9",
+    "url_path": "training/training-9",
+    "is_active": true,
+    "position": 5,
+    "level": 2,
+    "product_count": 6,
+    "children_data": [
+      {
+        "id": 10,
+        "children_data": []
+      }
+    ]
+  },
+  {
+    "id": 15,
+    "parent_id": 12,
+    "name": "Hoodies & Sweatshirts",
+    "url_key": "hoodies-and-sweatshirts-15",
+    "path": "1/2/11/12/15",
+    "url_path": "men/tops-men/hoodies-and-sweatshirts-men/hoodies-and-sweatshirts-15",
+    "is_active": true,
+    "position": 2,
+    "level": 4,
+    "product_count": 208,
+    "children_data": []
+  },
+  {
+    "id": 27,
+    "parent_id": 22,
+    "name": "Pants",
+    "url_key": "pants-27",
+    "path": "1/2/20/22/27",
+    "url_path": "women/bottoms-women/pants-women/pants-27",
+    "is_active": true,
+    "position": 1,
+    "level": 4,
+    "product_count": 91,
+    "children_data": []
+  },
+  {
+    "id": 35,
+    "parent_id": 7,
+    "name": "Performance Fabrics",
+    "url_key": "performance-fabrics-35",
+    "path": "1/2/7/35",
+    "url_path": "collections/performance-fabrics/performance-fabrics-35",
+    "is_active": true,
+    "position": 3,
+    "level": 3,
+    "product_count": 310,
+    "children_data": []
+  },
+  {
+    "id": 6,
+    "parent_id": 3,
+    "name": "Watches",
+    "url_key": "watches-6",
+    "path": "1/2/3/6",
+    "url_path": "gear/watches/watches-6",
+    "is_active": true,
+    "position": 3,
+    "level": 3,
+    "product_count": 9,
+    "children_data": []
+  },
+  {
+    "id": 4,
+    "parent_id": 3,
+    "name": "Bags",
+    "url_key": "bags-4",
+    "path": "1/2/3/4",
+    "url_path": "gear/bags/bags-4",
+    "is_active": true,
+    "position": 1,
+    "level": 3,
+    "product_count": 14,
+    "children_data": []
+  },
+  {
+    "id": 36,
+    "parent_id": 7,
+    "name": "Eco Friendly",
+    "url_key": "eco-friendly-36",
+    "path": "1/2/7/36",
+    "url_path": "collections/eco-friendly/eco-friendly-36",
+    "is_active": true,
+    "position": 4,
+    "level": 3,
+    "product_count": 247,
+    "children_data": []
+  },
+  {
+    "id": 20,
+    "parent_id": 2,
+    "name": "Women",
+    "url_key": "women-20",
+    "path": "1/2/20",
+    "url_path": "women/women-20",
+    "is_active": true,
+    "position": 2,
+    "level": 2,
+    "product_count": 0,
+    "children_data": [
+      {
+        "id": 21,
+        "children_data": [
+          {
+            "id": 23,
+            "children_data": []
+          },
+          {
+            "id": 24,
+            "children_data": []
+          },
+          {
+            "id": 25,
+            "children_data": []
+          },
+          {
+            "id": 26,
+            "children_data": []
+          }
+        ]
+      },
+      {
+        "id": 22,
+        "children_data": [
+          {
+            "id": 27,
+            "children_data": []
+          },
+          {
+            "id": 28,
+            "children_data": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 38,
+    "parent_id": 2,
+    "name": "What's New",
+    "url_key": "whats-new-38",
+    "path": "1/2/38",
+    "url_path": "what-is-new/whats-new-38",
+    "is_active": true,
+    "position": 1,
+    "level": 2,
+    "product_count": 0,
+    "children_data": []
+  },
+  {
+    "id": 2,
+    "parent_id": 1,
+    "name": "Default Category",
+    "url_key": "default-category-2",
+    "path": "1/2",
+    "url_path": "default-category-2",
+    "is_active": true,
+    "position": 1,
+    "level": 1,
+    "product_count": 1181,
+    "children_data": [
+      {
+        "id": 38,
+        "children_data": []
+      },
+      {
+        "id": 20,
+        "children_data": [
+          {
+            "id": 21,
+            "children_data": [
+              {
+                "id": 23,
+                "children_data": []
+              },
+              {
+                "id": 24,
+                "children_data": []
+              },
+              {
+                "id": 25,
+                "children_data": []
+              },
+              {
+                "id": 26,
+                "children_data": []
+              }
+            ]
+          },
+          {
+            "id": 22,
+            "children_data": [
+              {
+                "id": 27,
+                "children_data": []
+              },
+              {
+                "id": 28,
+                "children_data": []
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": 11,
+        "children_data": [
+          {
+            "id": 12,
+            "children_data": [
+              {
+                "id": 14,
+                "children_data": []
+              },
+              {
+                "id": 15,
+                "children_data": []
+              },
+              {
+                "id": 16,
+                "children_data": []
+              },
+              {
+                "id": 17,
+                "children_data": []
+              }
+            ]
+          },
+          {
+            "id": 13,
+            "children_data": [
+              {
+                "id": 18,
+                "children_data": []
+              },
+              {
+                "id": 19,
+                "children_data": []
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "children_data": [
+          {
+            "id": 4,
+            "children_data": []
+          },
+          {
+            "id": 5,
+            "children_data": []
+          },
+          {
+            "id": 6,
+            "children_data": []
+          }
+        ]
+      },
+      {
+        "id": 7,
+        "children_data": [
+          {
+            "id": 8,
+            "children_data": []
+          },
+          {
+            "id": 34,
+            "children_data": []
+          },
+          {
+            "id": 35,
+            "children_data": []
+          },
+          {
+            "id": 36,
+            "children_data": []
+          },
+          {
+            "id": 39,
+            "children_data": []
+          },
+          {
+            "id": 40,
+            "children_data": []
+          }
+        ]
+      },
+      {
+        "id": 9,
+        "children_data": [
+          {
+            "id": 10,
+            "children_data": []
+          }
+        ]
+      },
+      {
+        "id": 29,
+        "children_data": [
+          {
+            "id": 30,
+            "children_data": []
+          },
+          {
+            "id": 31,
+            "children_data": []
+          },
+          {
+            "id": 32,
+            "children_data": []
+          },
+          {
+            "id": 33,
+            "children_data": []
+          }
+        ]
+      },
+      {
+        "id": 37,
+        "children_data": []
+      }
+    ]
+  },
+  {
+    "id": 18,
+    "parent_id": 13,
+    "name": "Pants",
+    "url_key": "pants-18",
+    "path": "1/2/11/13/18",
+    "url_path": "men/bottoms-men/pants-men/pants-18",
+    "is_active": true,
+    "position": 1,
+    "level": 4,
+    "product_count": 156,
+    "children_data": []
+  },
+  {
+    "id": 16,
+    "parent_id": 12,
+    "name": "Tees",
+    "url_key": "tees-16",
+    "path": "1/2/11/12/16",
+    "url_path": "men/tops-men/tees-men/tees-16",
+    "is_active": true,
+    "position": 3,
+    "level": 4,
+    "product_count": 192,
+    "children_data": []
+  },
+  {
+    "id": 28,
+    "parent_id": 22,
+    "name": "Shorts",
+    "url_key": "shorts-28",
+    "path": "1/2/20/22/28",
+    "url_path": "women/bottoms-women/shorts-women/shorts-28",
+    "is_active": true,
+    "position": 2,
+    "level": 4,
+    "product_count": 137,
+    "children_data": []
+  },
+  {
+    "id": 13,
+    "parent_id": 11,
+    "name": "Bottoms",
+    "url_key": "bottoms-13",
+    "path": "1/2/11/13",
+    "url_path": "men/bottoms-men/bottoms-13",
+    "is_active": true,
+    "position": 2,
+    "level": 3,
+    "product_count": 0,
+    "children_data": [
+      {
+        "id": 18,
+        "children_data": []
+      },
+      {
+        "id": 19,
+        "children_data": []
+      }
+    ]
+  },
+  {
+    "id": 39,
+    "parent_id": 7,
+    "name": "Performance Sportswear New",
+    "url_key": "performance-sportswear-new-39",
+    "path": "1/2/7/39",
+    "url_path": "collections/performance-new/performance-sportswear-new-39",
+    "is_active": true,
+    "position": 5,
+    "level": 3,
+    "product_count": 0,
+    "children_data": []
+  },
+  {
+    "id": 7,
+    "parent_id": 2,
+    "name": "Collections",
+    "url_key": "collections-7",
+    "path": "1/2/7",
+    "url_path": "collections/collections-7",
+    "is_active": false,
+    "position": 5,
+    "level": 2,
+    "product_count": 13,
+    "children_data": [
+      {
+        "id": 8,
+        "children_data": []
+      },
+      {
+        "id": 34,
+        "children_data": []
+      },
+      {
+        "id": 35,
+        "children_data": []
+      },
+      {
+        "id": 36,
+        "children_data": []
+      },
+      {
+        "id": 39,
+        "children_data": []
+      },
+      {
+        "id": 40,
+        "children_data": []
+      }
+    ]
+  },
+  {
+    "id": 17,
+    "parent_id": 12,
+    "name": "Tanks",
+    "url_key": "tanks-17",
+    "path": "1/2/11/12/17",
+    "url_path": "men/tops-men/tanks-men/tanks-17",
+    "is_active": true,
+    "position": 4,
+    "level": 4,
+    "product_count": 102,
+    "children_data": []
+  },
+  {
+    "id": 23,
+    "parent_id": 21,
+    "name": "Jackets",
+    "url_key": "jackets-23",
+    "path": "1/2/20/21/23",
+    "url_path": "women/tops-women/jackets-women/jackets-23",
+    "is_active": true,
+    "position": 1,
+    "level": 4,
+    "product_count": 186,
+    "children_data": []
+  },
+  {
+    "id": 31,
+    "parent_id": 29,
+    "name": "Men Sale",
+    "url_key": "men-sale-31",
+    "path": "1/2/29/31",
+    "url_path": "promotions/men-sale/men-sale-31",
+    "is_active": true,
+    "position": 2,
+    "level": 3,
+    "product_count": 39,
+    "children_data": []
+  },
+  {
+    "id": 11,
+    "parent_id": 2,
+    "name": "Men",
+    "url_key": "men-11",
+    "path": "1/2/11",
+    "url_path": "men/men-11",
+    "is_active": true,
+    "position": 3,
+    "level": 2,
+    "product_count": 0,
+    "children_data": [
+      {
+        "id": 12,
+        "children_data": [
+          {
+            "id": 14,
+            "children_data": []
+          },
+          {
+            "id": 15,
+            "children_data": []
+          },
+          {
+            "id": 16,
+            "children_data": []
+          },
+          {
+            "id": 17,
+            "children_data": []
+          }
+        ]
+      },
+      {
+        "id": 13,
+        "children_data": [
+          {
+            "id": 18,
+            "children_data": []
+          },
+          {
+            "id": 19,
+            "children_data": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "parent_id": 2,
+    "name": "Gear",
+    "url_key": "gear-3",
+    "path": "1/2/3",
+    "url_path": "gear/gear-3",
+    "is_active": true,
+    "position": 4,
+    "level": 2,
+    "product_count": 46,
+    "children_data": [
+      {
+        "id": 4,
+        "children_data": []
+      },
+      {
+        "id": 5,
+        "children_data": []
+      },
+      {
+        "id": 6,
+        "children_data": []
+      }
+    ]
+  },
+  {
+    "id": 37,
+    "parent_id": 2,
+    "name": "Sale",
+    "url_key": "sale-37",
+    "path": "1/2/37",
+    "url_path": "sale/sale-37",
+    "is_active": true,
+    "position": 6,
+    "level": 2,
+    "product_count": 0,
+    "children_data": []
+  }
+]
