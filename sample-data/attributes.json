@@ -1,0 +1,568 @@
+[
+  {
+    "id": 149,
+    "is_user_defined": true,
+    "is_visible": true,
+    "frontend_input": "multiselect",
+    "attribute_code": "style_bottom",
+    "default_value": "",
+    "options": [
+      {
+        "label": " ",
+        "value": ""
+      },
+      {
+        "label": "Base Layer",
+        "value": "105"
+      },
+      {
+        "label": "Basic",
+        "value": "106"
+      },
+      {
+        "label": "Capri",
+        "value": "107"
+      },
+      {
+        "label": "Compression",
+        "value": "108"
+      },
+      {
+        "label": "Leggings",
+        "value": "109"
+      },
+      {
+        "label": "Parachute",
+        "value": "110"
+      },
+      {
+        "label": "Skort",
+        "value": "111"
+      },
+      {
+        "label": "Snug",
+        "value": "112"
+      },
+      {
+        "label": "Sweatpants",
+        "value": "113"
+      },
+      {
+        "label": "Tights",
+        "value": "114"
+      },
+      {
+        "label": "Track Pants",
+        "value": "115"
+      },
+      {
+        "label": "Workout Pants",
+        "value": "116"
+      }
+    ],
+    "default_frontend_label": "Style Bottom"
+  },
+  {
+    "id": 144,
+    "is_user_defined": true,
+    "is_visible": true,
+    "frontend_input": "boolean",
+    "attribute_code": "performance_fabric",
+    "default_value": "",
+    "options": [
+      {
+        "label": "Yes",
+        "value": "1"
+      },
+      {
+        "label": "No",
+        "value": "0"
+      }
+    ],
+    "default_frontend_label": "Performance Fabric"
+  },
+  {
+    "id": 143,
+    "is_user_defined": true,
+    "is_visible": true,
+    "frontend_input": "boolean",
+    "attribute_code": "eco_collection",
+    "default_value": "",
+    "options": [
+      {
+        "label": "Yes",
+        "value": "1"
+      },
+      {
+        "label": "No",
+        "value": "0"
+      }
+    ],
+    "default_frontend_label": "Eco Collection"
+  },
+  {
+    "id": 146,
+    "is_user_defined": true,
+    "is_visible": true,
+    "frontend_input": "boolean",
+    "attribute_code": "new",
+    "default_value": "",
+    "options": [
+      {
+        "label": "Yes",
+        "value": "1"
+      },
+      {
+        "label": "No",
+        "value": "0"
+      }
+    ],
+    "default_frontend_label": "New"
+  },
+  {
+    "id": 142,
+    "is_user_defined": true,
+    "is_visible": true,
+    "frontend_input": "select",
+    "attribute_code": "size",
+    "default_value": "91",
+    "options": [
+      {
+        "label": " ",
+        "value": ""
+      },
+      {
+        "label": "55 cm",
+        "value": "91"
+      },
+      {
+        "label": "XS",
+        "value": "167"
+      },
+      {
+        "label": "65 cm",
+        "value": "92"
+      },
+      {
+        "label": "S",
+        "value": "168"
+      },
+      {
+        "label": "75 cm",
+        "value": "93"
+      },
+      {
+        "label": "M",
+        "value": "169"
+      },
+      {
+        "label": "6 foot",
+        "value": "94"
+      },
+      {
+        "label": "L",
+        "value": "170"
+      },
+      {
+        "label": "8 foot",
+        "value": "95"
+      },
+      {
+        "label": "XL",
+        "value": "171"
+      },
+      {
+        "label": "10 foot",
+        "value": "96"
+      },
+      {
+        "label": "28",
+        "value": "172"
+      },
+      {
+        "label": "29",
+        "value": "173"
+      },
+      {
+        "label": "30",
+        "value": "174"
+      },
+      {
+        "label": "31",
+        "value": "175"
+      },
+      {
+        "label": "32",
+        "value": "176"
+      },
+      {
+        "label": "33",
+        "value": "177"
+      },
+      {
+        "label": "34",
+        "value": "178"
+      },
+      {
+        "label": "36",
+        "value": "179"
+      },
+      {
+        "label": "38",
+        "value": "180"
+      }
+    ],
+    "default_frontend_label": "Size"
+  },
+  {
+    "id": 137,
+    "is_user_defined": true,
+    "is_visible": true,
+    "frontend_input": "multiselect",
+    "attribute_code": "material",
+    "default_value": "",
+    "options": [
+      {
+        "label": " ",
+        "value": ""
+      },
+      {
+        "label": "Burlap",
+        "value": "31"
+      },
+      {
+        "label": "Cocona&reg; performance fabric",
+        "value": "143"
+      },
+      {
+        "label": "Canvas",
+        "value": "32"
+      },
+      {
+        "label": "Wool",
+        "value": "144"
+      },
+      {
+        "label": "Cotton",
+        "value": "33"
+      },
+      {
+        "label": "Fleece",
+        "value": "145"
+      },
+      {
+        "label": "Faux Leather",
+        "value": "34"
+      },
+      {
+        "label": "Hemp",
+        "value": "146"
+      },
+      {
+        "label": "Jersey",
+        "value": "147"
+      },
+      {
+        "label": "Leather",
+        "value": "35"
+      },
+      {
+        "label": "LumaTech&trade;",
+        "value": "148"
+      },
+      {
+        "label": "Mesh",
+        "value": "36"
+      },
+      {
+        "label": "Lycra&reg;",
+        "value": "149"
+      },
+      {
+        "label": "Nylon",
+        "value": "37"
+      },
+      {
+        "label": "Microfiber",
+        "value": "150"
+      },
+      {
+        "label": "Polyester",
+        "value": "38"
+      },
+      {
+        "label": "Rayon",
+        "value": "39"
+      },
+      {
+        "label": "Spandex",
+        "value": "151"
+      },
+      {
+        "label": "HeatTec&reg;",
+        "value": "152"
+      },
+      {
+        "label": "Ripstop",
+        "value": "40"
+      },
+      {
+        "label": "EverCool&trade;",
+        "value": "153"
+      },
+      {
+        "label": "Suede",
+        "value": "41"
+      },
+      {
+        "label": "Foam",
+        "value": "42"
+      },
+      {
+        "label": "Organic Cotton",
+        "value": "154"
+      },
+      {
+        "label": "Metal",
+        "value": "43"
+      },
+      {
+        "label": "TENCEL",
+        "value": "155"
+      },
+      {
+        "label": "CoolTech&trade;",
+        "value": "156"
+      },
+      {
+        "label": "Plastic",
+        "value": "44"
+      },
+      {
+        "label": "Khaki",
+        "value": "157"
+      },
+      {
+        "label": "Rubber",
+        "value": "45"
+      },
+      {
+        "label": "Linen",
+        "value": "158"
+      },
+      {
+        "label": "Synthetic",
+        "value": "46"
+      },
+      {
+        "label": "Stainless Steel",
+        "value": "47"
+      },
+      {
+        "label": "Wool",
+        "value": "159"
+      },
+      {
+        "label": "Silicone",
+        "value": "48"
+      },
+      {
+        "label": "Terry",
+        "value": "160"
+      }
+    ],
+    "default_frontend_label": "Material"
+  },
+  {
+    "id": 93,
+    "is_user_defined": true,
+    "is_visible": true,
+    "frontend_input": "select",
+    "attribute_code": "color",
+    "default_value": "49",
+    "options": [
+      {
+        "label": " ",
+        "value": ""
+      },
+      {
+        "label": "Black",
+        "value": "49"
+      },
+      {
+        "label": "Blue",
+        "value": "50"
+      },
+      {
+        "label": "Brown",
+        "value": "51"
+      },
+      {
+        "label": "Gray",
+        "value": "52"
+      },
+      {
+        "label": "Green",
+        "value": "53"
+      },
+      {
+        "label": "Lavender",
+        "value": "54"
+      },
+      {
+        "label": "Multi",
+        "value": "55"
+      },
+      {
+        "label": "Orange",
+        "value": "56"
+      },
+      {
+        "label": "Purple",
+        "value": "57"
+      },
+      {
+        "label": "Red",
+        "value": "58"
+      },
+      {
+        "label": "White",
+        "value": "59"
+      },
+      {
+        "label": "Yellow",
+        "value": "60"
+      }
+    ],
+    "default_frontend_label": "Color"
+  },
+  {
+    "id": 147,
+    "is_user_defined": true,
+    "is_visible": true,
+    "frontend_input": "boolean",
+    "attribute_code": "sale",
+    "default_value": "",
+    "options": [
+      {
+        "label": "Yes",
+        "value": "1"
+      },
+      {
+        "label": "No",
+        "value": "0"
+      }
+    ],
+    "default_frontend_label": "Sale"
+  },
+  {
+    "id": 154,
+    "is_user_defined": true,
+    "is_visible": true,
+    "frontend_input": "multiselect",
+    "attribute_code": "climate",
+    "default_value": "",
+    "options": [
+      {
+        "label": " ",
+        "value": ""
+      },
+      {
+        "label": "All-Weather",
+        "value": "202"
+      },
+      {
+        "label": "Cold",
+        "value": "203"
+      },
+      {
+        "label": "Cool",
+        "value": "204"
+      },
+      {
+        "label": "Indoor",
+        "value": "205"
+      },
+      {
+        "label": "Mild",
+        "value": "206"
+      },
+      {
+        "label": "Rainy",
+        "value": "207"
+      },
+      {
+        "label": "Spring",
+        "value": "208"
+      },
+      {
+        "label": "Warm",
+        "value": "209"
+      },
+      {
+        "label": "Windy",
+        "value": "210"
+      },
+      {
+        "label": "Wintry",
+        "value": "211"
+      },
+      {
+        "label": "Hot",
+        "value": "212"
+      }
+    ],
+    "default_frontend_label": "Climate"
+  },
+  {
+    "id": 153,
+    "is_user_defined": true,
+    "is_visible": true,
+    "frontend_input": "multiselect",
+    "attribute_code": "pattern",
+    "default_value": "",
+    "options": [
+      {
+        "label": " ",
+        "value": ""
+      },
+      {
+        "label": "Color-Blocked",
+        "value": "193"
+      },
+      {
+        "label": "Checked",
+        "value": "194"
+      },
+      {
+        "label": "Color-Blocked",
+        "value": "195"
+      },
+      {
+        "label": "Graphic Print",
+        "value": "196"
+      },
+      {
+        "label": "Solid",
+        "value": "197"
+      },
+      {
+        "label": "Solid-Highlight",
+        "value": "198"
+      },
+      {
+        "label": "Striped",
+        "value": "199"
+      },
+      {
+        "label": "Camo",
+        "value": "200"
+      },
+      {
+        "label": "Geometric",
+        "value": "201"
+      }
+    ],
+    "default_frontend_label": "Pattern"
+  }
+]
