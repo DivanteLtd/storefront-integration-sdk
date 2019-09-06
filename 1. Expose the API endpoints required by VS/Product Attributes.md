@@ -1,14 +1,18 @@
-# Attribute entity
+# API docs for Vue Storefront
 
 For supported attribute types (which are used in `frontend_input`),
 please refer to [Magento Attribute Types Dev Docs](https://devdocs.magento.com/guides/m1x/api/soap/catalog/catalogProductAttribute/product_attribute.types.html)
-However, only `multiselect` and `select` are currently used, every other type will be treated as if they were `text` and this is handled by `core/modules/catalog/components/ProductAttribute.ts` in vue-storefront.
+However, only `multiselect` and `select` are currently used, every other type will be treated as if they were 
+`text` and this is handled by `core/modules/catalog/components/ProductAttribute.ts` in vue-storefront.
+
+Vue-storefront uses Magento as a basic source of data, so the possible values can always be found in 
+Magento documentation. If in doubt, remember to always check there.
 
 ## Adding attributes
 
 To add new attribute to your custom API you need to know how you're going to use it.
-In all cases you'll have to push new attribute specification to ElasticSearch.
-Format may vary depending on how you want to use them, however here are the most common cases.
+In all cases you'll have to return the attribute in `attributes/index` and `products/index` endpoints but their 
+format may vary depending on how you want to use them. Below are the most common cases.
 
 ### 1. Simply show attribute on product page
 In that case the atributes/index endpoint should have the attribute returned as:all you need to do is return the 

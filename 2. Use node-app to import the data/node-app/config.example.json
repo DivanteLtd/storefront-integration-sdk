@@ -1,0 +1,19 @@
+{
+    "elasticsearch": {
+        "host": "",
+        "indexName": "vue_storefront_magento1"
+    },
+    "vsbridge": {
+        "url": "http://example.com:80/",
+        "auth": {
+            "username": "admin",
+            "password": "password123",
+            "secret": "Geiw0qua"
+        },
+        "auth_endpoint": "http://example.com/vsbridge/auth/admin",
+        "product_endpoint": "http://example.com/vsbridge/products/index",
+        "category_endpoint": "http://example.com/vsbridge/categories/index",
+        "taxrule_endpoint": "http://example.com/vsbridge/taxrules/index",
+        "attribute_endpoint": "http://example.com/vsbridge/attributes/index"    
+    }
+}
