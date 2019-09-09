@@ -2,6 +2,8 @@
 
 Vue Storefront is platform agnostic which means it can be connected to virtually any eCommerce backend and CMS. This repository is created to make the integration with any 3rd party backend platform as easy as possible.
 
+**Note:** This tutorial shows how to build a **Generic** integration for any custom backend API. This is the recommended approach giving you most of the Vue Storefront featuers available out of the box. [Check the other options...](Vue%20Storefront%20Integration%20Architecture.pdf)
+
 ## Three steps for the integration
 
 - **Step One** Vue Storefront uses Elastic Search as backend for all catalog operations. We do have **three** default types of entities that must be supported: `product`, `category`, `attribute` and **two optional entities** `taxrule`, `cms_block` and `cms_page` in the ES. You may find some sample-data json [files in `sample-data` subdirectory](sample-data).
