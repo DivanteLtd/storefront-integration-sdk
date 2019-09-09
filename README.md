@@ -1,19 +1,19 @@
 # Vue Storefront Custom Integration Tutorial
 
-Vue Storefront is platform agnostic which means it can be connected to virtually any CMS. This repository was created in order to make the integration with any 3rd party backend platform as easy as possible.
+Vue Storefront is platform agnostic which means it can be connected to virtually any eCommerce backend and CMS. This repository is created to make the integration with any 3rd party backend platform as easy as possible.
 
 ## Three steps for the integration
 
 - **Step One** Vue Storefront uses Elastic Search as backend for all catalog operations. We do have **three** default types of entities that must be supported: `product`, `category`, `attribute` and **two optional entities** `taxrule`, `cms_block` and `cms_page` in the ES. You may find some sample-data json [files in `sample-data` subdirectory](sample-data).
 
-- **Step Two** The second step is to support the **dynamic calls** that are used to synchronize shopping carts, promotion rules, user accounts etc. In order to have this step accomplished you'll need to implement 
+- **Step Two** The second step is to support the **dynamic calls** that are used to synchronize shopping carts, promotion rules, user accounts, and so on. To have this step accomplished you'll need to implement 
 
 - **Step Three** Is to configure `vue-storefront` to use the right set of endpoints from Step Two.
 
 
 ## Tutorial
 
-Now, we're to go thru all three steps in order to integrate Vue Storefront with custom or 3rd party eCommerce platform.
+Now, we're to go through all three steps to integrate Vue Storefront with custom or 3rd party eCommerce platform.
 
 First, make sure you've got the [vue-storefront and vue-storefront-api installed](https://docs.vuestorefront.io/guide/installation/linux-mac.html#installing-the-vue-storefront-api-locally) on your local machine, up and running. Opening the [http://localhost:3000](http://localhost:3000) should display default Vue Storefront theme with demo products.
 
@@ -21,25 +21,24 @@ First, make sure you've got the [vue-storefront and vue-storefront-api installed
 
 
 ### **Empty the `vue_storefront_catalog` index**.  
-This is the default Vue Storefront index which is configured in both `vue-storefront` and `vue-storefront-api` projeccts - in the `config/local.json`, `elasticsearch.indices` section. We'll be using default.
+This is the default Vue Storefront index which is configured in both `vue-storefront` and `vue-storefront-api` projects - in the `config/local.json`, `elasticsearch.indices` section. We'll be using "default".
 
-First, please go to `vue-storefront-api` directory. In my case i did it by the following command:
+First, please go to `vue-storefront-api` directory with the following command:
 
 ```bash
-MacBook-Pro-Piotr-3:sample-data pkarwatka$ cd ~/Documents/_PROJEKTY/vue-storefront-api
-MacBook-Pro-Piotr-3:vue-storefront-api pkarwatka$ 
+$ cd ./vue-storefront-api
 ```
 
 Then you can empty the default index:
 
 ```bash
-MacBook-Pro-Piotr-3:vue-storefront-api pkarwatka$ yarn db new
+$ yarn  thdb new
 yarn run v1.17.3
 $ node scripts/db.js new
 Elasticsearch INFO: 2019-09-06T19:32:23Z
-  Adding connection to http://localhost:9200/
+  Adding iconnection to http://localhost:9200/
 
-** Hello! I am going to create NEW ES index
+** Hello! I am going to create s cNEW ES index
 Elasticsearch DEBUG: 2019-09-06T19:32:23Z
   starting request {
     "method": "DELETE",
@@ -50,26 +49,27 @@ Elasticsearch DEBUG: 2019-09-06T19:32:23Z
 ...
 ```
 
-**Note:** Please make sure your local Elastic instance is up and running. After you've got the `vue-storefront` plus `vue-storefront-api` installed you can ensure it by just running `docker-compose up -d` in the `vue-storefront-api` directory.
+**Note:** Please make sure your local Elastic instance is up and running. After you've got the `vue-storefront` plus `vue-storefront-api` installed, you can ensure it by just running `docker-compose up -d` in the `vue-storefront-api` directory.
 
 ### **Import data**.
-In your custom integration you'll be probably pumping the data directly to ElasticSearch as it changed in the platform admin panel.
+In your custom integration, you'll probably be pumping the data directly to ElasticSearch as it changed in the platform admin panel.
 
-This is exactly how do work other Vue Storefront integrations you might want to get inspired by:
+This is exactly how other Vue Storefront integrations work. 
+You might want to get inspired by:
 - [`magento2-vsbridge-indexer`](https://github.com/DivanteLtd/magento2-vsbridge-indexer) - the PHP based integration for Magento2,
 - [`shopware2vuestorefront](https://github.com/DivanteLtd/shopware2vuestorefront/tree/master/vsf-shopware-indexer) - which is using a NodeJS app to pull the data from Shopware API and push it to Elastic,
 - [`spree2vuestorefront`](https://github.com/spark-solutions/spree2vuestorefront/) - which is putting thte data to Elastic directly from Ruby code, from Spree Commerce database,
 - [See other integrations ...](https://github.com/frqnck/awesome-vue-storefront#github-repos)
 
-In our example, we'll just push the static json files from `sample-data` directly to ElasticSearch index. Then I'll explain these data formats in details to let you prepare such an automatic exporter on your own.
+In our example, we'll push the static JSON files from `sample-data` directly to the ElasticSearch index. Then I'll explain these data formats in details to let you prepare such an automatic exporter on your own.
 
-To push the data into Elastic we'll be using a simple NodeJS tool [located in the sample-data folder]().
+To push the data into ElasticSearch we'll be using a simple NodeJS tool [located in the sample-data folder](https://github.com/DivanteLtd/vue-storefront-integration-boilerplate/blob/tutorial/sample-data/import.js).
 
 Now we can import the data:
 
 ```bash
-MacBook-Pro-Piotr-3:vue-storefront-api pkarwatka$ cd ~/Documents/_PROJEKTY/vue-storefront-integration-boilerplate/sample-data/
-MacBook-Pro-Piotr-3:sample-data pkarwatka$ node import.js products.json product vue_storefront_catalog
+$ cd ./vue-storefront-integration-boilerplate/sample-data/
+$ node import.js products.json product vue_storefront_catalog
 Importing product { id: 1769,
   name: 'Chloe Compete Tank',
   image: '/w/t/wt06-blue_main.jpg',
@@ -111,14 +111,14 @@ Importing product { id: 1769,
 Then please do execute the same import scripts for `atttribute` and `category` entities:
 
 ```bash
-MacBook-Pro-Piotr-3:sample-data pkarwatka$ node import.js attributes.json attribute vue_storefront_catalog
-MacBook-Pro-Piotr-3:sample-data pkarwatka$ node import.js categories.json catetgory vue_storefront_catalog
+$ node import.js attributes.json attribute vue_storefront_catalog
+$ node import.js categories.json category vue_storefront_catalog
 ```
 
-After importing the data  we need to make sure the Vue Storefront Elastic index schema has been properly applied. To ensure this we'll use the [Database tool](https://docs.vuestorefront.io/guide/data/database-tool.html) used previously to clear out the index - once again:
+After importing the data, we need to make sure the Vue Storefront Elastic index schema has been properly applied. To ensure this, we'll use the [Database tool](https://docs.vuestorefront.io/guide/data/database-tool.html) used previously to clear out the index - once again:
 
 ```bash
-MacBook-Pro-Piotr-3:vue-storefront-api pkarwatka$ yarn db rebuild
+$ yarn db rebuild
 yarn run v1.17.3
 $ node scripts/db.js rebuild
 Elasticsearch INFO: 2019-09-06T20:13:28Z
@@ -134,15 +134,16 @@ Elasticsearch DEBUG: 2019-09-06T20:13:28Z
   }
 ```
 
-After data has been imported you can check if it works just opening `http://localhost:3000` and using the Search feature:
+After data has been imported you can check if it works by opening `http://localhost:3000` and using the Search feature:
 
-<img src="screens/screen_0_products.png" width="300" />
+![Search Feature](https://github.com/DivanteLtd/vue-storefront-integration-boilerplate/blob/tutorial/screens/screen_0_products.png "Search Feature")
 
-**Congratulations!** Now it's a good moment to take deep breath and study the data formats we'd just imported in order to create your own mapper from the custom platform of your choice to Vue Storefront format.
+
+**Congratulations!** Now it's a good moment to take a deep breath and study the data formats we'd just imported to create your own mapper from the custom platform of your choice to Vue Storefront format.
 
 ### Product entity
 
-You might have seen that our data formats are pretty much similar to Magento formats. We've simplified them and aggregated. **Some parts are denormalized** on purpose. We're trying to avoid the relations known from the standard databases and rather use the DTO concept. For example, Product is a DTO containing all information necessary to display the PDP (Product Details Page): including `media_gallery`, `configurable_children` and other features. It's then fairly easy to cache the data for the Offline mode and performance.
+You might have seen that our data formats are pretty much similar to Magento formats. We've simplified them and aggregated. **Some parts are denormalized** on purpose. We're trying to avoid the relations known from the standard databases and rather use the [DTO](https://en.wikipedia.org/wiki/Data_transfer_object) concept. For example, Product is a DTO containing all information necessary to display the PDP (Product Details Page): including `media_gallery`, `configurable_children` and other features. It's then fairly easy to cache the data for the Offline mode and performance.
 
 [Read the full Product entity specification](Format-product.md)
 
@@ -154,14 +155,14 @@ Vue Storefront uses the attributes meta data dictionaries saved in the `attribut
 
 ### Category entity
 
-Categories are being used mostly for building the tree navigation. Vue Storefront uses the [dynamic-catetgories-prefetching](https://docs.vuestorefront.io/guide/basics/configuration.html#dynamic-categories-prefetching). Please make sure that **all the categorries** are indexed on the main level - even if they exist as a `category.children_data` assigned to any other category.
+Categories are being used mostly for building tree navigation. Vue Storefront uses the [dynamic-catetgories-prefetching](https://docs.vuestorefront.io/guide/basics/configuration.html#dynamic-categories-prefetching). Please make sure that **all the categories** are indexed on the main level - even if they exist as a `category.children_data` assigned to any other category.
 
 [Read the Category format specification](Format-category.md)
 
 
 ### TaxRate entity
 
-**Note:** TaxRates are skipped from `sample-data` as they're not crucial to display the products and categories in Vue Storefront (as long as the taxes are calculated and imported to Elastic)
+**Note:** TaxRates are skipped from `sample-data` as they're not crucial to display the products and categories in Vue Storefront (as long as the taxes are calculated before product pricing is imported to Elastic)
 
 Here is the data format:
 
@@ -194,22 +195,22 @@ To read more on how tax rates are processed when `config.tax.calculateServerSide
 
 ### Write your API adapter for dynamic requests
 
-Vue Storefornt doesn't store any user's data neither order or payment information. Even shopping carts - are just stored locally in the browser and then synced with the server (`cart/merge` Vuex action). 
+Vue Storefront doesn't store any user data, order or payment information. Even shopping carts are only stored locally in the browser and then synced with the server (`cart/merge` Vuex action). 
 
-Whenever product is being added to the cart or user authorization is being performed there is a API request executed.
+Whenever a product is added to the cart, or user authorization is performed, there is an API request executed.
 
-[Read more on the required API endpoints you must provide in order to have Vue Storefront synchronized](Dynamic%20API%20specification.md)
+[Read more on the required API endpoints you must provide to have Vue Storefront synchronized](Dynamic%20API%20specification.md)
 
 **Note:** If you're to use Vue Storefront just for catalog browsing purposes you can probably skip this step. In that case please make sure your `vue-storefront` instance is properly configured with the `config.cart.synchronize=false` and `config.cart.synchronize_totals=false`.
 
 
 ### Configure vue-storefront
 
-All You need to do is to set the proper dynamic API endpoints in the `config/local.json`. [Here You have the details](https://github.com/DivanteLtd/vue-storefront-integration-boilerplate/blob/master/3.%20Configure%20vue-storefront/How%20to%20configure%20Vue%20Storefront.md).
+All You need to do is to set the proper dynamic API endpoints in the `config/local.json`. [Here you have the details](https://github.com/DivanteLtd/vue-storefront-integration-boilerplate/blob/master/3.%20Configure%20vue-storefront/How%20to%20configure%20Vue%20Storefront.md).
 
 
 # Support
 
-This is MIT project so it's ... just AS IS :) However, if You're planing to add the new platform to the Vue Storefront ecosystem and publish it freely as an open source - we'll do our best to support You! 
+This is a project under MIT license so it's just AS IS :) However, if you're planning to add the new platform to the Vue Storefront ecosystem and publish it freely as an open-source - we'll do our best to support you! 
 
 Please feel free to contact the core team at [Vue Storefront Forum](https://forum.vuestorefront.io/c/development/integrations), on [Slack channel](http://slack.vuestorefront.io) or via contributors@vuestorefront.io
