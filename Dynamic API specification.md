@@ -2,11 +2,9 @@
 
 To integrate the [vue-storefront](https://github.com/DivanteLtd/vue-storefront) with third party platform You should start with building the API around the platform. It should be compatible with the following specification to let Vue Storefront app seamlesly use it and process the data.
 
-The example implementation references/links are provided for the Magento1 module.
-
 **This is general purpose API** for 3rd party platform integration with Vue Storefront.
 
-Here you can find some example implementations of this API:
+Here you can find some example implementations of this API for different platforms:
 - [`vue-storefront-api`](https://github.com/DivanteLtd/vue-storefront-api/) - NodeJS, this is our default API integrated with magento2
 - [`magento1-vsbridge`](https://github.com/DivanteLtd/magento1-vsbridge/tree/master/magento1-module/app/code/local/Divante/VueStorefrontBridge/controllers) - API implementation done as a native Magento1 module
 - [`coreshop-bridge`](https://github.com/DivanteLtd/coreshop-vsbridge/tree/master/src/CoreShop2VueStorefrontBundle/Controller) - Symfony based implementation for Coreshop,
@@ -20,25 +18,25 @@ All methods accept and respond with `application/json` content type.
 
 Cart module is in charge of creating the eCommerce backend shopping carts and synchronizing the items users have in Vue Storefront and eCommerce backend. For example it can synchronize Vue Storefront shopping cart with the Magento quotes.
 
-### POST [/vsbridge/cart/create](https://github.com/DivanteLtd/vue-storefront-api/blob/7d98771994b1009ad17d69c458f9e93686cfb145/src/vsbridge/cart.js#L26)
+### POST [/api/cart/create](https://github.com/DivanteLtd/vue-storefront-api/blob/7d98771994b1009ad17d69c458f9e93686cfb145/src/api/cart.js#L26)
 
 #### WHEN:
 
 This method is called when new Vue Storefront shopping cart is created. First visit, page refresh, after user-authorization ... If the `token` GET parameter is provided it's called as logged-in user; if not - it's called as guest-user. To draw the difference - let's keep to Magento example. For guest user vue-storefront-api is subsequently operating on `/guest-carts` API endpoints and for authorized users on `/carts/` endpoints)
 
 #### GET PARAMS:
-`token` - null OR user token obtained from [`/vsbridge/user/login`](https://github.com/DivanteLtd/vue-storefront-api/blob/7d98771994b1009ad17d69c458f9e93686cfb145/src/vsbridge/user.js#L48)
+`token` - null OR user token obtained from [`/api/user/login`](https://github.com/DivanteLtd/vue-storefront-api/blob/7d98771994b1009ad17d69c458f9e93686cfb145/src/api/user.js#L48)
 
 #### EXAMPLE CALL:
 
 ```bash
-curl 'https://your-domain.example.com/vsbridge/cart/create' -X POST
+curl 'https://your-domain.example.com/api/cart/create' -X POST
 ```
 
 For authorized user:
 
 ```bash
-curl 'https://your-domain.example.com/vsbridge/cart/create?token=xu8h02nd66yq0gaayj4x3kpqwity02or' -X POST
+curl 'https://your-domain.example.com/api/cart/create?token=xu8h02nd66yq0gaayj4x3kpqwity02or' -X POST
 ```
 
 
@@ -70,7 +68,7 @@ The `result` is a cart-id that should be used for all subsequent cart related op
 - `500` in case of error
 
 
-### GET [/vsbridge/cart/pull](https://github.com/DivanteLtd/vue-storefront-api/blob/7d98771994b1009ad17d69c458f9e93686cfb145/src/vsbridge/cart.js#L131)
+### GET [/api/cart/pull](https://github.com/DivanteLtd/vue-storefront-api/blob/7d98771994b1009ad17d69c458f9e93686cfb145/src/api/cart.js#L131)
 
 Method used to fetch the current server side shopping cart content, used mostly for synchronization purposes when `config.cart.synchronize=true`
 
@@ -78,8 +76,8 @@ Method used to fetch the current server side shopping cart content, used mostly 
 This method is called just after any Vue Storefront cart modification to check if the server or client shopping cart items need to be updated. It gets the current list of the shopping cart items. The synchronization algorithm in VueStorefront determines if server or client items need to be updated and executes `api/cart/update` or `api/cart/delete` accordngly.
 
 #### GET PARAMS:
-`token` - null OR user token obtained from [`/vsbridge/user/login`](https://github.com/DivanteLtd/vue-storefront-api/blob/7d98771994b1009ad17d69c458f9e93686cfb145/src/vsbridge/user.js#L48)
-`cartId` - numeric (integer) value for authorized user cart id or GUID (mixed string) for guest cart ID obtained from [`api/cart/create`](https://github.com/DivanteLtd/vue-storefront-api/blob/7d98771994b1009ad17d69c458f9e93686cfb145/src/vsbridge/cart.js#L26)
+`token` - null OR user token obtained from [`/api/user/login`](https://github.com/DivanteLtd/vue-storefront-api/blob/7d98771994b1009ad17d69c458f9e93686cfb145/src/api/user.js#L48)
+`cartId` - numeric (integer) value for authorized user cart id or GUID (mixed string) for guest cart ID obtained from [`api/cart/create`](https://github.com/DivanteLtd/vue-storefront-api/blob/7d98771994b1009ad17d69c458f9e93686cfb145/src/api/cart.js#L26)
 
 
 #### RESPONSE BODY:
@@ -139,7 +137,7 @@ This method is called just after any Vue Storefront cart modification to check i
 ```
 
 
-### POST [/vsbridge/cart/update](https://github.com/DivanteLtd/vue-storefront-api/blob/7d98771994b1009ad17d69c458f9e93686cfb145/src/vsbridge/cart.js#L43)
+### POST [/api/cart/update](https://github.com/DivanteLtd/vue-storefront-api/blob/7d98771994b1009ad17d69c458f9e93686cfb145/src/api/cart.js#L43)
 
 Method used to add or update shopping cart item's server side. As a request body there should be JSON given representing the cart item. `sku` and `qty` are the two required options. If you like to update/edit server cart item You need to pass `item_id` identifier as well (can be obtainted from `api/cart/pull`)
 
@@ -147,8 +145,8 @@ Method used to add or update shopping cart item's server side. As a request body
 This method is called just after `api/cart/pull` as a consequence of the synchronization process
 
 #### GET PARAMS:
-`token` - null OR user token obtained from [`/vsbridge/user/login`](https://github.com/DivanteLtd/vue-storefront-api/blob/7d98771994b1009ad17d69c458f9e93686cfb145/src/vsbridge/user.js#L48)
-`cartId` - numeric (integer) value for authorized user cart id or GUID (mixed string) for guest cart ID obtained from [`api/cart/create`](https://github.com/DivanteLtd/vue-storefront-api/blob/7d98771994b1009ad17d69c458f9e93686cfb145/src/vsbridge/cart.js#L26)
+`token` - null OR user token obtained from [`/api/user/login`](https://github.com/DivanteLtd/vue-storefront-api/blob/7d98771994b1009ad17d69c458f9e93686cfb145/src/api/user.js#L48)
+`cartId` - numeric (integer) value for authorized user cart id or GUID (mixed string) for guest cart ID obtained from [`api/cart/create`](https://github.com/DivanteLtd/vue-storefront-api/blob/7d98771994b1009ad17d69c458f9e93686cfb145/src/api/cart.js#L26)
 
 #### REQUEST BODY:
 
@@ -185,7 +183,7 @@ This method is called just after `api/cart/pull` as a consequence of the synchro
 #### EXAMPLE CALL:
 
 ```bash
-curl 'https://your-domain.example.com/vsbridge/cart/update?token=xu8h02nd66yq0gaayj4x3kpqwity02or&cartId=81668' -H 'content-type: application/json' -H 'accept: */*' --data-binary '{"cartItem":{"sku":"MS10-XS-Black","item_id":5853,"quoteId":"81668"}}' --compressed
+curl 'https://your-domain.example.com/api/cart/update?token=xu8h02nd66yq0gaayj4x3kpqwity02or&cartId=81668' -H 'content-type: application/json' -H 'accept: */*' --data-binary '{"cartItem":{"sku":"MS10-XS-Black","item_id":5853,"quoteId":"81668"}}' --compressed
 ```
 
 #### RESPONSE BODY:
@@ -206,7 +204,7 @@ curl 'https://your-domain.example.com/vsbridge/cart/update?token=xu8h02nd66yq0ga
 }
 ```
 
-### POST [/vsbridge/cart/delete](https://github.com/DivanteLtd/vue-storefront-api/blob/7d98771994b1009ad17d69c458f9e93686cfb145/src/vsbridge/cart.js#L113)
+### POST [/api/cart/delete](https://github.com/DivanteLtd/vue-storefront-api/blob/7d98771994b1009ad17d69c458f9e93686cfb145/src/api/cart.js#L113)
 
 This method is used to remove the shopping cart item on server side.
 
@@ -214,13 +212,13 @@ This method is used to remove the shopping cart item on server side.
 This method is called just after `api/cart/pull` as a consequence of the synchronization process
 
 #### GET PARAMS:
-`token` - null OR user token obtained from [`/vsbridge/user/login`](https://github.com/DivanteLtd/vue-storefront-api/blob/7d98771994b1009ad17d69c458f9e93686cfb145/src/vsbridge/user.js#L48)
-`cartId` - numeric (integer) value for authorized user cart id or GUID (mixed string) for guest cart ID obtained from [`api/cart/create`](https://github.com/DivanteLtd/vue-storefront-api/blob/7d98771994b1009ad17d69c458f9e93686cfb145/src/vsbridge/cart.js#L26)
+`token` - null OR user token obtained from [`/api/user/login`](https://github.com/DivanteLtd/vue-storefront-api/blob/7d98771994b1009ad17d69c458f9e93686cfb145/src/api/user.js#L48)
+`cartId` - numeric (integer) value for authorized user cart id or GUID (mixed string) for guest cart ID obtained from [`api/cart/create`](https://github.com/DivanteLtd/vue-storefront-api/blob/7d98771994b1009ad17d69c458f9e93686cfb145/src/api/cart.js#L26)
 
 #### EXAMPLE CALL:
 
 ```bash
-curl 'https://your-domain.example.com/vsbridge/cart/delete?token=xu8h02nd66yq0gaayj4x3kpqwity02or&cartId=81668' -H 'content-type: application/json' -H 'accept: */*' --data-binary '{"cartItem":{"sku":"MS10-XS-Black","item_id":5853,"quoteId":"81668"}}' --compressed
+curl 'https://your-domain.example.com/api/cart/delete?token=xu8h02nd66yq0gaayj4x3kpqwity02or&cartId=81668' -H 'content-type: application/json' -H 'accept: */*' --data-binary '{"cartItem":{"sku":"MS10-XS-Black","item_id":5853,"quoteId":"81668"}}' --compressed
 ```
 
 #### REQUEST BODY:
@@ -245,14 +243,14 @@ curl 'https://your-domain.example.com/vsbridge/cart/delete?token=xu8h02nd66yq0ga
 }
 ```
 
-### POST [/vsbridge/cart/apply-coupon](https://github.com/DivanteLtd/vue-storefront-api/blob/7d98771994b1009ad17d69c458f9e93686cfb145/src/vsbridge/cart.js#L63)
+### POST [/api/cart/apply-coupon](https://github.com/DivanteLtd/vue-storefront-api/blob/7d98771994b1009ad17d69c458f9e93686cfb145/src/api/cart.js#L63)
 
 This method is used to apply the discount code to the current server side quote.
 
 #### EXAMPLE CALL:
 
 ```bash
-curl 'https://your-domain.example.com/vsbridge/cart/apply-coupon?token=2q1w9oixh3bukxyj947tiordnehai4td&cartId=5effb906a97ebecd6ae96e3958d04edc&coupon=ARMANI' -X POST -H 'content-type: application/json' -H 'accept: */*' 
+curl 'https://your-domain.example.com/api/cart/apply-coupon?token=2q1w9oixh3bukxyj947tiordnehai4td&cartId=5effb906a97ebecd6ae96e3958d04edc&coupon=ARMANI' -X POST -H 'content-type: application/json' -H 'accept: */*' 
 ```
 
 #### RESPONSE BODY:
@@ -265,14 +263,14 @@ curl 'https://your-domain.example.com/vsbridge/cart/apply-coupon?token=2q1w9oixh
 ```
 
 
-### POST [/vsbridge/cart/delete-coupon](https://github.com/DivanteLtd/vue-storefront-api/blob/7d98771994b1009ad17d69c458f9e93686cfb145/src/vsbridge/cart.js#L82)
+### POST [/api/cart/delete-coupon](https://github.com/DivanteLtd/vue-storefront-api/blob/7d98771994b1009ad17d69c458f9e93686cfb145/src/api/cart.js#L82)
 
 This method is used to delete the discount code to the current server side quote.
 
 #### EXAMPLE CALL:
 
 ```bash
-curl 'https://your-domain.example.com/vsbridge/cart/delete-coupon?token=2q1w9oixh3bukxyj947tiordnehai4td&cartId=5effb906a97ebecd6ae96e3958d04edc' -X POST -H 'content-type: application/json' -H 'accept: */*' 
+curl 'https://your-domain.example.com/api/cart/delete-coupon?token=2q1w9oixh3bukxyj947tiordnehai4td&cartId=5effb906a97ebecd6ae96e3958d04edc' -X POST -H 'content-type: application/json' -H 'accept: */*' 
 ```
 
 #### RESPONSE BODY:
@@ -284,14 +282,14 @@ curl 'https://your-domain.example.com/vsbridge/cart/delete-coupon?token=2q1w9oix
 }
 ```
 
-### GET [/vsbridge/cart/coupon](https://github.com/DivanteLtd/vue-storefront-api/blob/7d98771994b1009ad17d69c458f9e93686cfb145/src/vsbridge/cart.js#L82)
+### GET [/api/cart/coupon](https://github.com/DivanteLtd/vue-storefront-api/blob/7d98771994b1009ad17d69c458f9e93686cfb145/src/api/cart.js#L82)
 
 This method is used to get the currently applied coupon code
 
 #### EXAMPLE CALL:
 
 ```bash
-curl 'https://your-domain.example.com/vsbridge/cart/coupon?token=2q1w9oixh3bukxyj947tiordnehai4td&cartId=5effb906a97ebecd6ae96e3958d04edc' -H 'content-type: application/json' -H 'accept: */*' 
+curl 'https://your-domain.example.com/api/cart/coupon?token=2q1w9oixh3bukxyj947tiordnehai4td&cartId=5effb906a97ebecd6ae96e3958d04edc' -H 'content-type: application/json' -H 'accept: */*' 
 ```
 
 #### RESPONSE BODY:
@@ -303,19 +301,19 @@ curl 'https://your-domain.example.com/vsbridge/cart/coupon?token=2q1w9oixh3bukxy
 }
 ```
 
-### GET [/vsbridge/cart/totals](https://github.com/DivanteLtd/vue-storefront-api/blob/7d98771994b1009ad17d69c458f9e93686cfb145/src/vsbridge/cart.js#L145)
+### GET [/api/cart/totals](https://github.com/DivanteLtd/vue-storefront-api/blob/7d98771994b1009ad17d69c458f9e93686cfb145/src/api/cart.js#L145)
 
 Method called when the `config.synchronize_totals=true` just after any shopping cart modification. It's used to synchronize the Magento / other CMS totals after all promotion rules processed with current Vue Storefront state.
 
 #### EXAMPLE CALL:
 
 ```bash
-curl 'https://your-domain.example.com/vsbridge/cart/totals?token=xu8h02nd66yq0gaayj4x3kpqwity02or&cartId=81668' -H 'content-type: application/json' -H 'accept: */*'
+curl 'https://your-domain.example.com/api/cart/totals?token=xu8h02nd66yq0gaayj4x3kpqwity02or&cartId=81668' -H 'content-type: application/json' -H 'accept: */*'
 ```
 
 #### GET PARAMS:
-`token` - null OR user token obtained from [`/vsbridge/user/login`](https://github.com/DivanteLtd/vue-storefront-api/blob/7d98771994b1009ad17d69c458f9e93686cfb145/src/vsbridge/user.js#L48)
-`cartId` - numeric (integer) value for authorized user cart id or GUID (mixed string) for guest cart ID obtained from [`api/cart/create`](https://github.com/DivanteLtd/vue-storefront-api/blob/7d98771994b1009ad17d69c458f9e93686cfb145/src/vsbridge/cart.js#L26)
+`token` - null OR user token obtained from [`/api/user/login`](https://github.com/DivanteLtd/vue-storefront-api/blob/7d98771994b1009ad17d69c458f9e93686cfb145/src/api/user.js#L48)
+`cartId` - numeric (integer) value for authorized user cart id or GUID (mixed string) for guest cart ID obtained from [`api/cart/create`](https://github.com/DivanteLtd/vue-storefront-api/blob/7d98771994b1009ad17d69c458f9e93686cfb145/src/api/cart.js#L26)
 
 #### RESPONSE BODY:
 
@@ -399,19 +397,19 @@ You have totals data for the current, synchronized quote returned:
 }
 ```
 
-### GET [/vsbridge/cart/payment-methods](https://github.com/DivanteLtd/vue-storefront-api/blob/7d98771994b1009ad17d69c458f9e93686cfb145/src/vsbridge/cart.js#L178)
+### GET [/api/cart/payment-methods](https://github.com/DivanteLtd/vue-storefront-api/blob/7d98771994b1009ad17d69c458f9e93686cfb145/src/api/cart.js#L178)
 
 This method is used as a step in the cart synchronization process to get all the payment methods with actual costs as available inside the backend CMS
 
 #### EXAMPLE CALL:
 
 ```bash
-curl 'https://your-domain.example.com/vsbridge/cart/payment-methods?token=xu8h02nd66yq0gaayj4x3kpqwity02or&cartId=81668' -H 'content-type: application/json' -H 'accept: */*'
+curl 'https://your-domain.example.com/api/cart/payment-methods?token=xu8h02nd66yq0gaayj4x3kpqwity02or&cartId=81668' -H 'content-type: application/json' -H 'accept: */*'
 ```
 
 #### GET PARAMS:
-`token` - null OR user token obtained from [`/vsbridge/user/login`](https://github.com/DivanteLtd/vue-storefront-api/blob/7d98771994b1009ad17d69c458f9e93686cfb145/src/vsbridge/user.js#L48)
-`cartId` - numeric (integer) value for authorized user cart id or GUID (mixed string) for guest cart ID obtained from [`api/cart/create`](https://github.com/DivanteLtd/vue-storefront-api/blob/7d98771994b1009ad17d69c458f9e93686cfb145/src/vsbridge/cart.js#L26)
+`token` - null OR user token obtained from [`/api/user/login`](https://github.com/DivanteLtd/vue-storefront-api/blob/7d98771994b1009ad17d69c458f9e93686cfb145/src/api/user.js#L48)
+`cartId` - numeric (integer) value for authorized user cart id or GUID (mixed string) for guest cart ID obtained from [`api/cart/create`](https://github.com/DivanteLtd/vue-storefront-api/blob/7d98771994b1009ad17d69c458f9e93686cfb145/src/api/cart.js#L26)
 
 
 #### RESPONSE BODY:
@@ -437,19 +435,19 @@ curl 'https://your-domain.example.com/vsbridge/cart/payment-methods?token=xu8h02
 }
 ```
 
-### POST [/vsbridge/cart/shipping-methods](https://github.com/DivanteLtd/vue-storefront-api/blob/7d98771994b1009ad17d69c458f9e93686cfb145/src/vsbridge/cart.js#L160)
+### POST [/api/cart/shipping-methods](https://github.com/DivanteLtd/vue-storefront-api/blob/7d98771994b1009ad17d69c458f9e93686cfb145/src/api/cart.js#L160)
 
 This method is used as a step in the cart synchronization process to get all the shipping methods with actual costs as available inside the backend CMS
 
 #### EXAMPLE CALL:
 
 ```bash
-curl 'https://your-domain.example.com/vsbridge/cart/shipping-methods?token=xu8h02nd66yq0gaayj4x3kpqwity02or&cartId=81668' -H 'content-type: application/json' -H 'accept: */*' --data-binary '{"address":{"country_id":"PL"}}'
+curl 'https://your-domain.example.com/api/cart/shipping-methods?token=xu8h02nd66yq0gaayj4x3kpqwity02or&cartId=81668' -H 'content-type: application/json' -H 'accept: */*' --data-binary '{"address":{"country_id":"PL"}}'
 ```
 
 #### GET PARAMS:
-`token` - null OR user token obtained from [`/vsbridge/user/login`](https://github.com/DivanteLtd/vue-storefront-api/blob/7d98771994b1009ad17d69c458f9e93686cfb145/src/vsbridge/user.js#L48)
-`cartId` - numeric (integer) value for authorized user cart id or GUID (mixed string) for guest cart ID obtained from [`api/cart/create`](https://github.com/DivanteLtd/vue-storefront-api/blob/7d98771994b1009ad17d69c458f9e93686cfb145/src/vsbridge/cart.js#L26)
+`token` - null OR user token obtained from [`/api/user/login`](https://github.com/DivanteLtd/vue-storefront-api/blob/7d98771994b1009ad17d69c458f9e93686cfb145/src/api/user.js#L48)
+`cartId` - numeric (integer) value for authorized user cart id or GUID (mixed string) for guest cart ID obtained from [`api/cart/create`](https://github.com/DivanteLtd/vue-storefront-api/blob/7d98771994b1009ad17d69c458f9e93686cfb145/src/api/cart.js#L26)
 
 
 #### REQUEST BODY:
@@ -488,19 +486,19 @@ If the shipping methods are dependend on the full address - probably we need to 
 }
 ```
 
-### POST [/vsbridge/cart/shipping-information](https://github.com/DivanteLtd/vue-storefront-api/blob/7d98771994b1009ad17d69c458f9e93686cfb145/src/vsbridge/cart.js#L188)
+### POST [/api/cart/shipping-information](https://github.com/DivanteLtd/vue-storefront-api/blob/7d98771994b1009ad17d69c458f9e93686cfb145/src/api/cart.js#L188)
 
 This method sets the shipping information on specified quote which is a required step before calling `api/cart/totals`
 
 #### EXAMPLE CALL:
 
 ```bash
-curl 'https://your-domain.example.com/vsbridge/cart/shipping-information?token=xu8h02nd66yq0gaayj4x3kpqwity02or&cartId=81668' -H 'content-type: application/json' -H 'accept: */*' --data-binary '{"addressInformation":{"shipping_address":{"country_id":"PL"},"shipping_method_code":"flatrate","shipping_carrier_code":"flatrate"}}'
+curl 'https://your-domain.example.com/api/cart/shipping-information?token=xu8h02nd66yq0gaayj4x3kpqwity02or&cartId=81668' -H 'content-type: application/json' -H 'accept: */*' --data-binary '{"addressInformation":{"shipping_address":{"country_id":"PL"},"shipping_method_code":"flatrate","shipping_carrier_code":"flatrate"}}'
 ```
 
 #### GET PARAMS:
-`token` - null OR user token obtained from [`/vsbridge/user/login`](https://github.com/DivanteLtd/vue-storefront-api/blob/7d98771994b1009ad17d69c458f9e93686cfb145/src/vsbridge/user.js#L48)
-`cartId` - numeric (integer) value for authorized user cart id or GUID (mixed string) for guest cart ID obtained from [`api/cart/create`](https://github.com/DivanteLtd/vue-storefront-api/blob/7d98771994b1009ad17d69c458f9e93686cfb145/src/vsbridge/cart.js#L26)
+`token` - null OR user token obtained from [`/api/user/login`](https://github.com/DivanteLtd/vue-storefront-api/blob/7d98771994b1009ad17d69c458f9e93686cfb145/src/api/user.js#L48)
+`cartId` - numeric (integer) value for authorized user cart id or GUID (mixed string) for guest cart ID obtained from [`api/cart/create`](https://github.com/DivanteLtd/vue-storefront-api/blob/7d98771994b1009ad17d69c458f9e93686cfb145/src/api/cart.js#L26)
 
 
 #### REQUEST BODY:
@@ -621,14 +619,14 @@ curl 'https://your-domain.example.com/vsbridge/cart/shipping-information?token=x
 
 ## User module
 
-### POST [/vsbridge/user/create](https://github.com/DivanteLtd/vue-storefront-api/blob/7d98771994b1009ad17d69c458f9e93686cfb145/src/vsbridge/user.js#L25)
+### POST [/api/user/create](https://github.com/DivanteLtd/vue-storefront-api/blob/7d98771994b1009ad17d69c458f9e93686cfb145/src/api/user.js#L25)
 
 Registers new user to eCommerce backend users database. 
 
 #### EXAMPLE CALL:
 
 ```bash
-curl 'https://your-domain.example.com/vsbridge/user/create' -H 'content-type: application/json' -H 'accept: application/json, text/plain, */*'--data-binary '{"customer":{"email":"pkarwatka9998@divante.pl","firstname":"Joe","lastname":"Black"},"password":"SecretPassword!@#123"}'
+curl 'https://your-domain.example.com/api/user/create' -H 'content-type: application/json' -H 'accept: application/json, text/plain, */*'--data-binary '{"customer":{"email":"pkarwatka9998@divante.pl","firstname":"Joe","lastname":"Black"},"password":"SecretPassword!@#123"}'
 ```
 
 #### REQUEST BODY:
@@ -678,7 +676,7 @@ In case of error:
 ```
 
 
-### POST [/vsbridge/user/login](https://github.com/DivanteLtd/vue-storefront-api/blob/7d98771994b1009ad17d69c458f9e93686cfb145/src/vsbridge/user.js#L48)
+### POST [/api/user/login](https://github.com/DivanteLtd/vue-storefront-api/blob/7d98771994b1009ad17d69c458f9e93686cfb145/src/api/user.js#L48)
 
 Authorizes the user. It's called after user submits "Login" form inside the Vue Storefront app. It returns the user token which should be used for all subsequent API calls that requires authorization
 
@@ -698,7 +696,7 @@ null
 
 #### RESPONSE BODY:
 
-`curl 'https://your-domain.example.com/vsbridge/user/login' -H 'content-type: application/json' -H 'accept: application/json' --data-binary '"username":"pkarwatka102@divante.pl","password":"TopSecretPassword}'`
+`curl 'https://your-domain.example.com/api/user/login' -H 'content-type: application/json' -H 'accept: application/json' --data-binary '"username":"pkarwatka102@divante.pl","password":"TopSecretPassword}'`
 
 ```json
 {
@@ -725,7 +723,7 @@ The result is a authorization token, that should be passed via `?token=xu8h02nd6
 - `500` in case of error
 
 
-### POST /vsbridge/user/refresh
+### POST /api/user/refresh
 
 Refresh the user token
 
@@ -745,7 +743,7 @@ null
 
 #### RESPONSE BODY:
 
-`curl 'https://your-domain.example.com/vsbridge/user/login' -H 'content-type: application/json' -H 'accept: application/json' --data-binary '"refreshToken":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjEzOSJ9.a4HQc2HODmOj5SRMiv-EzWuMZbyIz0CLuVRhPw_MrOM"}'`
+`curl 'https://your-domain.example.com/api/user/login' -H 'content-type: application/json' -H 'accept: application/json' --data-binary '"refreshToken":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjEzOSJ9.a4HQc2HODmOj5SRMiv-EzWuMZbyIz0CLuVRhPw_MrOM"}'`
 
 ```json
 {
@@ -770,14 +768,14 @@ The result is a authorization token, that should be passed via `?token=xu8h02nd6
 - `200` when success
 - `500` in case of error
 
-### POST [/vsbridge/user/resetPassword](https://github.com/DivanteLtd/vue-storefront-api/blob/7d98771994b1009ad17d69c458f9e93686cfb145/src/vsbridge/user.js#L60)
+### POST [/api/user/resetPassword](https://github.com/DivanteLtd/vue-storefront-api/blob/7d98771994b1009ad17d69c458f9e93686cfb145/src/api/user.js#L60)
 
 Sends the password reset link for the specified user.
 
 #### EXAMPLE CALL:
 
 ```bash
-curl 'https://your-domain.example.com/vsbridge/user/resetPassword' -H 'content-type: application/json' -H 'accept: application/json, text/plain, */*' --data-binary '{"email":"pkarwatka992@divante.pl"}'
+curl 'https://your-domain.example.com/api/user/resetPassword' -H 'content-type: application/json' -H 'accept: application/json, text/plain, */*' --data-binary '{"email":"pkarwatka992@divante.pl"}'
 ```
 
 #### REQUEST BODY:
@@ -798,13 +796,13 @@ curl 'https://your-domain.example.com/vsbridge/user/resetPassword' -H 'content-t
 ```
 
 
-### POST [/vsbridge/user/changePassword](https://github.com/DivanteLtd/vue-storefront-api/blob/7d98771994b1009ad17d69c458f9e93686cfb145/src/vsbridge/user.js#L124)
+### POST [/api/user/changePassword](https://github.com/DivanteLtd/vue-storefront-api/blob/7d98771994b1009ad17d69c458f9e93686cfb145/src/api/user.js#L124)
 
 This method is used to change password for current user identified by `token` obtained from `api/user/login`
 
 #### GET PARAMS:
 
-`token` - user token returned from `POST /vsbridge/user/login`
+`token` - user token returned from `POST /api/user/login`
 
 #### REQUEST BODY:
 
@@ -825,13 +823,13 @@ This method is used to change password for current user identified by `token` ob
 }
 ```
 
-### GET [/vsbridge/user/order-history](https://github.com/DivanteLtd/vue-storefront-api/blob/7d98771994b1009ad17d69c458f9e93686cfb145/src/vsbridge/user.js#L91)
+### GET [/api/user/order-history](https://github.com/DivanteLtd/vue-storefront-api/blob/7d98771994b1009ad17d69c458f9e93686cfb145/src/api/user.js#L91)
 
 Get the user order history from server side
 
 #### GET PARAMS:
 
-`token` - user token returned from `POST /vsbridge/user/login`
+`token` - user token returned from `POST /api/user/login`
 
 #### RESPONSE BODY:
 
@@ -1089,13 +1087,13 @@ Get the user order history from server side
 }
 ```
 
-### GET [/vsbridge/user/me](https://github.com/DivanteLtd/vue-storefront-api/blob/7d98771994b1009ad17d69c458f9e93686cfb145/src/vsbridge/user.js#L78)
+### GET [/api/user/me](https://github.com/DivanteLtd/vue-storefront-api/blob/7d98771994b1009ad17d69c458f9e93686cfb145/src/api/user.js#L78)
 
-Gets the User profile for currently authorized user. It's called after `POST /vsbridge/user/login` successful call.
+Gets the User profile for currently authorized user. It's called after `POST /api/user/login` successful call.
 
 #### GET PARAMS:
 
-`token` - user token returned from `POST /vsbridge/user/login`
+`token` - user token returned from `POST /api/user/login`
 
 #### RESPONSE BODY:
 
@@ -1145,13 +1143,13 @@ Gets the User profile for currently authorized user. It's called after `POST /vs
 
 
 
-### POST [/vsbridge/user/me](https://github.com/DivanteLtd/vue-storefront-api/blob/7d98771994b1009ad17d69c458f9e93686cfb145/src/vsbridge/user.js#L78)
+### POST [/api/user/me](https://github.com/DivanteLtd/vue-storefront-api/blob/7d98771994b1009ad17d69c458f9e93686cfb145/src/api/user.js#L78)
 
 Updates the user address and other data information.
 
 #### GET PARAMS:
 
-`token` - user token returned from `POST /vsbridge/user/login`
+`token` - user token returned from `POST /api/user/login`
 
 #### REQUEST BODY:
 
@@ -1256,7 +1254,7 @@ In the response You'll get the current, updated information about the user.
 
 ## Stock module
 
-### GET [`/vsbridge/stock/check/:sku`](https://github.com/DivanteLtd/vue-storefront-api/blob/7d98771994b1009ad17d69c458f9e93686cfb145/src/vsbridge/stock.js#L20)
+### GET [`/api/stock/check/:sku`](https://github.com/DivanteLtd/vue-storefront-api/blob/7d98771994b1009ad17d69c458f9e93686cfb145/src/api/stock.js#L20)
 
 This method is used to check the stock item for specified product sku
 
@@ -1296,7 +1294,7 @@ This method is used to check the stock item for specified product sku
 }
 ```
 
-### GET [`/vsbridge/stock/list`](https://github.com/DivanteLtd/vue-storefront-api/blob/master/src/api/stock.js#L52)
+### GET [`/api/stock/list`](https://github.com/DivanteLtd/vue-storefront-api/blob/master/src/api/stock.js#L52)
 This method is used to check multiple stock items for specified product skus. Requires `skus` param of comma-separated values to indicate which stock items to return.
 
 #### RESPONSE BODY:
@@ -1340,7 +1338,7 @@ This method is used to check multiple stock items for specified product skus. Re
 
 ## Order module
 
-### POST ['/vsbridge/order/create`](https://github.com/DivanteLtd/vue-storefront-api/blob/7d98771994b1009ad17d69c458f9e93686cfb145/src/vsbridge/order.js#L17)
+### POST ['/api/order/create`](https://github.com/DivanteLtd/vue-storefront-api/blob/7d98771994b1009ad17d69c458f9e93686cfb145/src/api/order.js#L17)
 
 Queue the order into the order queue which will be asynchronously submitted to the eCommerce backend.
 
@@ -1420,13 +1418,13 @@ In case of the JSON validation error, the validation errors will be returned ins
 
 ## Catalog module
 
-### [/vsbridge/catalog](https://github.com/DivanteLtd/vue-storefront-api/blob/7d98771994b1009ad17d69c458f9e93686cfb145/src/vsbridge/catalog.js#L4)
+### [/api/catalog](https://github.com/DivanteLtd/vue-storefront-api/blob/7d98771994b1009ad17d69c458f9e93686cfb145/src/api/catalog.js#L4)
 
 Catalog endpoints are a proxy to Elastic Search 5.x and can be used to search the store catalog (synchronized with Magento2 or other platform).
 
 #### GET PARAMETERS
 
-`/vsbridge/catalog/:index-name/:entity-name/_search?size=:pageSize&from=:offset&sort=`
+`/api/catalog/:index-name/:entity-name/_search?size=:pageSize&from=:offset&sort=`
 
 `index-name` is an Elastic Search index name - by default it's `vue_storefront_catalog` for most instalations
 `entity-name` is an Elastic Search entity name - `product`, `attribute`, `taxrule`, `category` ...
@@ -1436,7 +1434,7 @@ Catalog endpoints are a proxy to Elastic Search 5.x and can be used to search th
 #### EXAMPLE CALL
 
 ```bash
-curl 'https://your-domain.example.com/vsbridge/catalog/vue_storefront_catalog/attribute/_search?size=50&from=0&sort=' -H 'content-type: application/json' -H 'accept: */*' --data-binary '{"query":{"bool":{"filter":{"bool":{"should":[{"term":{"attribute_code":"color"}},{"term":{"attribute_code":"size"}},{"term":{"attribute_code":"price"}}]}}}}}'
+curl 'https://your-domain.example.com/api/catalog/vue_storefront_catalog/attribute/_search?size=50&from=0&sort=' -H 'content-type: application/json' -H 'accept: */*' --data-binary '{"query":{"bool":{"filter":{"bool":{"should":[{"term":{"attribute_code":"color"}},{"term":{"attribute_code":"size"}},{"term":{"attribute_code":"price"}}]}}}}}'
 ```
 
 #### REQUEST BODY
@@ -1833,7 +1831,7 @@ Elastic Search data format. Please read more on [data formats used in Vue Storef
 }
 ```
 
-### [/vsbridge/product/list](https://github.com/DivanteLtd/vue-storefront-api/blob/7d98771994b1009ad17d69c458f9e93686cfb145/src/vsbridge/product.js#L22) and [/vsbridge/product/render-list](https://github.com/DivanteLtd/vue-storefront-api/blob/7d98771994b1009ad17d69c458f9e93686cfb145/src/vsbridge/product.js#L39)
+### [/api/product/list](https://github.com/DivanteLtd/vue-storefront-api/blob/7d98771994b1009ad17d69c458f9e93686cfb145/src/api/product.js#L22) and [/api/product/render-list](https://github.com/DivanteLtd/vue-storefront-api/blob/7d98771994b1009ad17d69c458f9e93686cfb145/src/api/product.js#L39)
 
 Magento specific methods to return the product details for specifed SKUs.
 Methods are mostly used for data synchronization with Magento two and for some specific cases when overriding the platform prices inside Vue Storefront.
@@ -1846,8 +1844,8 @@ Methods are mostly used for data synchronization with Magento two and for some s
 #### EXAMPLE CALL:
 
 ```bash
-curl https://your-domain.example.com/vsbridge/product/list?skus=WP07
-curl https://your-domain.example.com/vsbridge/product/render-list?skus=WP07
+curl https://your-domain.example.com/api/product/list?skus=WP07
+curl https://your-domain.example.com/api/product/render-list?skus=WP07
 ```
 
 #### RESPONSE BODY:
@@ -2014,7 +2012,7 @@ For render-list:
 
 ## Image module
 
-### [/img](https://github.com/DivanteLtd/vue-storefront-api/blob/7d98771994b1009ad17d69c458f9e93686cfb145/src/vsbridge/img.js#L5)
+### [/img](https://github.com/DivanteLtd/vue-storefront-api/blob/7d98771994b1009ad17d69c458f9e93686cfb145/src/api/img.js#L5)
 
 This simple API module is used to just resize the images using [Imageable](https://github.com/sdepold/node-imageable) node library.
 

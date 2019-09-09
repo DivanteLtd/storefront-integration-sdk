@@ -1,0 +1,85 @@
+{
+  "name": "vue-storefront-api",
+  "version": "1.10.0",
+  "private": true,
+  "description": "vue-storefront API and data services",
+  "main": "dist",
+  "scripts": {
+    "dev": "nodemon",
+    "dev:inspect": "nodemon --exec \"node --inspect -r ts-node/register src\"",
+    "build": "npm run -s build:code",
+    "build:code": "tsc --build",
+    "start": "pm2 start ecosystem.json $PM2_ARGS",
+    "prestart": "npm run -s build",
+    "test": "eslint src",
+    "lint": "eslint --ext .js src migrations scripts"
+  },
+  "eslintConfig": {
+    "extends": "eslint:recommended",
+    "parserOptions": {
+      "ecmaVersion": 2018,
+      "sourceType": "module"
+    },
+    "env": {
+      "node": true,
+      "es6": true
+    },
+    "rules": {
+      "no-console": 0,
+      "no-unused-vars": 1
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DivanteLtd/vue-storefront-integration-sdk.git"
+  },
+  "author": "Piotr Karwatka <pkarwatka@divante.pl>",
+  "license": "MIT",
+  "dependencies": {
+    "ajv": "^6.4.0",
+    "ajv-keywords": "^3.4.0",
+    "body-parser": "^1.18.2",
+    "bodybuilder": "2.2.13",
+    "compression": "^1.7.2",
+    "config": "^1.30.0",
+    "cors": "^2.8.4",
+    "express": "^4.16.3",
+    "humps": "^1.1.0",
+    "jsonfile": "^4.0.0",
+    "jwa": "^1.1.5",
+    "jwt-simple": "^0.5.1",
+    "lodash": "^4.17.10",
+    "md5": "^2.2.1",
+    "mime-types": "^2.1.18",
+    "morgan": "^1.9.0",
+    "pm2": "^2.10.4",
+    "request": "^2.85.0",
+    "request-promise-native": "^1.0.5",
+    "resource-router-middleware": "^0.6.0",
+    "sharp": "^0.21.0",
+    "soap": "^0.25.0",
+    "winston": "^2.4.2"
+  },
+  "devDependencies": {
+    "@types/body-parser": "^1.17.0",
+    "@types/config": "^0.0.34",
+    "@types/express": "^4.16.1",
+    "@types/node": "^11.13.4",
+    "cpx": "^1.5.0",
+    "eslint": "^4.16.0",
+    "nodemon": "^1.18.7",
+    "ts-node": "^8.1.0",
+    "tslib": "^1.9.3",
+    "typescript": "3.3.*"
+  },
+  "bugs": {
+    "url": "https://github.com/DivanteLtd/vue-storefront-integration-sdk/issues"
+  },
+  "homepage": "https://github.com/DivanteLtd/vue-storefront-integration-sdk/",
+  "keywords": [
+    "storefront",
+    "rest",
+    "api",
+    "nodejs"
+  ]
+}
