@@ -2,7 +2,7 @@
 
 To integrate the [vue-storefront](https://github.com/DivanteLtd/vue-storefront) with third party platform You should start with building the API around the platform. It should be compatible with the following specification to let Vue Storefront app seamlesly use it and process the data.
 
-**This is general purpose API** for 3rd party platform integration with Vue Storefront.
+**Note:** Please check the [sample API implementation](sample-api-js). It's compliant with this API specification.
 
 Here you can find some example implementations of this API for different platforms:
 - [`vue-storefront-api`](https://github.com/DivanteLtd/vue-storefront-api/) - NodeJS, this is our default API integrated with magento2
