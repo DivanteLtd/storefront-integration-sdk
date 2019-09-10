@@ -1,0 +1,71 @@
+{
+  "server": {
+    "host": "localhost",
+    "port": 8080
+  },
+  "images": {
+    "baseUrl": "http://demo-magento2.vuestorefront.io/media/catalog/product"
+  },
+  "bodyLimit": "100kb",
+  "corsHeaders": [
+    "Link"
+  ],  
+  "elasticsearch": {
+    "host": "localhost",
+    "port": 9200,
+    "protocol": "http",
+    "user": "elastic",
+    "password": "changeme",
+    "min_score": 0.01,
+    "indices": [
+      "vue_storefront_catalog",
+      "vue_storefront_catalog_de",
+      "vue_storefront_catalog_it"
+    ],
+    "indexTypes": [
+      "product",
+      "category",
+      "cms",
+      "attribute",
+      "taxrule",
+      "review"
+    ],
+    "apiVersion": "5.6"
+  },  
+  "imageable": {
+    "maxListeners": 512,
+    "imageSizeLimit": 1024,
+    "whitelist": {
+      "allowedHosts": [
+        ".*divante.pl",
+        ".*vuestorefront.io"
+      ]
+    },
+    "cache": {
+      "memory": 50,
+      "files": 20,
+      "items": 100
+    },
+    "concurrency": 0,
+    "counters": {
+      "queue": 2,
+      "process": 4
+    },
+    "simd": true,
+    "caching": {
+      "active": false,
+      "type": "file",
+      "file": {
+        "path": "/tmp/vue-storefront-api"
+      },
+      "google-cloud-storage": {
+        "libraryOptions": {},
+        "bucket": "",
+        "prefix": "vue-storefront-api/image-cache"
+      }
+    },
+    "action": {
+      "type": "local"
+    }
+  }
+}

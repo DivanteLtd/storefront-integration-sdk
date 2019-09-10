@@ -6,8 +6,11 @@ By default Vue Storefront uses ES index named `vue_storefront_catalog`. Please a
 - `vue-storefront` [config file](https://github.com/DivanteLtd/vue-storefront/tree/master/config) `local.json` to point to right index name,
 - `vue-storefront-api` [config file](https://github.com/DivanteLtd/vue-storefront-api/tree/master/config) `local.json` to point to right index name.
 
-Restart `vue-storefront` and `vue-storefront-api`. 
+Restart `vue-storefront` and `vue-storefront-api`.
+
 **Please note**: By default `vue-storefront` is using `vue-storefront-api` as a proxy to ElasticSearch. You might want to use the Elastic connection directly. In that case feel free to put the `http://localhost:9200` or whatever Elastic URL you have as a `elasticsearch.host` to `vue-storefront/config/local.json`.
+
+**Note**: When connecting to Elastic directly, please make sure to change the `config.elasticsearch.queryMethod` to `POST` in [the config file](https://github.com/DivanteLtd/vue-storefront/blob/8f3ce717a823ef3a5c7469082b8a8bcb36abb5c1/config/default.json#L56).
 
 The integration requires You to change the `config/local.json` to set the proper endpoints for [Dynamic API calls](Dynamic%20API%20specification.md).
 
