@@ -11,6 +11,21 @@ const asyncMiddleware = fn => (req, res, next) => {
   Promise.resolve(fn(req, res, next)).catch(next);
 };
 
+/**
+ * Image resizer
+ * 
+ * ```bash
+ *  curl https://your-domain.example.com/img/310/300/resize/w/p/wp07-black_main.jpg
+ * ```
+ * 
+ * or
+ * 
+ * ```bash
+ *  curl https://your-domain.example.com/img/310/300/resize?url=https%3A%2F%2Fimages.yourdomain.com%2Fw%2Fp%2Fwp07-black_main.jpg
+ * ```
+ * 
+ * Details: https://github.com/DivanteLtd/vue-storefront-integration-sdk/blob/tutorial/Dynamic%20API%20specification.md#img
+ */
 export default ({ config, db }) =>
   asyncMiddleware(async (req, res, body) => {
     if (!(req.method == 'GET')) {

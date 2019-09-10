@@ -34,7 +34,8 @@ export default ({ config, db }) => {
 	/** 
 	 * POST update or add the cart item
 	 *
-	 * Request boddy:
+	 * Request body:
+	 * 
 	 * {  
 	 *	"cartItem":{  
 	 *		"sku":"WS12-XS-Orange",
@@ -108,7 +109,7 @@ export default ({ config, db }) => {
 	 * curl 'https://your-domain.example.com/vsbridge/cart/delete-coupon?token=2q1w9oixh3bukxyj947tiordnehai4td&cartId=5effb906a97ebecd6ae96e3958d04edc' -X POST -H 'content-type: application/json'
 	 * ```
 	 * 
-	 * Details:
+	 * Details: https://github.com/DivanteLtd/vue-storefront-integration-sdk/blob/tutorial/Dynamic%20API%20specification.md#post-vsbridgecartdelete-coupon
 	 */
 	cartApi.post('/delete-coupon', (req, res) => {
 		res.json({
@@ -125,6 +126,8 @@ export default ({ config, db }) => {
 	 * ```bash
 	 * curl 'http://loccalhost:8080/api/cart/coupon?token=2q1w9oixh3bukxyj947tiordnehai4td&cartId=5effb906a97ebecd6ae96e3958d04edc' -H 'content-type: application/json'
 	 * ```
+	 * 
+	 * Details: https://github.com/DivanteLtd/vue-storefront-integration-sdk/blob/tutorial/Dynamic%20API%20specification.md#get-vsbridgecartcoupon
 	 */
 	cartApi.get('/coupon', (req, res) => {
 		res.json({

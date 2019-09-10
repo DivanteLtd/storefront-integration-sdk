@@ -3,11 +3,14 @@ import { Router } from 'express';
 import order from './order';
 import user from './user';
 import stock from './stock';
-import review from './review';
 import cart from './cart';
+import catalog from './catalog';
 
 export default ({ config, db }) => {
 	let api = Router();
+
+  // mount the catalog resource
+  api.use('/catalog', catalog({ config, db }))	
 
 	// mount the order resource
 	api.use('/order', order({ config, db }));
@@ -17,9 +20,6 @@ export default ({ config, db }) => {
 
 	// mount the stock resource
 	api.use('/stock', stock({ config, db }));
-
-	// mount the review resource
-	api.use('/review', review({ config, db }));
 
 	// mount the cart resource
 	api.use('/cart', cart({ config, db }));

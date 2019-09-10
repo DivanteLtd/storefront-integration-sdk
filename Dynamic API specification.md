@@ -768,14 +768,14 @@ The result is a authorization token, that should be passed via `?token=xu8h02nd6
 - `200` when success
 - `500` in case of error
 
-### POST [/api/user/resetPassword](https://github.com/DivanteLtd/vue-storefront-api/blob/7d98771994b1009ad17d69c458f9e93686cfb145/src/api/user.js#L60)
+### POST [/api/user/reset-password](https://github.com/DivanteLtd/vue-storefront-api/blob/7d98771994b1009ad17d69c458f9e93686cfb145/src/api/user.js#L60)
 
 Sends the password reset link for the specified user.
 
 #### EXAMPLE CALL:
 
 ```bash
-curl 'https://your-domain.example.com/api/user/resetPassword' -H 'content-type: application/json' -H 'accept: application/json, text/plain, */*' --data-binary '{"email":"pkarwatka992@divante.pl"}'
+curl 'https://your-domain.example.com/api/user/reset-password' -H 'content-type: application/json' -H 'accept: application/json, text/plain, */*' --data-binary '{"email":"pkarwatka992@divante.pl"}'
 ```
 
 #### REQUEST BODY:
@@ -796,7 +796,7 @@ curl 'https://your-domain.example.com/api/user/resetPassword' -H 'content-type: 
 ```
 
 
-### POST [/api/user/changePassword](https://github.com/DivanteLtd/vue-storefront-api/blob/7d98771994b1009ad17d69c458f9e93686cfb145/src/api/user.js#L124)
+### POST [/api/user/change-password](https://github.com/DivanteLtd/vue-storefront-api/blob/7d98771994b1009ad17d69c458f9e93686cfb145/src/api/user.js#L124)
 
 This method is used to change password for current user identified by `token` obtained from `api/user/login`
 
@@ -1422,6 +1422,8 @@ In case of the JSON validation error, the validation errors will be returned ins
 
 Catalog endpoints are a proxy to Elastic Search 5.x and can be used to search the store catalog (synchronized with Magento2 or other platform).
 
+**Note:** This endpoint is not required as it's possible to configure the `vue-storefront` to connect directly to Elastic. Please just set the proper Elastic URL in the `config/local.json:elasticsearch` 
+
 #### GET PARAMETERS
 
 `/api/catalog/:index-name/:entity-name/_search?size=:pageSize&from=:offset&sort=`
@@ -1473,7 +1475,7 @@ Request body is a Elastic Search query. [Please read more on Elastic querying DS
 
 #### RESPONSE BODY:
 
-Elastic Search data format. Please read more on [data formats used in Vue Storefront](https://github.com/DivanteLtd/vue-storefront/blob/master/doc/ElasticSearch%20data%20formats.md)
+Elastic Search data format. Please read more on [data formats used in Vue Storefront](README.md)
 
 ```json
 {
@@ -2014,11 +2016,15 @@ For render-list:
 
 ### [/img](https://github.com/DivanteLtd/vue-storefront-api/blob/7d98771994b1009ad17d69c458f9e93686cfb145/src/api/img.js#L5)
 
-This simple API module is used to just resize the images using [Imageable](https://github.com/sdepold/node-imageable) node library.
+This simple API module is used to just resize the images using [Sharp](https://github.com/lovell/sharp) node library.
 
 #### GET PARAMS
 
 `/img/{width}/{height}/{operation}/{relativeUrl}`
+
+or 
+
+`/img/{width}/{height}/{operation}?absoluteUrl={absoluteUrl}`
 
 for example:
 
