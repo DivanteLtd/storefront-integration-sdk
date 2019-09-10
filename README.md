@@ -192,7 +192,7 @@ Here is the data format:
 }
 ```
 
-To read more on how tax rates are processed when `config.tax.calculateServerSide=false`, please [study the taxCalc.ts](https://github.com/DivanteLtd/vue-storefront/blob/develop/core/modules/catalog/helpers/taxCalc.ts).
+To read more on how tax rates are processed when `config.tax.calculateServerSide=false`, please read the [Prices how to](Prices%20how-to.md) and then [study the taxCalc.ts](https://github.com/DivanteLtd/vue-storefront/blob/develop/core/modules/catalog/helpers/taxCalc.ts).
 
 
 ### Write your API adapter for dynamic requests
