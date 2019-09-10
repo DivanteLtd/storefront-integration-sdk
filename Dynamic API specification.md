@@ -18,7 +18,7 @@ All methods accept and respond with `application/json` content type.
 
 Cart module is in charge of creating the eCommerce backend shopping carts and synchronizing the items users have in Vue Storefront and eCommerce backend. For example it can synchronize Vue Storefront shopping cart with the Magento quotes.
 
-### POST [/api/cart/create](https://github.com/DivanteLtd/vue-storefront-api/blob/7d98771994b1009ad17d69c458f9e93686cfb145/src/api/cart.js#L26)
+### POST /api/cart/create
 
 #### WHEN:
 
@@ -68,7 +68,7 @@ The `result` is a cart-id that should be used for all subsequent cart related op
 - `500` in case of error
 
 
-### GET [/api/cart/pull](https://github.com/DivanteLtd/vue-storefront-api/blob/7d98771994b1009ad17d69c458f9e93686cfb145/src/api/cart.js#L131)
+### GET /api/cart/pull
 
 Method used to fetch the current server side shopping cart content, used mostly for synchronization purposes when `config.cart.synchronize=true`
 
@@ -137,7 +137,7 @@ This method is called just after any Vue Storefront cart modification to check i
 ```
 
 
-### POST [/api/cart/update](https://github.com/DivanteLtd/vue-storefront-api/blob/7d98771994b1009ad17d69c458f9e93686cfb145/src/api/cart.js#L43)
+### POST /api/cart/update
 
 Method used to add or update shopping cart item's server side. As a request body there should be JSON given representing the cart item. `sku` and `qty` are the two required options. If you like to update/edit server cart item You need to pass `item_id` identifier as well (can be obtainted from `api/cart/pull`)
 
@@ -204,7 +204,7 @@ curl 'https://your-domain.example.com/api/cart/update?token=xu8h02nd66yq0gaayj4x
 }
 ```
 
-### POST [/api/cart/delete](https://github.com/DivanteLtd/vue-storefront-api/blob/7d98771994b1009ad17d69c458f9e93686cfb145/src/api/cart.js#L113)
+### POST /api/cart/delete
 
 This method is used to remove the shopping cart item on server side.
 
@@ -243,7 +243,7 @@ curl 'https://your-domain.example.com/api/cart/delete?token=xu8h02nd66yq0gaayj4x
 }
 ```
 
-### POST [/api/cart/apply-coupon](https://github.com/DivanteLtd/vue-storefront-api/blob/7d98771994b1009ad17d69c458f9e93686cfb145/src/api/cart.js#L63)
+### POST /api/cart/apply-coupon
 
 This method is used to apply the discount code to the current server side quote.
 
@@ -263,7 +263,7 @@ curl 'https://your-domain.example.com/api/cart/apply-coupon?token=2q1w9oixh3bukx
 ```
 
 
-### POST [/api/cart/delete-coupon](https://github.com/DivanteLtd/vue-storefront-api/blob/7d98771994b1009ad17d69c458f9e93686cfb145/src/api/cart.js#L82)
+### POST /api/cart/delete-coupon
 
 This method is used to delete the discount code to the current server side quote.
 
@@ -282,7 +282,7 @@ curl 'https://your-domain.example.com/api/cart/delete-coupon?token=2q1w9oixh3buk
 }
 ```
 
-### GET [/api/cart/coupon](https://github.com/DivanteLtd/vue-storefront-api/blob/7d98771994b1009ad17d69c458f9e93686cfb145/src/api/cart.js#L82)
+### GET /api/cart/coupon
 
 This method is used to get the currently applied coupon code
 
@@ -301,7 +301,7 @@ curl 'https://your-domain.example.com/api/cart/coupon?token=2q1w9oixh3bukxyj947t
 }
 ```
 
-### GET [/api/cart/totals](https://github.com/DivanteLtd/vue-storefront-api/blob/7d98771994b1009ad17d69c458f9e93686cfb145/src/api/cart.js#L145)
+### GET /api/cart/totals
 
 Method called when the `config.synchronize_totals=true` just after any shopping cart modification. It's used to synchronize the Magento / other CMS totals after all promotion rules processed with current Vue Storefront state.
 
@@ -397,7 +397,7 @@ You have totals data for the current, synchronized quote returned:
 }
 ```
 
-### GET [/api/cart/payment-methods](https://github.com/DivanteLtd/vue-storefront-api/blob/7d98771994b1009ad17d69c458f9e93686cfb145/src/api/cart.js#L178)
+### GET /api/cart/payment-methods
 
 This method is used as a step in the cart synchronization process to get all the payment methods with actual costs as available inside the backend CMS
 
@@ -435,7 +435,7 @@ curl 'https://your-domain.example.com/api/cart/payment-methods?token=xu8h02nd66y
 }
 ```
 
-### POST [/api/cart/shipping-methods](https://github.com/DivanteLtd/vue-storefront-api/blob/7d98771994b1009ad17d69c458f9e93686cfb145/src/api/cart.js#L160)
+### POST /api/cart/shipping-methods
 
 This method is used as a step in the cart synchronization process to get all the shipping methods with actual costs as available inside the backend CMS
 
@@ -486,7 +486,7 @@ If the shipping methods are dependend on the full address - probably we need to 
 }
 ```
 
-### POST [/api/cart/shipping-information](https://github.com/DivanteLtd/vue-storefront-api/blob/7d98771994b1009ad17d69c458f9e93686cfb145/src/api/cart.js#L188)
+### POST /api/cart/shipping-information
 
 This method sets the shipping information on specified quote which is a required step before calling `api/cart/totals`
 
@@ -619,7 +619,7 @@ curl 'https://your-domain.example.com/api/cart/shipping-information?token=xu8h02
 
 ## User module
 
-### POST [/api/user/create](https://github.com/DivanteLtd/vue-storefront-api/blob/7d98771994b1009ad17d69c458f9e93686cfb145/src/api/user.js#L25)
+### POST /api/user/create
 
 Registers new user to eCommerce backend users database. 
 
@@ -676,7 +676,7 @@ In case of error:
 ```
 
 
-### POST [/api/user/login](https://github.com/DivanteLtd/vue-storefront-api/blob/7d98771994b1009ad17d69c458f9e93686cfb145/src/api/user.js#L48)
+### POST /api/user/login
 
 Authorizes the user. It's called after user submits "Login" form inside the Vue Storefront app. It returns the user token which should be used for all subsequent API calls that requires authorization
 
@@ -768,7 +768,7 @@ The result is a authorization token, that should be passed via `?token=xu8h02nd6
 - `200` when success
 - `500` in case of error
 
-### POST [/api/user/reset-password](https://github.com/DivanteLtd/vue-storefront-api/blob/7d98771994b1009ad17d69c458f9e93686cfb145/src/api/user.js#L60)
+### POST /api/user/reset-password
 
 Sends the password reset link for the specified user.
 
@@ -796,7 +796,7 @@ curl 'https://your-domain.example.com/api/user/reset-password' -H 'content-type:
 ```
 
 
-### POST [/api/user/change-password](https://github.com/DivanteLtd/vue-storefront-api/blob/7d98771994b1009ad17d69c458f9e93686cfb145/src/api/user.js#L124)
+### POST /api/user/change-password
 
 This method is used to change password for current user identified by `token` obtained from `api/user/login`
 
@@ -823,7 +823,7 @@ This method is used to change password for current user identified by `token` ob
 }
 ```
 
-### GET [/api/user/order-history](https://github.com/DivanteLtd/vue-storefront-api/blob/7d98771994b1009ad17d69c458f9e93686cfb145/src/api/user.js#L91)
+### GET /api/user/order-history
 
 Get the user order history from server side
 
@@ -1087,7 +1087,7 @@ Get the user order history from server side
 }
 ```
 
-### GET [/api/user/me](https://github.com/DivanteLtd/vue-storefront-api/blob/7d98771994b1009ad17d69c458f9e93686cfb145/src/api/user.js#L78)
+### GET /api/user/me
 
 Gets the User profile for currently authorized user. It's called after `POST /api/user/login` successful call.
 
@@ -1143,7 +1143,7 @@ Gets the User profile for currently authorized user. It's called after `POST /ap
 
 
 
-### POST [/api/user/me](https://github.com/DivanteLtd/vue-storefront-api/blob/7d98771994b1009ad17d69c458f9e93686cfb145/src/api/user.js#L78)
+### POST /api/user/me
 
 Updates the user address and other data information.
 
@@ -1254,7 +1254,7 @@ In the response You'll get the current, updated information about the user.
 
 ## Stock module
 
-### GET [`/api/stock/check/:sku`](https://github.com/DivanteLtd/vue-storefront-api/blob/7d98771994b1009ad17d69c458f9e93686cfb145/src/api/stock.js#L20)
+### GET `/api/stock/check/:sku`
 
 This method is used to check the stock item for specified product sku
 
@@ -1294,7 +1294,8 @@ This method is used to check the stock item for specified product sku
 }
 ```
 
-### GET [`/api/stock/list`](https://github.com/DivanteLtd/vue-storefront-api/blob/master/src/api/stock.js#L52)
+### GET `/api/stock/list`
+
 This method is used to check multiple stock items for specified product skus. Requires `skus` param of comma-separated values to indicate which stock items to return.
 
 #### RESPONSE BODY:
@@ -1338,7 +1339,7 @@ This method is used to check multiple stock items for specified product skus. Re
 
 ## Order module
 
-### POST ['/api/order/create`](https://github.com/DivanteLtd/vue-storefront-api/blob/7d98771994b1009ad17d69c458f9e93686cfb145/src/api/order.js#L17)
+### POST '/api/order/create`
 
 Queue the order into the order queue which will be asynchronously submitted to the eCommerce backend.
 
@@ -1418,7 +1419,7 @@ In case of the JSON validation error, the validation errors will be returned ins
 
 ## Catalog module
 
-### [/api/catalog](https://github.com/DivanteLtd/vue-storefront-api/blob/7d98771994b1009ad17d69c458f9e93686cfb145/src/api/catalog.js#L4)
+### POST|GET /api/catalog
 
 Catalog endpoints are a proxy to Elastic Search 5.x and can be used to search the store catalog (synchronized with Magento2 or other platform).
 
@@ -1833,7 +1834,7 @@ Elastic Search data format. Please read more on [data formats used in Vue Storef
 }
 ```
 
-### [/api/product/list](https://github.com/DivanteLtd/vue-storefront-api/blob/7d98771994b1009ad17d69c458f9e93686cfb145/src/api/product.js#L22) and [/api/product/render-list](https://github.com/DivanteLtd/vue-storefront-api/blob/7d98771994b1009ad17d69c458f9e93686cfb145/src/api/product.js#L39)
+### /api/product/list
 
 Magento specific methods to return the product details for specifed SKUs.
 Methods are mostly used for data synchronization with Magento two and for some specific cases when overriding the platform prices inside Vue Storefront.
@@ -2014,7 +2015,7 @@ For render-list:
 
 ## Image module
 
-### [/img](https://github.com/DivanteLtd/vue-storefront-api/blob/7d98771994b1009ad17d69c458f9e93686cfb145/src/api/img.js#L5)
+### /img
 
 This simple API module is used to just resize the images using [Sharp](https://github.com/lovell/sharp) node library.
 
