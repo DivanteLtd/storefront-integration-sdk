@@ -34,7 +34,7 @@ $ cd ./vue-storefront-api
 Then you can empty the default index:
 
 ```bash
-$ yarn  thdb new
+$ yarn db new
 yarn run v1.17.3
 $ node scripts/db.js new
 Elasticsearch INFO: 2019-09-06T19:32:23Z
