@@ -143,7 +143,7 @@ After data has been imported you can check if it works by opening `http://localh
 
 **Congratulations!** Now it's a good moment to take a deep breath and study the data formats we'd just imported to create your own mapper from the custom platform of your choice to Vue Storefront format.
 
-** Note: please make sure that you use non-zero IDs in the following entities to avoid unexpected behavior. **
+**Note:** please make sure that you use non-zero IDs in the following entities to avoid unexpected behavior.
 
 ### Product entity
 
