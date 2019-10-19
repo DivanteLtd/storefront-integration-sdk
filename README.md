@@ -71,6 +71,7 @@ Now we can import the data:
 
 ```bash
 $ cd ./vue-storefront-integration-boilerplate/sample-data/
+$ yarn install Or npm install
 $ node import.js products.json product vue_storefront_catalog
 Importing product { id: 1769,
   name: 'Chloe Compete Tank',
