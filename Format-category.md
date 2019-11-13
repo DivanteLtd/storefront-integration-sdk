@@ -32,6 +32,7 @@ This is just a category name.
 ```json
     "url_key": "hoodies-and-sweatshirts-24",
     "url_path": "women/tops-women/hoodies-and-sweatshirts-women/hoodies-and-sweatshirts-24",
+    "slug": "hoodies-and-sweatshirts-24"
 ```
 
 ```json
