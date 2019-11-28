@@ -144,6 +144,8 @@ After data has been imported you can check if it works by opening `http://localh
 
 **Congratulations!** Now it's a good moment to take a deep breath and study the data formats we'd just imported to create your own mapper from the custom platform of your choice to Vue Storefront format.
 
+**Note:** please make sure that you use non-zero IDs in the following entities to avoid unexpected behavior.
+
 ### Product entity
 
 You might have seen that our data formats are pretty much similar to Magento formats. We've simplified them and aggregated. **Some parts are denormalized** on purpose. We're trying to avoid the relations known from the standard databases and rather use the [DTO](https://en.wikipedia.org/wiki/Data_transfer_object) concept. For example, Product is a DTO containing all information necessary to display the PDP (Product Details Page): including `media_gallery`, `configurable_children` and other features. It's then fairly easy to cache the data for the Offline mode and performance.
