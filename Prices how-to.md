@@ -43,3 +43,15 @@ Product Original price (set only if `final_price` or `special_price` are lower t
 
 **Note:** The prices are being set for all `configurable_children` with the exact same format
 **Note:** If any of the `configurable_children` has the price lower than the main product, the main product price will be updated accordingly.
+
+#### Cart prices
+Additionally to product prices, the cart item prices in cart/totals endpoint contains following price keys which are always Net prices:
+- `price`
+- `base_price`
+- `row_total`
+- `base_row_total`
+each of them also have their gross price equivalent suffixed by `_incl_tax`
+
+The cart/totals has a key "total_segments" in which there are two segments: `subtotal` and `grand_total`. The amounts returned there behave differently for each store depending on the backend setting. 
+For Magento backend, this is described here: https://docs.magento.com/m2/ce/user_guide/configuration/sales/tax.html#shopping-cart-display-settings
+So make sure to adjust it in your custom integration according to your business logic.
