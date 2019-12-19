@@ -305,6 +305,8 @@ curl 'https://your-domain.example.com/api/cart/coupon?token=2q1w9oixh3bukxyj947t
 
 Method called when the `config.synchronize_totals=true` just after any shopping cart modification. It's used to synchronize the Magento / other CMS totals after all promotion rules processed with current Vue Storefront state.
 
+**Note**: Make sure to check notes on [Cart prices](https://github.com/DivanteLtd/storefront-integration-sdk/blob/master/Prices%20how-to.md#cart-prices)
+
 #### EXAMPLE CALL:
 
 ```bash
