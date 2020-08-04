@@ -8,7 +8,7 @@ Here you can find some example implementations of this API for different platfor
 - [`vue-storefront-api`](https://github.com/DivanteLtd/vue-storefront-api/) - NodeJS, this is our default API integrated with magento2
 - [`magento1-vsbridge`](https://github.com/DivanteLtd/magento1-vsbridge/tree/master/magento1-module/app/code/local/Divante/VueStorefrontBridge/controllers) - API implementation done as a native Magento1 module
 - [`coreshop-bridge`](https://github.com/DivanteLtd/coreshop-vsbridge/tree/master/src/CoreShop2VueStorefrontBundle/Controller) - Symfony based implementation for Coreshop,
-- [`spree2vuestorefront](https://github.com/spark-solutions/spree2vuestorefront) - Ruby implementation for the Spree Commerce platform.
+- [`spree2vuestorefront`](https://github.com/spark-solutions/spree2vuestorefront) - Ruby implementation for the Spree Commerce platform.
 
 ## Dynamic requests API specification 
 
