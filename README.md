@@ -6,7 +6,7 @@ Vue Storefront is platform agnostic which means it can be connected to virtually
 
 ## Three steps for the integration
 
-- **Step One** Vue Storefront uses Elastic Search as backend for all catalog operations. We do have **three** default types of entities that must be supported: `product`, `category`, `attribute` and **two optional entities** `taxrule`, `cms_block` and `cms_page` in the ES. You may find some sample-data json [files in `sample-data` subdirectory](sample-data).
+- **Step One** Vue Storefront uses Elastic Search as backend for all catalog operations. We do have **three** default types of entities that must be supported: `product`, `category`, `attribute` and **three optional entities** `taxrule`, `cms_block` and `cms_page` in the ES. You may find some sample-data json [files in `sample-data` subdirectory](sample-data).
 
 - **Step Two** The second step is to support the **dynamic calls** that are used to synchronize shopping carts, promotion rules, user accounts, and so on. To have this step accomplished you'll need to implement the actuall endpoints business logic. Check the [boilerplate API implementation in Express.js](sample-api-js)
 
