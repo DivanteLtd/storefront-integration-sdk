@@ -59,7 +59,7 @@ In your custom integration, you'll probably be pumping the data directly to Elas
 This is exactly how other Vue Storefront integrations work. 
 You might want to get inspired by:
 - [`magento2-vsbridge-indexer`](https://github.com/DivanteLtd/magento2-vsbridge-indexer) - the PHP based integration for Magento2,
-- [`shopware2vuestorefront](https://github.com/DivanteLtd/shopware2vuestorefront/tree/master/vsf-shopware-indexer) - which is using a NodeJS app to pull the data from Shopware API and push it to Elastic,
+- [`shopware2vuestorefront`](https://github.com/DivanteLtd/shopware2vuestorefront/tree/master/vsf-shopware-indexer) - which is using a NodeJS app to pull the data from Shopware API and push it to Elastic,
 - [`spree2vuestorefront`](https://github.com/spark-solutions/spree2vuestorefront/) - which is putting thte data to Elastic directly from Ruby code, from Spree Commerce database,
 - [See other integrations ...](https://github.com/frqnck/awesome-vue-storefront#github-repos)
 
