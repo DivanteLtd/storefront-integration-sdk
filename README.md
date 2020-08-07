@@ -211,7 +211,7 @@ Whenever a product is added to the cart, or user authorization is performed, the
 
 ### Configure vue-storefront
 
-All You need to do is to set the proper dynamic API endpoints in the `config/local.json`. [Here you have the details](https://github.com/DivanteLtd/vue-storefront-integration-boilerplate/blob/master/3.%20Configure%20vue-storefront/How%20to%20configure%20Vue%20Storefront.md).
+All You need to do is to set the proper dynamic API endpoints in the `config/local.json`. [Here you have the details](How%20to%20configure%20Vue%20Storefront.md).
 
 
 # Support
