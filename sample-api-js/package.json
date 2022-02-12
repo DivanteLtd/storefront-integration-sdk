@@ -36,7 +36,7 @@
   "author": "Piotr Karwatka <pkarwatka@divante.pl>",
   "license": "MIT",
   "dependencies": {
-    "ajv": "^6.4.0",
+    "ajv": "^6.12.3",
     "ajv-keywords": "^3.4.0",
     "body-parser": "^1.18.2",
     "bodybuilder": "2.2.13",
