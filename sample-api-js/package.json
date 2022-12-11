@@ -43,7 +43,7 @@
     "compression": "^1.7.2",
     "config": "^1.30.0",
     "cors": "^2.8.4",
-    "express": "^4.16.3",
+    "express": "^4.17.3",
     "humps": "^1.1.0",
     "jsonfile": "^4.0.0",
     "jwa": "^1.1.5",
